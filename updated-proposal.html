@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>AYUVA · Updated CVML Proposal (May 13, 2026)</title>
+<title>AYUVA · Section 1 · Holding Company</title>
 <style>
   :root {
     --ink:#1a1a1a; --ink-soft:#3a3a3a; --muted:#777;
@@ -30,13 +30,6 @@
     border-left: 4px solid var(--accent);
     margin: 32px 0 16px;
   }
-  h3 { font-size: 16px; margin: 18px 0 8px; }
-
-  .source-note {
-    background: var(--paper); border:1px solid var(--line); border-radius: 10px;
-    padding: 12px 16px; margin: 18px 0; font-size: 13px; color: var(--ink-soft);
-  }
-  .source-note b { color: var(--accent-deep); }
 
   /* Structure diagram */
   .structure {
@@ -48,6 +41,7 @@
     border: 2px solid var(--line); border-radius: 12px;
     padding: 14px 22px; min-width: 200px; text-align: center;
     background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    transition: all 0.2s;
   }
   .entity .label {
     font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
@@ -55,18 +49,16 @@
   }
   .entity .name { font-size: 16px; font-weight: 700; color: var(--ink); }
   .entity .desc { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+
   .entity.holding {
     border-color: var(--accent); background: linear-gradient(180deg, #fff8e8, #ffffff);
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(184,148,72,0.25);
   }
   .entity.holding .label { color: var(--accent-deep); }
-  .entity.muted { opacity: 0.4; background: #fafafa; }
 
-  .ownership-label {
-    font-size: 10px; color: var(--accent-deep); font-weight: 700;
-    background: white; padding: 2px 8px; border-radius: 10px;
-    border: 1px solid var(--accent); margin: 4px 0;
+  .connector {
+    width: 2px; height: 30px; background: var(--line);
   }
   .branch-row {
     display: flex; justify-content: center; gap: 24px;
@@ -86,55 +78,65 @@
     background: var(--line); transform: translateX(-50%);
   }
 
-  /* Purpose grid */
-  .purpose-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 12px 0;
-  }
-  .purpose-card {
-    background: var(--paper); border:1px solid var(--line); border-radius: 12px;
-    padding: 16px 18px;
-  }
-  .purpose-card h4 {
-    margin: 0 0 8px; font-size: 13px; letter-spacing: 0.04em;
-    color: var(--accent-deep); text-transform: uppercase;
-  }
-  .purpose-card ul { margin: 0; padding-left: 20px; font-size: 13.5px; }
-  .purpose-card li { margin-bottom: 4px; }
+  .entity.muted { opacity: 0.4; background: #fafafa; }
 
-  /* Jurisdiction cards — neutral presentation */
+  .ownership-label {
+    font-size: 10px; color: var(--accent-deep); font-weight: 700;
+    background: white; padding: 2px 8px; border-radius: 10px;
+    border: 1px solid var(--accent); margin: 4px 0;
+  }
+
+  /* Side-by-side */
+  .does-does-not {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 12px 0;
+  }
+  .does, .does-not {
+    border-radius: 12px; padding: 18px 20px;
+  }
+  .does { background: var(--green-bg); border-left: 4px solid var(--green); }
+  .does-not { background: var(--red-bg); border-left: 4px solid var(--red); }
+  .does h3, .does-not h3 {
+    margin: 0 0 8px; font-size: 14px; letter-spacing: 0.04em;
+  }
+  .does h3 { color: var(--green); }
+  .does-not h3 { color: var(--red); }
+  .does ul, .does-not ul { margin: 0; padding-left: 20px; font-size: 13.5px; }
+  .does li, .does-not li { margin-bottom: 4px; }
+
+  /* Comparison cards */
   .juris-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 14px 0;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 12px 0;
   }
   .juris-card {
-    background: white; border: 1px solid var(--line); border-radius: 12px;
-    padding: 18px 20px;
+    background: var(--paper); border: 2px solid var(--line); border-radius: 12px;
+    padding: 16px 18px;
+    position: relative; transition: all 0.2s;
+  }
+  .juris-card.recommended {
+    border-color: var(--green); background: linear-gradient(180deg, var(--green-bg), white);
+  }
+  .juris-card.recommended::after {
+    content: "✓ Recommended"; position: absolute; top: -10px; right: 12px;
+    background: var(--green); color: white; font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 10px;
+  }
+  .juris-card.expensive {
+    border-color: var(--red); background: linear-gradient(180deg, var(--red-bg), white);
   }
   .juris-name {
-    font-size: 17px; font-weight: 700; margin-bottom: 2px;
+    font-size: 16px; font-weight: 700; margin-bottom: 2px;
   }
   .juris-tagline {
-    font-size: 11px; color: var(--muted); margin-bottom: 12px;
-    text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 11px; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;
   }
-  .juris-section { margin-bottom: 10px; }
-  .juris-section-label {
-    font-size: 10.5px; font-weight: 700; color: var(--accent-deep);
-    letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px;
+  .juris-fee {
+    font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 2px;
   }
-  .juris-section-body {
-    font-size: 13px; color: var(--ink-soft); line-height: 1.55;
+  .juris-fee small { font-size: 11px; color: var(--muted); font-weight: 500; }
+  .juris-meta {
+    font-size: 12px; color: var(--ink-soft); margin-top: 8px;
+    padding-top: 8px; border-top: 1px dashed var(--line);
   }
-  .juris-fees {
-    background: var(--bg); border-radius: 8px; padding: 10px 12px;
-    margin-top: 8px; font-size: 13px;
-  }
-  .juris-fees ul { margin: 0; padding-left: 18px; }
-  .juris-notes-cvml {
-    background: var(--green-bg); border-left: 3px solid var(--green);
-    padding: 8px 12px; border-radius: 0 8px 8px 0; margin-top: 10px;
-    font-size: 12.5px; color: var(--ink-soft);
-  }
-  .juris-notes-cvml b { color: var(--green); }
 
   /* Cost bar chart */
   .bar-chart {
@@ -142,25 +144,27 @@
     padding: 20px; margin: 14px 0;
   }
   .bar-row {
-    display: grid; grid-template-columns: 130px 1fr 100px; gap: 12px;
+    display: grid; grid-template-columns: 110px 1fr 90px; gap: 12px;
     align-items: center; margin-bottom: 10px; font-size: 13px;
   }
   .bar-row:last-child { margin-bottom: 0; }
   .bar-row .juris-name-small { font-weight: 600; }
   .bar-track {
     background: #f0ebda; border-radius: 4px; height: 24px; overflow: hidden;
+    position: relative;
   }
   .bar-fill {
     height: 100%; border-radius: 4px;
     display: flex; align-items: center; padding-left: 8px;
     color: white; font-size: 11px; font-weight: 600;
+    transition: width 0.4s;
   }
-  .bar-fill.difc { background: linear-gradient(90deg, #8a6f2c, #b89448); }
+  .bar-fill.difc { background: linear-gradient(90deg, var(--red), #c25555); }
   .bar-fill.dwtc { background: linear-gradient(90deg, var(--amber), #d49945); }
   .bar-fill.rak { background: linear-gradient(90deg, var(--green), #84a854); }
   .bar-amount { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
 
-  /* Fee box */
+  /* Fee breakdown box */
   .fee-box {
     background: white; border: 2px solid var(--accent); border-radius: 12px;
     padding: 18px 22px; margin: 14px 0;
@@ -170,44 +174,40 @@
     border-bottom: 1px dashed var(--line); font-size: 14px;
   }
   .fee-line:last-of-type { border-bottom: none; }
-  .fee-label { color: var(--ink-soft); }
-  .fee-amt { font-weight: 600; font-variant-numeric: tabular-nums; }
-  .fee-note {
-    font-size: 12px; color: var(--muted); margin-top: 10px;
-    padding-top: 8px; border-top: 1px solid var(--line);
-  }
-
-  /* Scope of work */
-  .scope-list {
-    background: var(--paper); border:1px solid var(--line); border-radius: 12px;
-    padding: 16px 20px; margin: 12px 0;
-  }
-  .scope-list ul { margin: 8px 0 0; padding-left: 22px; font-size: 13.5px; line-height: 1.7; }
-  .scope-list li { margin-bottom: 3px; }
-  .scope-list h4 {
-    margin: 10px 0 4px; font-size: 14px;
+  .fee-line .fee-label { color: var(--ink-soft); }
+  .fee-line .fee-amt { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .fee-total {
+    display: flex; justify-content: space-between; padding-top: 10px; margin-top: 6px;
+    border-top: 2px solid var(--accent); font-weight: 700; font-size: 16px;
     color: var(--accent-deep);
   }
-  .scope-list h4:first-child { margin-top: 0; }
 
-  /* Decision callout */
-  .decision-callout {
-    background: linear-gradient(135deg, #fff8e8, #fffdf7);
-    border: 2px solid var(--accent); border-radius: 14px;
+  /* Recommendation */
+  .recommendation {
+    background: linear-gradient(135deg, var(--green-bg), #f7faec);
+    border: 2px solid var(--green); border-radius: 14px;
     padding: 20px 24px; margin: 20px 0;
   }
-  .decision-callout h3 {
-    margin: 0 0 10px; color: var(--accent-deep); font-size: 16px;
+  .recommendation h3 {
+    margin: 0 0 8px; color: var(--green); font-size: 16px;
     display: flex; align-items: center; gap: 8px;
   }
-  .decision-callout p { margin: 6px 0; font-size: 14px; }
-  .decision-callout .q-list { padding-left: 22px; }
-  .decision-callout .q-list li { margin-bottom: 6px; font-size: 13.5px; }
+  .recommendation p { margin: 6px 0; font-size: 14px; }
+
+  /* Mini icons */
+  .pill {
+    display: inline-block; padding: 2px 10px; border-radius: 10px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .pill.cheap { background: var(--green-bg); color: var(--green); }
+  .pill.expensive { background: var(--red-bg); color: var(--red); }
+  .pill.medium { background: var(--amber-bg); color: var(--amber); }
 
   @media (max-width: 680px) {
-    .juris-grid, .purpose-grid { grid-template-columns: 1fr; }
+    .juris-grid { grid-template-columns: 1fr; }
+    .does-does-not { grid-template-columns: 1fr; }
     .branch-row { flex-wrap: wrap; }
-    .bar-row { grid-template-columns: 100px 1fr 90px; }
+    .bar-row { grid-template-columns: 80px 1fr 80px; }
   }
 </style>
 </head>
@@ -216,300 +216,196 @@
 <div class="container">
 
   <h1>Section 1: Holding Company</h1>
-  <div class="sub">
-    Working name: <b>EXCEED Capital</b> · Category A of the updated CVML proposal (13 May 2026)
-  </div>
+  <div class="sub">Working name: <b>EXCEED Capital</b> · Top of the AYUVA group structure</div>
 
-  <div class="source-note">
-    📄 <b>Source:</b> CVML's revised proposal dated 13 May 2026 — "Category A: Establishment of the Holding Company" (pages 4–6 of the proposal PDF). All content below is drawn directly from that section.
-  </div>
-
-  <h2>📍 Where the Holding Company sits in the structure</h2>
+  <h2>📍 Where it sits in the structure</h2>
 
   <div class="structure">
     <div class="entity holding">
       <div class="label">Section 1 — We are here</div>
       <div class="name">Holding Company<br>(EXCEED Capital)</div>
-      <div class="desc">Parent / central holding vehicle</div>
+      <div class="desc">Owns 100% of everything below</div>
     </div>
 
-    <div class="ownership-label">↓ holds ownership interests ↓</div>
+    <div class="ownership-label">↓ owns 100% ↓</div>
 
     <div class="branch-row">
       <div class="entity muted">
         <div class="label">Section 2</div>
         <div class="name">Investment Co</div>
+        <div class="desc">Takes investor money</div>
       </div>
       <div class="entity muted">
         <div class="label">Section 3</div>
         <div class="name">PMC</div>
+        <div class="desc">Builds the project</div>
       </div>
       <div class="entity muted">
         <div class="label">Section 4</div>
         <div class="name">AMC</div>
-      </div>
-      <div class="entity muted">
-        <div class="label">Section 5</div>
-        <div class="name">SPVs</div>
+        <div class="desc">Operates the project</div>
       </div>
     </div>
   </div>
 
-  <h2>🎯 Structure and Purpose (per CVML)</h2>
+  <h2>🎯 What it does (and doesn't do)</h2>
 
-  <p style="font-size:14px;">
-    CVML describes the Holding Company as "the parent and central holding vehicle of the proposed structure" providing "strategic oversight, centralized control, and an efficient structure for future investments, expansion, and investor participation."
-  </p>
-
-  <div class="purpose-grid">
-    <div class="purpose-card">
-      <h4>The Holding Company will:</h4>
+  <div class="does-does-not">
+    <div class="does">
+      <h3>✓ DOES</h3>
       <ul>
-        <li>Hold ownership interests in the Investment Company, Project Management Company, Asset / Hotel Management Company, and relevant SPVs</li>
-        <li>Act as the central ownership and governance vehicle of the group</li>
-        <li>Oversee strategic decision-making and group-level management</li>
-        <li>Facilitate future expansion, restructuring, and investor participation</li>
-        <li>Provide liability segregation and centralized asset ownership within the wider structure</li>
+        <li>Owns shares of Investment Co, PMC, AMC</li>
+        <li>Sits as group parent for governance</li>
+        <li>Lets you sell/restructure cleanly later</li>
+        <li>Provides liability ring-fencing</li>
       </ul>
     </div>
-    <div class="purpose-card">
-      <h4>Why it's a separate entity</h4>
-      <p style="font-size:13.5px; margin:0;">
-        Per the proposal: the Holding Co provides "an efficient and scalable framework for future investments, operations, and expansion." It is being established as a <b>new UAE entity</b> — not the existing EXCEED REAL ESTATE LLC — so that the AYUVA group sits in its own clean corporate envelope.
-      </p>
+    <div class="does-not">
+      <h3>✗ DOES NOT</h3>
+      <ul>
+        <li>Take investor money (Investment Co does)</li>
+        <li>Build anything (PMC does)</li>
+        <li>Operate the facility (AMC does)</li>
+        <li>Sign vendor contracts</li>
+        <li>Have operational employees</li>
+      </ul>
     </div>
   </div>
 
-  <h2>🏛️ The 4 jurisdiction options CVML lists</h2>
-
-  <p style="font-size:14px; margin-bottom:14px;">
-    CVML's proposal presents 4 jurisdictions for the Holding Company. The "Notes" column in each card below contains CVML's own description of what each jurisdiction is suited for.
+  <p style="font-size:14px; color:var(--ink-soft); background:var(--paper); padding:12px 16px; border-radius:10px; border-left:3px solid var(--accent);">
+    <b>Mental model:</b> The Holding Co is a clean "folder" that contains the other folders. It does nothing operational — it just <em>owns</em>.
   </p>
 
-  <div class="juris-grid">
+  <h2>💡 Why not just use EXCEED REAL ESTATE LLC?</h2>
 
-    <div class="juris-card">
-      <div class="juris-name">DIFC</div>
+  <p style="font-size:14px;">EXCEED REAL ESTATE has its own existing business and partners. Two problems if we reuse it as Holding Co:</p>
+
+  <div class="does-does-not">
+    <div class="does-not" style="border-left-color:var(--amber); background:var(--amber-bg);">
+      <h3 style="color:var(--amber);">⚠ Risk mixing</h3>
+      <p style="margin:0; font-size:13.5px;">If EXCEED REAL ESTATE has any legal/financial issue, AYUVA investors get dragged into it. Their investment is tied to all of EXCEED's other dealings.</p>
+    </div>
+    <div class="does-not" style="border-left-color:var(--amber); background:var(--amber-bg);">
+      <h3 style="color:var(--amber);">⚠ DD complexity</h3>
+      <p style="margin:0; font-size:13.5px;">Future investors would have to investigate ALL of EXCEED's history (multi-year, multi-deal). With a fresh "EXCEED Capital" they only investigate AYUVA.</p>
+    </div>
+  </div>
+
+  <p style="font-size:14px; margin-top:14px;">→ Solution: create <b>EXCEED Capital</b> as a fresh, dedicated entity.</p>
+
+  <h2>🏛️ The 4 jurisdiction options Walid is offering</h2>
+
+  <div class="juris-grid">
+    <div class="juris-card expensive">
+      <div class="juris-name">DIFC <span class="pill expensive">23× more expensive</span></div>
       <div class="juris-tagline">Dubai International Financial Centre</div>
-      <div class="juris-section">
-        <div class="juris-section-label">Key features (CVML)</div>
-        <div class="juris-section-body">"Premium common law jurisdiction suitable for sophisticated holding structures, investor participation, governance flexibility and international positioning."</div>
-      </div>
-      <div class="juris-section">
-        <div class="juris-section-label">Approximate fees</div>
-        <div class="juris-fees">
-          <ul>
-            <li>Application fee: ~USD 8,000</li>
-            <li>License fee: ~USD 12,000</li>
-            <li>Data protection fee: ~USD 750 (if applicable)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="juris-section">
-        <div class="juris-section-label">Office</div>
-        <div class="juris-section-body">Additional office or flexi-desk cost applicable.</div>
-      </div>
-      <div class="juris-notes-cvml">
-        <b>CVML notes:</b> "Suitable for institutional investment structures and high-end governance framework."
+      <div class="juris-fee">~AED 76,000 <small>govt fee</small></div>
+      <div class="juris-meta">
+        • Office required (flexi-desk min)<br>
+        • Premium common-law jurisdiction<br>
+        • Overkill for a pure holding entity
       </div>
     </div>
 
-    <div class="juris-card">
-      <div class="juris-name">RAK ICC</div>
+    <div class="juris-card recommended">
+      <div class="juris-name">RAK ICC <span class="pill cheap">cheapest</span></div>
       <div class="juris-tagline">RAK International Corporate Centre</div>
-      <div class="juris-section">
-        <div class="juris-section-label">Key features (CVML)</div>
-        <div class="juris-section-body">"Cost-efficient holding structure commonly used for passive holding and ownership purposes."</div>
-      </div>
-      <div class="juris-section">
-        <div class="juris-section-label">Approximate fees</div>
-        <div class="juris-fees">
-          <ul>
-            <li>Standard Holding Company: AED 3,250</li>
-          </ul>
-        </div>
-      </div>
-      <div class="juris-section">
-        <div class="juris-section-label">Office</div>
-        <div class="juris-section-body">No physical office requirement generally applicable.</div>
-      </div>
-      <div class="juris-notes-cvml">
-        <b>CVML notes:</b> "Suitable for a pure holding structure."
+      <div class="juris-fee">~AED 3,250 <small>govt fee</small></div>
+      <div class="juris-meta">
+        • <b>No office required</b><br>
+        • Designed exactly for passive holding<br>
+        • No ongoing operational cost
       </div>
     </div>
 
     <div class="juris-card">
       <div class="juris-name">RAK ICC SPV</div>
-      <div class="juris-tagline">RAK ICC SPV Holding Company</div>
-      <div class="juris-section">
-        <div class="juris-section-label">Key features (CVML)</div>
-        <div class="juris-section-body">"Alternative SPV-style holding vehicle under RAK ICC."</div>
-      </div>
-      <div class="juris-section">
-        <div class="juris-section-label">Approximate fees</div>
-        <div class="juris-fees">
-          <ul>
-            <li>Application fee: ~USD 100</li>
-            <li>License fee: ~USD 1,000</li>
-          </ul>
-        </div>
-      </div>
-      <div class="juris-section">
-        <div class="juris-section-label">Office</div>
-        <div class="juris-section-body">Additional office or flexi-desk cost may apply.</div>
-      </div>
-      <div class="juris-notes-cvml">
-        <b>CVML notes:</b> "May be suitable depending on the contemplated structure and substance requirements."
+      <div class="juris-tagline">SPV-style holding variant</div>
+      <div class="juris-fee">~AED 4,000 <small>govt fee</small></div>
+      <div class="juris-meta">
+        • Alternative SPV structure<br>
+        • Office may apply<br>
+        • Niche use case
       </div>
     </div>
 
     <div class="juris-card">
-      <div class="juris-name">DWTC</div>
-      <div class="juris-tagline">Dubai World Trade Centre Authority</div>
-      <div class="juris-section">
-        <div class="juris-section-label">Key features (CVML)</div>
-        <div class="juris-section-body">"UAE free zone option with visa eligibility and operational flexibility."</div>
-      </div>
-      <div class="juris-section">
-        <div class="juris-section-label">Approximate fees</div>
-        <div class="juris-fees">
-          <ul>
-            <li>~AED 17,000 (includes license, registration, e-card, 1–2 visa allocation)</li>
-          </ul>
-        </div>
-      </div>
-      <div class="juris-section">
-        <div class="juris-section-label">Office</div>
-        <div class="juris-section-body">Office / flexi-desk requirement may apply.</div>
-      </div>
-      <div class="juris-notes-cvml">
-        <b>CVML notes:</b> "Suitable where operational presence and visa allocation are required."
+      <div class="juris-name">DWTC <span class="pill medium">mid-tier</span></div>
+      <div class="juris-tagline">Dubai World Trade Centre</div>
+      <div class="juris-fee">~AED 17,000 <small>govt fee</small></div>
+      <div class="juris-meta">
+        • Office required<br>
+        • Comes with visa eligibility (1-2)<br>
+        • Useful only if you want visas at this layer
       </div>
     </div>
-
   </div>
-
-  <p style="font-size:12.5px; color:var(--muted); padding:10px 14px; background:var(--paper); border-radius:8px; border-left:3px solid var(--line);">
-    CVML disclaimer (verbatim from proposal): "The above costs are indicative only and may vary depending on the final structure, selected activities, visa allocation, office requirements, and any applicable regulatory requirements."
-  </p>
 
   <h2>📊 Year 1 government fees — visual comparison</h2>
 
   <div class="bar-chart">
     <div class="bar-row">
       <div class="juris-name-small">DIFC</div>
-      <div class="bar-track"><div class="bar-fill difc" style="width:100%">~AED 76,000</div></div>
-      <div class="bar-amount">~AED 76,000</div>
+      <div class="bar-track"><div class="bar-fill difc" style="width:100%">76,000 AED</div></div>
+      <div class="bar-amount">AED 76,000</div>
     </div>
     <div class="bar-row">
       <div class="juris-name-small">DWTC</div>
-      <div class="bar-track"><div class="bar-fill dwtc" style="width:22%">AED 17,000</div></div>
+      <div class="bar-track"><div class="bar-fill dwtc" style="width:22%">17,000 AED</div></div>
       <div class="bar-amount">AED 17,000</div>
     </div>
     <div class="bar-row">
       <div class="juris-name-small">RAK ICC SPV</div>
-      <div class="bar-track"><div class="bar-fill rak" style="width:5.3%">~AED 4,000</div></div>
-      <div class="bar-amount">~AED 4,000</div>
+      <div class="bar-track"><div class="bar-fill rak" style="width:5.3%">4k</div></div>
+      <div class="bar-amount">AED 4,000</div>
     </div>
     <div class="bar-row">
       <div class="juris-name-small">RAK ICC</div>
-      <div class="bar-track"><div class="bar-fill rak" style="width:4.3%">AED 3,250</div></div>
+      <div class="bar-track"><div class="bar-fill rak" style="width:4.3%">3.25k</div></div>
       <div class="bar-amount">AED 3,250</div>
     </div>
   </div>
 
-  <h2>📋 Key Requirements (per CVML)</h2>
+  <p style="font-size:13px; color:var(--muted); text-align:center;">↑ DIFC costs <b>~23× more</b> than RAK ICC for the same legal function</p>
 
-  <div class="scope-list">
-    <ul>
-      <li>The minimum share capital will depend on the selected jurisdiction</li>
-      <li>The company will be required to appoint a manager / director and determine the appropriate shareholder structure</li>
-      <li>The constitutional documents will need to reflect the intended ownership, governance, and control framework</li>
-      <li>The structure must allow for flexibility in relation to future subsidiaries, SPVs, and investor participation</li>
-    </ul>
-  </div>
+  <h2>💰 What CVML charges YOU (separately from government)</h2>
 
-  <h2>🧾 Regulatory & Tax Considerations (per CVML)</h2>
-
-  <div class="scope-list">
-    <ul>
-      <li>The Holding Company will be required to register for UAE Corporate Tax in accordance with applicable legislation</li>
-      <li>VAT registration may be required depending on the nature of activities and whether the applicable thresholds are met</li>
-      <li>Economic substance and beneficial ownership requirements may apply depending on the jurisdiction and activities undertaken</li>
-      <li>Ongoing compliance obligations will apply in relation to corporate filings, licensing renewals, and tax requirements</li>
-    </ul>
-  </div>
-
-  <h2>📑 Scope of Work CVML will deliver (Category A)</h2>
-
-  <div class="scope-list">
-    <h4>(i) Incorporation of the Company</h4>
-    <ul>
-      <li>Advising on the most suitable UAE jurisdiction (mainland or free zone) for the Holding Company</li>
-      <li>Assisting in the preparation and submission of the incorporation application</li>
-      <li>Drafting and/or reviewing all corporate and incorporation documents, including the Memorandum of Association, Articles of Association (where applicable), and ancillary documents</li>
-      <li>Advising on the most suitable ownership and governance structure</li>
-      <li>Liaising and coordinating with the relevant authorities on approvals, licensing, and registration</li>
-      <li>Following up until issuance of the trade license and incorporation documents</li>
-      <li>Providing general legal and practical guidance in relation to the incorporation</li>
-    </ul>
-
-    <h4>(ii) Corporate Structuring and Governance</h4>
-    <ul>
-      <li>Advising on the proposed group structure and ownership framework between the Holding Company and the underlying entities</li>
-      <li>Advising on the relationship between the Holding Company, Investment Company, PMC, AMC, and SPVs</li>
-      <li>Advising on governance mechanisms, shareholder arrangements, management structure, and decision-making framework</li>
-      <li>Drafting and/or reviewing any required shareholder resolutions and corporate approvals</li>
-      <li>Advising on future restructuring, expansion, and investor participation considerations</li>
-      <li>Preparing any ancillary legal documentation required for implementation of the structure</li>
-    </ul>
-
-    <h4>(iii) Corporate Tax and VAT Registration</h4>
-    <ul>
-      <li>Advising on the applicability of UAE Corporate Tax to the Holding Company's activities</li>
-      <li>Preparing and completing the Corporate Tax registration application with the FTA</li>
-      <li>Liaising with the FTA on any queries or clarifications</li>
-      <li>Assisting with VAT registration, where applicable</li>
-      <li>Providing high-level guidance on compliance requirements</li>
-    </ul>
-  </div>
-
-  <h2>💰 CVML's fee for the Holding Company</h2>
+  <p style="font-size:14px;">CVML's legal fee is what THEY charge to do the paperwork. The government fee above is what UAE charges to register the entity. You pay BOTH.</p>
 
   <div class="fee-box">
     <div class="fee-line">
-      <span class="fee-label">Category A — Holding Company (lumpsum)</span>
+      <span class="fee-label">CVML legal fee (Holding Co setup)</span>
       <span class="fee-amt">AED 35,000</span>
     </div>
     <div class="fee-line">
-      <span class="fee-label">+ 5% VAT</span>
-      <span class="fee-amt">AED 1,750</span>
+      <span class="fee-label">+ Government fee (depends on jurisdiction)</span>
+      <span class="fee-amt">AED 3,250 – 76,000</span>
     </div>
     <div class="fee-line">
-      <span class="fee-label">+ Government / authority fee (varies by jurisdiction)</span>
-      <span class="fee-amt">~AED 3,250 – 76,000</span>
+      <span class="fee-label">+ 5% VAT on CVML fee</span>
+      <span class="fee-amt">AED 1,750</span>
     </div>
-    <div class="fee-note">
-      Per the proposal: "the professional fee is exclusive of 5% VAT. Further, disbursements, if any, are not included within our professional fees, and are chargeable on actuals." Government, authority, registration, office, and similar fees are passed through to you at cost on top of CVML's lumpsum.
+    <div class="fee-total">
+      <span>Total Year 1 (Holding Co only)</span>
+      <span>AED 40,000 – 113,000</span>
     </div>
   </div>
 
-  <h2>🤔 What I need to decide on Section 1</h2>
+  <p style="font-size:13px; color:var(--muted);">Range depends on jurisdiction choice. Almost 3× difference between cheapest and most expensive.</p>
 
-  <div class="decision-callout">
-    <h3>Open questions for the Holding Company layer</h3>
-    <ol class="q-list">
-      <li><b>Pick a jurisdiction</b> — DIFC, RAK ICC, RAK ICC SPV, or DWTC. CVML's notes call <b>RAK ICC</b> "suitable for a pure holding structure." DIFC is positioned for "high-end governance framework / institutional investment structures."</li>
-      <li><b>Confirm the entity name</b> — "EXCEED Capital" (or EXCEED Holdings, EXCEED Group, etc.)</li>
-      <li><b>Manager / director</b> — who will be appointed as the manager/director of the Holding Co?</li>
-      <li><b>Shareholder structure</b> — who holds shares in the Holding Co? (founders only, or with future investor allocation reserved?)</li>
-      <li><b>Office</b> — if DIFC or DWTC is chosen, decide on flexi-desk vs. dedicated office, since that's a separate cost.</li>
-      <li><b>Visa allocation at this layer</b> — does the Holding Co need any visas (e.g. for CEO)? If yes, DWTC has visa eligibility built in; otherwise the operating entities below will provide visas.</li>
-    </ol>
+  <h2>✅ My recommendation</h2>
+
+  <div class="recommendation">
+    <h3>RAK ICC (standard) — for the Holding Company</h3>
+    <p><b>Why:</b> The Holding Co does no business. It just owns shares. Paying DIFC premium fees here is wasted money — the premium prestige matters at the <b>Investment Co layer</b> (Section 2), where investors actually look.</p>
+    <p><b>Saves you ~AED 73,000 in Year 1</b> vs. DIFC, plus no office cost on top.</p>
+    <p style="font-size:12.5px; color:var(--ink-soft); margin-top:10px;">
+      <b>One caveat to verify with Walid:</b> Some banks treat RAK ICC entities differently when opening UAE bank accounts. Worth asking him directly.
+    </p>
   </div>
 
   <p style="text-align:center; color:var(--muted); font-size:13px; margin-top:40px; padding-top:20px; border-top:1px solid var(--line);">
-    Section 1 of 8 · Next: Section 2 — Investment Company (Category B)
+    Section 1 of 5 · Next: Section 2 — Investment Company
   </p>
 
 </div>
