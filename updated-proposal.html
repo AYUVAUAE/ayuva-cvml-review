@@ -16,16 +16,16 @@
   body {
     font-family: -apple-system, "Helvetica Neue", "Hiragino Sans", sans-serif;
     background: var(--bg); color: var(--ink); margin: 0; padding: 30px 20px;
-    line-height: 1.6;
+    font-size:17px; line-height: 1.6;
   }
   .container { max-width: 920px; margin: 0 auto; }
   h1 {
-    font-size: 28px; margin: 0 0 6px; letter-spacing: -0.01em;
+    font-size:36.4px; margin: 0 0 6px; letter-spacing: -0.01em;
     border-bottom: 3px solid var(--accent); padding-bottom: 10px;
   }
-  .sub { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+  .sub { color: var(--muted); font-size:18.2px; margin-bottom: 32px; }
   h2 {
-    font-size: 20px; color: var(--accent-deep);
+    font-size:26px; color: var(--accent-deep);
     background: var(--paper); padding: 10px 16px;
     border-left: 4px solid var(--accent);
     margin: 32px 0 16px;
@@ -44,11 +44,11 @@
     transition: all 0.2s;
   }
   .entity .label {
-    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    font-size:13px; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--muted); margin-bottom: 4px; font-weight: 600;
   }
-  .entity .name { font-size: 16px; font-weight: 700; color: var(--ink); }
-  .entity .desc { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+  .entity .name { font-size:20.8px; font-weight: 700; color: var(--ink); }
+  .entity .desc { font-size:15px; color: var(--muted); margin-top: 4px; }
 
   .entity.holding {
     border-color: var(--accent); background: linear-gradient(180deg, #fff8e8, #ffffff);
@@ -81,7 +81,7 @@
   .entity.muted { opacity: 0.4; background: #fafafa; }
 
   .ownership-label {
-    font-size: 10px; color: var(--accent-deep); font-weight: 700;
+    font-size:13px; color: var(--accent-deep); font-weight: 700;
     background: white; padding: 2px 8px; border-radius: 10px;
     border: 1px solid var(--accent); margin: 4px 0;
   }
@@ -96,11 +96,11 @@
   .does { background: var(--green-bg); border-left: 4px solid var(--green); }
   .does-not { background: var(--red-bg); border-left: 4px solid var(--red); }
   .does h3, .does-not h3 {
-    margin: 0 0 8px; font-size: 14px; letter-spacing: 0.04em;
+    margin: 0 0 8px; font-size:18.2px; letter-spacing: 0.04em;
   }
   .does h3 { color: var(--green); }
   .does-not h3 { color: var(--red); }
-  .does ul, .does-not ul { margin: 0; padding-left: 20px; font-size: 13.5px; }
+  .does ul, .does-not ul { margin: 0; padding-left: 20px; font-size:17.6px; }
   .does li, .does-not li { margin-bottom: 4px; }
 
   /* Comparison cards */
@@ -117,24 +117,24 @@
   }
   .juris-card.recommended::after {
     content: "✓ Recommended"; position: absolute; top: -10px; right: 12px;
-    background: var(--green); color: white; font-size: 11px; font-weight: 700;
+    background: var(--green); color: white; font-size:14.3px; font-weight: 700;
     padding: 3px 10px; border-radius: 10px;
   }
   .juris-card.expensive {
     border-color: var(--red); background: linear-gradient(180deg, var(--red-bg), white);
   }
   .juris-name {
-    font-size: 16px; font-weight: 700; margin-bottom: 2px;
+    font-size:20.8px; font-weight: 700; margin-bottom: 2px;
   }
   .juris-tagline {
-    font-size: 11px; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+    font-size:14.3px; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em;
   }
   .juris-fee {
-    font-size: 22px; font-weight: 700; color: var(--ink); margin-bottom: 2px;
+    font-size:28.6px; font-weight: 700; color: var(--ink); margin-bottom: 2px;
   }
-  .juris-fee small { font-size: 11px; color: var(--muted); font-weight: 500; }
+  .juris-fee small { font-size:14.3px; color: var(--muted); font-weight: 500; }
   .juris-meta {
-    font-size: 12px; color: var(--ink-soft); margin-top: 8px;
+    font-size:15.6px; color: var(--ink-soft); margin-top: 8px;
     padding-top: 8px; border-top: 1px dashed var(--line);
   }
 
@@ -145,7 +145,7 @@
   }
   .bar-row {
     display: grid; grid-template-columns: 110px 1fr 90px; gap: 12px;
-    align-items: center; margin-bottom: 10px; font-size: 13px;
+    align-items: center; margin-bottom: 10px; font-size:16.9px;
   }
   .bar-row:last-child { margin-bottom: 0; }
   .bar-row .juris-name-small { font-weight: 600; }
@@ -156,7 +156,7 @@
   .bar-fill {
     height: 100%; border-radius: 4px;
     display: flex; align-items: center; padding-left: 8px;
-    color: white; font-size: 11px; font-weight: 600;
+    color: white; font-size:14.3px; font-weight: 600;
     transition: width 0.4s;
   }
   .bar-fill.difc { background: linear-gradient(90deg, var(--red), #c25555); }
@@ -171,14 +171,14 @@
   }
   .fee-line {
     display: flex; justify-content: space-between; padding: 6px 0;
-    border-bottom: 1px dashed var(--line); font-size: 14px;
+    border-bottom: 1px dashed var(--line); font-size:18.2px;
   }
   .fee-line:last-of-type { border-bottom: none; }
   .fee-line .fee-label { color: var(--ink-soft); }
   .fee-line .fee-amt { font-weight: 600; font-variant-numeric: tabular-nums; }
   .fee-total {
     display: flex; justify-content: space-between; padding-top: 10px; margin-top: 6px;
-    border-top: 2px solid var(--accent); font-weight: 700; font-size: 16px;
+    border-top: 2px solid var(--accent); font-weight: 700; font-size:20.8px;
     color: var(--accent-deep);
   }
 
@@ -189,15 +189,15 @@
     padding: 20px 24px; margin: 20px 0;
   }
   .recommendation h3 {
-    margin: 0 0 8px; color: var(--green); font-size: 16px;
+    margin: 0 0 8px; color: var(--green); font-size:20.8px;
     display: flex; align-items: center; gap: 8px;
   }
-  .recommendation p { margin: 6px 0; font-size: 14px; }
+  .recommendation p { margin: 6px 0; font-size:18.2px; }
 
   /* Mini icons */
   .pill {
     display: inline-block; padding: 2px 10px; border-radius: 10px;
-    font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    font-size:14.3px; font-weight: 700; letter-spacing: 0.04em;
   }
   .pill.cheap { background: var(--green-bg); color: var(--green); }
   .pill.expensive { background: var(--red-bg); color: var(--red); }
@@ -272,26 +272,26 @@
     </div>
   </div>
 
-  <p style="font-size:14px; color:var(--ink-soft); background:var(--paper); padding:12px 16px; border-radius:10px; border-left:3px solid var(--accent);">
+  <p style="font-size:18.2px; color:var(--ink-soft); background:var(--paper); padding:12px 16px; border-radius:10px; border-left:3px solid var(--accent);">
     <b>Mental model:</b> The Holding Co is a clean "folder" that contains the other folders. It does nothing operational — it just <em>owns</em>.
   </p>
 
   <h2>💡 Why not just use EXCEED REAL ESTATE LLC?</h2>
 
-  <p style="font-size:14px;">EXCEED REAL ESTATE has its own existing business and partners. Two problems if we reuse it as Holding Co:</p>
+  <p style="font-size:18.2px;">EXCEED REAL ESTATE has its own existing business and partners. Two problems if we reuse it as Holding Co:</p>
 
   <div class="does-does-not">
     <div class="does-not" style="border-left-color:var(--amber); background:var(--amber-bg);">
       <h3 style="color:var(--amber);">⚠ Risk mixing</h3>
-      <p style="margin:0; font-size:13.5px;">If EXCEED REAL ESTATE has any legal/financial issue, AYUVA investors get dragged into it. Their investment is tied to all of EXCEED's other dealings.</p>
+      <p style="margin:0; font-size:17.6px;">If EXCEED REAL ESTATE has any legal/financial issue, AYUVA investors get dragged into it. Their investment is tied to all of EXCEED's other dealings.</p>
     </div>
     <div class="does-not" style="border-left-color:var(--amber); background:var(--amber-bg);">
       <h3 style="color:var(--amber);">⚠ DD complexity</h3>
-      <p style="margin:0; font-size:13.5px;">Future investors would have to investigate ALL of EXCEED's history (multi-year, multi-deal). With a fresh "EXCEED Capital" they only investigate AYUVA.</p>
+      <p style="margin:0; font-size:17.6px;">Future investors would have to investigate ALL of EXCEED's history (multi-year, multi-deal). With a fresh "EXCEED Capital" they only investigate AYUVA.</p>
     </div>
   </div>
 
-  <p style="font-size:14px; margin-top:14px;">→ Solution: create <b>EXCEED Capital</b> as a fresh, dedicated entity.</p>
+  <p style="font-size:18.2px; margin-top:14px;">→ Solution: create <b>EXCEED Capital</b> as a fresh, dedicated entity.</p>
 
   <h2>🏛️ The 4 jurisdiction options Walid is offering</h2>
 
@@ -366,102 +366,183 @@
     </div>
   </div>
 
-  <p style="font-size:13px; color:var(--muted); text-align:center;">↑ DIFC costs <b>~23× more</b> than RAK ICC for the same legal function</p>
+  <p style="font-size:16.9px; color:var(--muted); text-align:center;">↑ DIFC costs <b>~23× more</b> than RAK ICC for the same legal function</p>
 
-  <h2>⚖️ What drives the jurisdiction decision (per CVML)</h2>
+  <h2>📋 Key Requirements (what we need to decide / provide)</h2>
 
-  <p style="font-size:14px;">CVML's proposal lists 5 things to weigh when picking the Holding Co jurisdiction. Each affects which option fits best.</p>
+  <p style="font-size:18.2px;">CVML lists 4 baseline requirements. Each has a concrete decision or output we need to give them before they can incorporate the entity.</p>
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin:14px 0;">
-    <div style="background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:14px 16px;">
-      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:4px;">1 · OWNERSHIP & GOVERNANCE</div>
-      <div style="font-size:13px; color:var(--ink-soft);">Who owns what, and how decisions are made at the group level.</div>
+  <!-- REQ 1: SHARE CAPITAL -->
+  <div style="background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:20px 24px; margin:14px 0;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+      <div style="width:34px; height:34px; background:var(--accent); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:20.8px;">1</div>
+      <div style="font-size:20.8px; font-weight:700;">Minimum share capital</div>
     </div>
-    <div style="background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:14px 16px;">
-      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:4px;">2 · LICENSING / REGULATORY</div>
-      <div style="font-size:13px; color:var(--ink-soft);">Each jurisdiction has different licensing rules and ongoing regulator obligations.</div>
+
+    <div style="background:white; border:1px solid var(--line); border-left:3px solid var(--green); border-radius:8px; padding:12px 16px; margin-bottom:14px;">
+      <div style="font-size:14.3px; font-weight:700; color:var(--green); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:4px;">📌 RAK ICC research finding</div>
+      <div style="font-size:17.6px; line-height:1.55;">
+        RAK ICC has <b>NO statutory minimum</b> share capital requirement. You just declare an "authorized capital" amount on paper — it doesn't need to be paid up or deposited. Common practice:
+        <ul style="margin:6px 0 0; padding-left:20px;">
+          <li><b>Bare minimum:</b> AED 1,000 (just a number)</li>
+          <li><b>Typical:</b> AED 10,000–50,000</li>
+          <li><b>Better banking optics:</b> USD 10,000–100,000 declared (~AED 37k–370k)</li>
+        </ul>
+      </div>
     </div>
-    <div style="background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:14px 16px;">
-      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:4px;">3 · TAX EFFICIENCY</div>
-      <div style="font-size:13px; color:var(--ink-soft);">UAE Corporate Tax treatment varies by entity type and jurisdiction. Affects how profits flow up.</div>
-    </div>
-    <div style="background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:14px 16px;">
-      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:4px;">4 · BANKING & SUBSTANCE</div>
-      <div style="font-size:13px; color:var(--ink-soft);">UAE banks treat jurisdictions differently when opening accounts. Some require "substance" (real office + staff).</div>
-    </div>
-    <div style="background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:14px 16px;">
-      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:4px;">5 · FUTURE SCALABILITY</div>
-      <div style="font-size:13px; color:var(--ink-soft);">If we add new investors, SPVs, or restructure later, the jurisdiction must accommodate that flexibility.</div>
+
+    <div style="margin-bottom:8px;">
+      <label style="font-size:16.9px; font-weight:600; color:var(--ink-soft); display:block; margin-bottom:6px;">Your decision — declared share capital for EXCEED Capital:</label>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span style="font-size:18.2px; font-weight:600;">AED</span>
+        <input type="number" id="share-capital-input" value="50000" min="1000" step="1000"
+               data-key="share-capital"
+               style="flex:1; max-width:200px; padding:8px 12px; border:2px solid var(--line); border-radius:8px; font-family:inherit; font-size:19.5px; font-weight:600; color:var(--ink);" />
+        <span id="share-capital-usd" style="font-size:15.6px; color:var(--muted);">≈ USD 13,615</span>
+      </div>
+      <div style="font-size:15.6px; color:var(--muted); margin-top:6px;">Suggested default: AED 50,000 — reasonable, no paid-up requirement. You can change this anytime.</div>
     </div>
   </div>
 
-  <h2>📋 Key Requirements (what we need to set up)</h2>
+  <!-- REQ 2: SHAREHOLDER STRUCTURE -->
+  <div style="background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:20px 24px; margin:14px 0;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+      <div style="width:34px; height:34px; background:var(--accent); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:20.8px;">2</div>
+      <div style="font-size:20.8px; font-weight:700;">Shareholder structure</div>
+    </div>
 
-  <p style="font-size:14px;">CVML lists 4 baseline requirements regardless of jurisdiction:</p>
+    <div style="background:white; border:1px solid var(--line); border-left:3px solid var(--green); border-radius:8px; padding:12px 16px; margin-bottom:14px;">
+      <div style="font-size:14.3px; font-weight:700; color:var(--green); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:4px;">📌 RAK ICC rules</div>
+      <div style="font-size:17.6px; line-height:1.55;">
+        <ul style="margin:0; padding-left:20px;">
+          <li>Individuals OR companies can be shareholders</li>
+          <li><b>Minimum 1</b> shareholder, <b>maximum ~50</b></li>
+          <li>The CEO can be a direct shareholder — no requirement to use a holding company</li>
+        </ul>
+      </div>
+    </div>
 
-  <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:12px 0;">
-    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0; border-bottom:1px dashed var(--line);">
-      <div style="font-weight:700; color:var(--accent-deep);">1.</div>
-      <div>
-        <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Minimum share capital</div>
-        <div style="font-size:13px; color:var(--ink-soft);">Amount depends on the jurisdiction you pick. RAK ICC is minimal; DIFC has its own thresholds.</div>
+    <div style="font-size:17.6px; margin-bottom:10px;">Three structural options:</div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-bottom:12px;">
+      <div style="background:var(--green-bg); border:2px solid var(--green); border-radius:10px; padding:12px;">
+        <div style="font-size:14.3px; font-weight:700; color:var(--green); letter-spacing:0.06em; margin-bottom:4px;">✓ RECOMMENDED</div>
+        <div style="font-weight:700; font-size:17.6px; margin-bottom:4px;">Option A</div>
+        <div style="font-size:16.2px;">Individuals direct (Baru + Teru). Simplest, cleanest.</div>
       </div>
-    </div>
-    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0; border-bottom:1px dashed var(--line);">
-      <div style="font-weight:700; color:var(--accent-deep);">2.</div>
-      <div>
-        <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Manager / director appointment + shareholder structure</div>
-        <div style="font-size:13px; color:var(--ink-soft);">Need to decide who manages the Holding Co (usually founder or CEO) and who holds the shares.</div>
+      <div style="background:white; border:1px solid var(--line); border-radius:10px; padding:12px;">
+        <div style="font-weight:700; font-size:17.6px; margin-bottom:4px;">Option B</div>
+        <div style="font-size:16.2px;">EXCEED REAL ESTATE LLC as parent. Undoes ring-fencing.</div>
       </div>
-    </div>
-    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0; border-bottom:1px dashed var(--line);">
-      <div style="font-weight:700; color:var(--accent-deep);">3.</div>
-      <div>
-        <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Constitutional documents (MoA / AoA)</div>
-        <div style="font-size:13px; color:var(--ink-soft);">Memorandum of Association + Articles of Association must reflect intended ownership, governance, and control framework. CVML drafts these.</div>
-      </div>
-    </div>
-    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0;">
-      <div style="font-weight:700; color:var(--accent-deep);">4.</div>
-      <div>
-        <div style="font-weight:700; font-size:14px; margin-bottom:2px;">Flexibility for future subsidiaries / SPVs / investors</div>
-        <div style="font-size:13px; color:var(--ink-soft);">Structure must be able to absorb new entities and new shareholders without restructuring from scratch.</div>
+      <div style="background:white; border:1px solid var(--line); border-radius:10px; padding:12px;">
+        <div style="font-weight:700; font-size:17.6px; margin-bottom:4px;">Option C</div>
+        <div style="font-size:16.2px;">Other holding vehicle. Overkill at this stage.</div>
       </div>
     </div>
   </div>
+
+  <!-- REQ 3: MoA / AoA -->
+  <div style="background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:20px 24px; margin:14px 0;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+      <div style="width:34px; height:34px; background:var(--accent); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:20.8px;">3</div>
+      <div style="font-size:20.8px; font-weight:700;">Constitutional documents (MoA / AoA)</div>
+    </div>
+
+    <div style="font-size:17.6px; line-height:1.6; margin-bottom:12px;">
+      The Memorandum of Association + Articles of Association are the entity's "rulebook" — ownership %, decision-making, share-transfer rules, director powers. <b>CVML drafts these</b> as part of the AED 35,000 lumpsum.
+    </div>
+
+    <div style="background:white; border:1px solid var(--line); border-left:3px solid var(--green); border-radius:8px; padding:12px 16px;">
+      <div style="font-size:14.3px; font-weight:700; color:var(--green); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">✓ RECOMMENDED APPROACH</div>
+      <div style="font-size:17.6px; line-height:1.6;">
+        <b>Wait for CVML's draft, then review.</b> What you give them upfront is minimal:
+        <ul style="margin:6px 0 0; padding-left:20px;">
+          <li>Ownership split (e.g., Baru 50% / Teru 50%)</li>
+          <li>Named manager/director (probably one of you)</li>
+          <li>Confirm: single share class, no special voting rights</li>
+        </ul>
+        Let CVML draft a standard RAK ICC template based on those inputs. Review their draft, ask questions, ask for changes if anything looks unusual.
+      </div>
+    </div>
+  </div>
+
+  <!-- REQ 4: FLEXIBILITY -->
+  <div style="background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:20px 24px; margin:14px 0;">
+    <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+      <div style="width:34px; height:34px; background:var(--accent); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:20.8px;">4</div>
+      <div style="font-size:20.8px; font-weight:700;">Flexibility for future subsidiaries / SPVs / investors</div>
+    </div>
+
+    <div style="font-size:17.6px; line-height:1.6; margin-bottom:12px;">
+      What this really means: <b>don't paint yourself into a corner</b>. The Holding Co should be able to absorb new SPVs, new shareholders, and restructuring later without having to rebuild from scratch.
+    </div>
+
+    <div style="background:white; border:1px solid var(--line); border-left:3px solid var(--green); border-radius:8px; padding:12px 16px;">
+      <div style="font-size:14.3px; font-weight:700; color:var(--green); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px;">📌 WHAT TO TELL CVML</div>
+      <div style="font-size:17.6px; line-height:1.6;">
+        Just give them this one instruction:
+        <div style="background:var(--bg); border-radius:6px; padding:10px 14px; margin-top:8px; font-style:italic; color:var(--ink-soft); font-size:16.9px; border-left:2px solid var(--accent);">
+          "Please structure EXCEED Capital with flexibility for future share issuance, additional shareholders, and adding subsidiary investments. Authorize a high share count so we don't have to amend the MoA every time we issue new shares."
+        </div>
+        That's it. CVML knows what this means and will draft accordingly. <b>You don't need to specify anything else.</b>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      // Live USD conversion for share capital input + localStorage persistence
+      const input = document.getElementById('share-capital-input');
+      const usdLabel = document.getElementById('share-capital-usd');
+      const STORAGE_KEY = 'ayuva-proposal:share-capital';
+
+      const update = () => {
+        const aed = parseFloat(input.value) || 0;
+        const usd = aed / 3.6725; // AED to USD pegged rate
+        usdLabel.textContent = '≈ USD ' + usd.toLocaleString('en-US', { maximumFractionDigits: 0 });
+        try { localStorage.setItem(STORAGE_KEY, input.value); } catch(e){}
+      };
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) input.value = saved;
+      } catch(e){}
+      update();
+      input.addEventListener('input', update);
+    })();
+  </script>
 
   <h2>🧾 Regulatory & Tax obligations (ongoing)</h2>
 
-  <p style="font-size:14px;">Once the Holding Co is set up, these are the recurring obligations CVML flags:</p>
+  <p style="font-size:18.2px;">Once the Holding Co is set up, these are the recurring obligations CVML flags:</p>
 
   <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:12px 0;">
     <div style="background:var(--paper); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:10px; padding:14px 18px;">
-      <div style="font-size:14px; font-weight:700; margin-bottom:6px;">📊 UAE Corporate Tax</div>
-      <div style="font-size:13px; color:var(--ink-soft);">Must register with the Federal Tax Authority (FTA). 9% rate applies above the AED 375k profit threshold; QFZP exemption may apply for free-zone entities.</div>
+      <div style="font-size:18.2px; font-weight:700; margin-bottom:6px;">📊 UAE Corporate Tax</div>
+      <div style="font-size:16.9px; color:var(--ink-soft);">Must register with the Federal Tax Authority (FTA). 9% rate applies above the AED 375k profit threshold; QFZP exemption may apply for free-zone entities.</div>
     </div>
     <div style="background:var(--paper); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:10px; padding:14px 18px;">
-      <div style="font-size:14px; font-weight:700; margin-bottom:6px;">🧮 VAT registration</div>
-      <div style="font-size:13px; color:var(--ink-soft);">May be required if turnover crosses the mandatory threshold (AED 375k). Pure holding cos often don't, but CVML will assess.</div>
+      <div style="font-size:18.2px; font-weight:700; margin-bottom:6px;">🧮 VAT registration</div>
+      <div style="font-size:16.9px; color:var(--ink-soft);">May be required if turnover crosses the mandatory threshold (AED 375k). Pure holding cos often don't, but CVML will assess.</div>
     </div>
     <div style="background:var(--paper); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:10px; padding:14px 18px;">
-      <div style="font-size:14px; font-weight:700; margin-bottom:6px;">🏛️ Economic Substance + UBO</div>
-      <div style="font-size:13px; color:var(--ink-soft);">Economic Substance Regulations (ESR) and Ultimate Beneficial Owner (UBO) filings may apply — depends on activities + jurisdiction.</div>
+      <div style="font-size:18.2px; font-weight:700; margin-bottom:6px;">🏛️ Economic Substance + UBO</div>
+      <div style="font-size:16.9px; color:var(--ink-soft);">Economic Substance Regulations (ESR) and Ultimate Beneficial Owner (UBO) filings may apply — depends on activities + jurisdiction.</div>
     </div>
     <div style="background:var(--paper); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:10px; padding:14px 18px;">
-      <div style="font-size:14px; font-weight:700; margin-bottom:6px;">📅 Ongoing compliance</div>
-      <div style="font-size:13px; color:var(--ink-soft);">Annual corporate filings, license renewals, tax returns — all must be maintained or the entity goes inactive / penalised.</div>
+      <div style="font-size:18.2px; font-weight:700; margin-bottom:6px;">📅 Ongoing compliance</div>
+      <div style="font-size:16.9px; color:var(--ink-soft);">Annual corporate filings, license renewals, tax returns — all must be maintained or the entity goes inactive / penalised.</div>
     </div>
   </div>
 
   <h2>📑 Scope of Work — what CVML actually delivers for AED 35,000</h2>
 
-  <p style="font-size:14px;">The AED 35,000 lumpsum covers 3 work streams. Here's the breakdown of every deliverable CVML commits to in the proposal:</p>
+  <p style="font-size:18.2px;">The AED 35,000 lumpsum covers 3 work streams. Here's the breakdown of every deliverable CVML commits to in the proposal:</p>
 
   <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:12px 0;">
 
     <div style="margin-bottom:18px;">
-      <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(i) Incorporation of the Company — 8 deliverables</div>
-      <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
+      <div style="font-size:18.2px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(i) Incorporation of the Company — 8 deliverables</div>
+      <ul style="margin:0; padding-left:22px; font-size:17.6px; line-height:1.65;">
         <li>Advising on most suitable UAE jurisdiction (mainland or free zone)</li>
         <li>Preparing and submitting the incorporation application</li>
         <li>Drafting / reviewing all corporate docs: <b>Memorandum of Association, Articles of Association</b>, ancillary docs</li>
@@ -474,8 +555,8 @@
     </div>
 
     <div style="margin-bottom:18px;">
-      <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(ii) Corporate Structuring & Governance — 6 deliverables</div>
-      <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
+      <div style="font-size:18.2px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(ii) Corporate Structuring & Governance — 6 deliverables</div>
+      <ul style="margin:0; padding-left:22px; font-size:17.6px; line-height:1.65;">
         <li>Advising on the proposed group structure + ownership framework</li>
         <li>Advising on the Holding ↔ Investment Co / PMC / AMC / SPV relationships</li>
         <li>Advising on governance mechanisms, shareholder arrangements, decision-making framework</li>
@@ -486,8 +567,8 @@
     </div>
 
     <div>
-      <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(iii) Corporate Tax + VAT Registration — 5 deliverables</div>
-      <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
+      <div style="font-size:18.2px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(iii) Corporate Tax + VAT Registration — 5 deliverables</div>
+      <ul style="margin:0; padding-left:22px; font-size:17.6px; line-height:1.65;">
         <li>Advising on whether UAE Corporate Tax applies to the Holding Co</li>
         <li>Preparing and submitting the Corporate Tax registration with the FTA</li>
         <li>Liaising with the FTA on queries / clarifications</li>
@@ -498,32 +579,32 @@
 
   </div>
 
-  <p style="font-size:13px; color:var(--ink-soft); background:var(--green-bg); border-left:3px solid var(--green); padding:10px 14px; border-radius:0 8px 8px 0;">
+  <p style="font-size:16.9px; color:var(--ink-soft); background:var(--green-bg); border-left:3px solid var(--green); padding:10px 14px; border-radius:0 8px 8px 0;">
     <b>Total: 19 individual deliverables</b> bundled into the AED 35,000 lumpsum. This is a fixed-fee engagement — they don't bill hourly for these items.
   </p>
 
   <h2>💰 What CVML charges YOU (separately from government)</h2>
 
-  <p style="font-size:14px;">There are <b>3 separate payments</b> that make up your total Year 1 cost. Pick a jurisdiction below to see the total update live.</p>
+  <p style="font-size:18.2px;">There are <b>3 separate payments</b> that make up your total Year 1 cost. Pick a jurisdiction below to see the total update live.</p>
 
-  <div style="background:#fef9e8; border:1px dashed var(--accent); border-radius:10px; padding:12px 16px; margin:12px 0; font-size:13px; color:var(--ink-soft);">
+  <div style="background:#fef9e8; border:1px dashed var(--accent); border-radius:10px; padding:12px 16px; margin:12px 0; font-size:16.9px; color:var(--ink-soft);">
     <b>Important clarification:</b> CVML's <b>AED 35,000 lumpsum fee is the SAME regardless of which jurisdiction</b> you pick. They charge that for their legal work (drafting MoA, registration, etc.). The <b>government fee</b> changes with jurisdiction — that's what UAE charges to register the entity, and CVML passes it through to you at cost. 5% VAT applies only to CVML's fee, not to government fees.
   </div>
 
   <!-- INTERACTIVE JURISDICTION SELECTOR -->
   <div style="background:var(--paper); border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin:18px 0;">
-    <div style="font-size:13px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:12px; text-transform:uppercase;">⚙️ Pick a jurisdiction to see Year 1 total</div>
+    <div style="font-size:16.9px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:12px; text-transform:uppercase;">⚙️ Pick a jurisdiction to see Year 1 total</div>
 
     <div id="juris-buttons" style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;">
       <button class="juris-btn" data-juris="difc" data-fee="76000" data-name="DIFC" data-tagline="Dubai International Financial Centre">DIFC</button>
-      <button class="juris-btn active" data-juris="rakicc" data-fee="3250" data-name="RAK ICC" data-tagline="RAK International Corporate Centre">RAK ICC <span style="font-size:10px; opacity:0.85;">✓ recommended</span></button>
+      <button class="juris-btn active" data-juris="rakicc" data-fee="3250" data-name="RAK ICC" data-tagline="RAK International Corporate Centre">RAK ICC <span style="font-size:13px; opacity:0.85;">✓ recommended</span></button>
       <button class="juris-btn" data-juris="rakspv" data-fee="4000" data-name="RAK ICC SPV" data-tagline="RAK ICC SPV Holding Co">RAK ICC SPV</button>
       <button class="juris-btn" data-juris="dwtc" data-fee="17000" data-name="DWTC" data-tagline="Dubai World Trade Centre">DWTC</button>
     </div>
 
     <div id="juris-detail" style="background:white; border-radius:10px; padding:16px 18px; margin-bottom:14px; border:1px solid var(--line);">
-      <div id="juris-detail-name" style="font-size:18px; font-weight:700; margin-bottom:2px;">RAK ICC</div>
-      <div id="juris-detail-tagline" style="font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;">RAK International Corporate Centre</div>
+      <div id="juris-detail-name" style="font-size:23.4px; font-weight:700; margin-bottom:2px;">RAK ICC</div>
+      <div id="juris-detail-tagline" style="font-size:14.3px; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em;">RAK International Corporate Centre</div>
     </div>
 
     <div class="fee-line">
@@ -543,7 +624,7 @@
       <span id="juris-total">AED 40,000</span>
     </div>
 
-    <div style="font-size:12px; color:var(--muted); margin-top:12px; padding-top:10px; border-top:1px dashed var(--line);">
+    <div style="font-size:15.6px; color:var(--muted); margin-top:12px; padding-top:10px; border-top:1px dashed var(--line);">
       <b>Note:</b> Above is just the Holding Co cost. Office costs (if jurisdiction requires one), bank account opening fees, and other disbursements are <b>extra and at actuals</b> per CVML's disclaimer.
     </div>
   </div>
@@ -551,7 +632,7 @@
   <style>
     .juris-btn {
       background: white; border: 2px solid var(--line); border-radius: 99px;
-      padding: 10px 20px; font-family: inherit; font-size: 13.5px; font-weight: 600;
+      padding: 10px 20px; font-family: inherit; font-size:17.6px; font-weight: 600;
       color: var(--ink-soft); cursor: pointer; transition: all 0.15s;
       display: inline-flex; align-items: center; gap: 6px;
     }
@@ -596,12 +677,12 @@
     <h3>RAK ICC (standard) — for the Holding Company</h3>
     <p><b>Why:</b> The Holding Co does no business. It just owns shares. Paying DIFC premium fees here is wasted money — the premium prestige matters at the <b>Investment Co layer</b> (Section 2), where investors actually look.</p>
     <p><b>Saves you ~AED 73,000 in Year 1</b> vs. DIFC, plus no office cost on top.</p>
-    <p style="font-size:12.5px; color:var(--ink-soft); margin-top:10px;">
+    <p style="font-size:16.2px; color:var(--ink-soft); margin-top:10px;">
       <b>One caveat to verify with Walid:</b> Some banks treat RAK ICC entities differently when opening UAE bank accounts. Worth asking him directly.
     </p>
   </div>
 
-  <p style="text-align:center; color:var(--muted); font-size:13px; margin-top:40px; padding-top:20px; border-top:1px solid var(--line);">
+  <p style="text-align:center; color:var(--muted); font-size:16.9px; margin-top:40px; padding-top:20px; border-top:1px solid var(--line);">
     Section 1 of 5 · Next: Section 2 — Investment Company
   </p>
 
