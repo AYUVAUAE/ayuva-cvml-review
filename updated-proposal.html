@@ -374,7 +374,6 @@
 
   <!-- REQ 1: SHARE CAPITAL -->
   <div style="background:var(--paper); border:2px solid var(--green); border-radius:14px; padding:20px 24px; margin:14px 0; position:relative;">
-    <div style="position:absolute; top:-12px; right:18px; background:var(--green); color:white; font-size:11px; font-weight:700; letter-spacing:0.08em; padding:4px 12px; border-radius:99px;">✓ LOCKED IN</div>
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
       <div style="width:34px; height:34px; background:var(--green); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">1</div>
       <div style="font-size:16px; font-weight:700;">Minimum share capital → <span style="color:var(--green);">AED 50,000</span></div>
@@ -407,7 +406,6 @@
 
   <!-- REQ 2: SHAREHOLDER STRUCTURE -->
   <div style="background:var(--paper); border:2px solid var(--amber); border-radius:14px; padding:20px 24px; margin:14px 0; position:relative;">
-    <div style="position:absolute; top:-12px; right:18px; background:var(--amber); color:white; font-size:11px; font-weight:700; letter-spacing:0.08em; padding:4px 12px; border-radius:99px;">⏳ TO DISCUSS</div>
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
       <div style="width:34px; height:34px; background:var(--amber); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">2</div>
       <div style="font-size:16px; font-weight:700;">Shareholder structure → <span style="color:var(--amber);">TBD — to decide in meeting</span></div>
@@ -427,7 +425,6 @@
 
   <!-- REQ 3: MoA / AoA -->
   <div style="background:var(--paper); border:2px solid var(--green); border-radius:14px; padding:20px 24px; margin:14px 0; position:relative;">
-    <div style="position:absolute; top:-12px; right:18px; background:var(--green); color:white; font-size:11px; font-weight:700; letter-spacing:0.08em; padding:4px 12px; border-radius:99px;">✓ LOCKED IN</div>
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
       <div style="width:34px; height:34px; background:var(--green); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">3</div>
       <div style="font-size:16px; font-weight:700;">Constitutional documents (MoA / AoA) → <span style="color:var(--green);">Wait for CVML draft, then review</span></div>
@@ -440,7 +437,6 @@
 
   <!-- REQ 4: FLEXIBILITY -->
   <div style="background:var(--paper); border:2px solid var(--green); border-radius:14px; padding:20px 24px; margin:14px 0; position:relative;">
-    <div style="position:absolute; top:-12px; right:18px; background:var(--green); color:white; font-size:11px; font-weight:700; letter-spacing:0.08em; padding:4px 12px; border-radius:99px;">✓ LOCKED IN</div>
     <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
       <div style="width:34px; height:34px; background:var(--green); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px;">4</div>
       <div style="font-size:16px; font-weight:700;">Future flexibility → <span style="color:var(--green);">One instruction to CVML</span></div>
@@ -710,6 +706,61 @@
     })();
   </script>
 
+  <h2>🧮 F, G, H — Special Service Fees (charged per use)</h2>
+
+  <p style="font-size:14px;">Beyond the Category A AED 35,000 lumpsum, CVML has 3 special service fees that apply <b>per company / per use</b>:</p>
+
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:14px 0;">
+
+    <!-- F -->
+    <div style="background:var(--paper); border:2px solid var(--accent); border-radius:12px; padding:16px;">
+      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.08em; margin-bottom:4px;">CATEGORY F</div>
+      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Corporate Tax registration</div>
+      <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 3,000<small style="font-size:11px; color:var(--muted); font-weight:500;"> / company</small></div>
+      <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
+        <b style="color:var(--green);">✓ Applies to Holding Co</b><br>Every UAE company must register (legal requirement) — even if tax rate ends up at 0%.
+      </div>
+    </div>
+
+    <!-- G -->
+    <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:16px; opacity:0.7;">
+      <div style="font-size:11px; font-weight:700; color:var(--muted); letter-spacing:0.08em; margin-bottom:4px;">CATEGORY G</div>
+      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">VAT registration</div>
+      <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 1,500<small style="font-size:11px; color:var(--muted); font-weight:500;"> / company</small></div>
+      <div style="background:var(--red-bg); border-left:3px solid var(--red); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
+        <b style="color:var(--red);">✗ Doesn't apply to Holding Co</b><br>Holding Co has no sales → no VAT registration needed.
+      </div>
+    </div>
+
+    <!-- H -->
+    <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:16px; opacity:0.7;">
+      <div style="font-size:11px; font-weight:700; color:var(--muted); letter-spacing:0.08em; margin-bottom:4px;">CATEGORY H</div>
+      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Visa processing</div>
+      <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 8,000<small style="font-size:11px; color:var(--muted); font-weight:500;"> / visa</small></div>
+      <div style="background:var(--red-bg); border-left:3px solid var(--red); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
+        <b style="color:var(--red);">✗ Doesn't apply to Holding Co</b><br>Holding Co has no employees → no visas needed.
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background:var(--bg); border:1px dashed var(--accent); border-radius:10px; padding:12px 16px; font-size:13px; color:var(--ink-soft);">
+    <b>Note:</b> F, G, H will apply DIFFERENTLY to the other entities (Investment Co, PMC, AMC, SPV). PMC and AMC will need VAT (G) and many visas (H). We'll see this at each section.
+  </div>
+
+  <h2>💵 Real Year 1 total for Holding Co</h2>
+
+  <div style="background:white; border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin:14px 0;">
+    <div class="fee-line"><span class="fee-label">Category A — Setup fee</span><span class="fee-amt">AED 35,000</span></div>
+    <div class="fee-line"><span class="fee-label">Category F — Corp Tax registration</span><span class="fee-amt">AED 3,000</span></div>
+    <div class="fee-line"><span class="fee-label">+ 5% VAT on CVML fees</span><span class="fee-amt">AED 1,900</span></div>
+    <div class="fee-line"><span class="fee-label">+ Government fee (RAK ICC)</span><span class="fee-amt">AED 3,250</span></div>
+    <div class="fee-total" style="border-top:2px solid var(--accent); padding-top:12px; margin-top:8px;">
+      <span>Year 1 Total — Holding Co</span>
+      <span style="color:var(--accent-deep);">AED 43,150</span>
+    </div>
+  </div>
+
   <h2>📑 Scope of Work — what CVML actually delivers for AED 35,000</h2>
 
   <p style="font-size:14px;">The AED 35,000 lumpsum covers 3 work streams. Here's the breakdown of every deliverable CVML commits to in the proposal:</p>
@@ -758,6 +809,107 @@
   <p style="font-size:13px; color:var(--ink-soft); background:var(--green-bg); border-left:3px solid var(--green); padding:10px 14px; border-radius:0 8px 8px 0;">
     <b>Total: 19 individual deliverables</b> bundled into the AED 35,000 lumpsum. This is a fixed-fee engagement — they don't bill hourly for these items.
   </p>
+
+  <h2>👤 What CVML does NOT cover — in-house finance needed</h2>
+
+  <p style="font-size:14px;">CVML handles the <b>legal side</b> (entity setup, tax registration, document drafting). They do NOT handle the <b>financial operations</b> side. For that we need a separate finance person.</p>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0;">
+    <div style="background:var(--green-bg); border:2px solid var(--green); border-radius:12px; padding:16px 18px;">
+      <div style="font-size:11px; font-weight:700; color:var(--green); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">✓ CVML COVERS</div>
+      <ul style="margin:0; padding-left:20px; font-size:13px; line-height:1.7;">
+        <li>Entity setup & registration</li>
+        <li>Legal documents (MoA / AoA)</li>
+        <li>Tax / VAT registration</li>
+        <li>FTA liaison</li>
+        <li>High-level compliance guidance</li>
+      </ul>
+    </div>
+    <div style="background:var(--red-bg); border:2px solid var(--red); border-radius:12px; padding:16px 18px;">
+      <div style="font-size:11px; font-weight:700; color:var(--red); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:8px;">✗ CVML DOES NOT COVER</div>
+      <ul style="margin:0; padding-left:20px; font-size:13px; line-height:1.7;">
+        <li>Bookkeeping / day-to-day accounting</li>
+        <li>Annual Corporate Tax returns</li>
+        <li>Quarterly VAT returns</li>
+        <li>Tax planning / optimization</li>
+        <li>Audit support</li>
+        <li>Investor financial reporting</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-size:14px; margin-top:10px;">→ We need to hire someone in-house (or outsource to an accounting firm) for these.</p>
+
+  <h3 style="font-size:16px; margin:18px 0 8px;">Three options to choose from:</h3>
+
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:10px 0;">
+    <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:14px;">
+      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:4px;">EARLY STAGE</div>
+      <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Outsourced accounting firm</div>
+      <div style="font-size:13px; color:var(--ink-soft); margin-bottom:6px;">AED 5,000 – 15,000 / month</div>
+      <div style="font-size:12px; color:var(--muted);">Cheap, no HR overhead, handles bookkeeping + tax filings</div>
+    </div>
+    <div style="background:var(--paper); border:2px solid var(--accent); border-radius:12px; padding:14px;">
+      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:4px;">✓ RECOMMENDED NOW</div>
+      <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Part-time Finance Manager</div>
+      <div style="font-size:13px; color:var(--ink-soft); margin-bottom:6px;">AED 15,000 – 25,000 / month</div>
+      <div style="font-size:12px; color:var(--muted);">One person handles all 5 entities, knows your business, can grow into CFO</div>
+    </div>
+    <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:14px;">
+      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:4px;">YEAR 2+</div>
+      <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Full-time CFO</div>
+      <div style="font-size:13px; color:var(--ink-soft); margin-bottom:6px;">AED 50,000 – 100,000+ / month</div>
+      <div style="font-size:12px; color:var(--muted);">Strategic, multi-entity consolidation, investor relations, exit planning</div>
+    </div>
+  </div>
+
+  <h2>❓ Questions to send Walid</h2>
+
+  <p style="font-size:14px;">Open items flagged during our review — to be clarified before signing:</p>
+
+  <div style="background:#fef9e8; border:1px solid var(--accent); border-radius:12px; padding:18px 22px; margin:14px 0;">
+
+    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0; border-bottom:1px dashed var(--line);">
+      <div style="font-weight:700; color:var(--accent-deep);">Q1.</div>
+      <div>
+        <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Is Stream (iii) in Category A already covered, or billed separately?</div>
+        <div style="font-size:13px; color:var(--ink-soft);">Category A's Scope of Work Stream (iii) includes "Corporate Tax and VAT Registration." But Categories F and G also charge AED 3,000 and AED 1,500 per company for the same. Is the AED 35,000 lumpsum INCLUSIVE of FTA registration, or is F+G billed on top?</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0; border-bottom:1px dashed var(--line);">
+      <div style="font-weight:700; color:var(--accent-deep);">Q2.</div>
+      <div>
+        <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Confirm RAK ICC for the Holding Company</div>
+        <div style="font-size:13px; color:var(--ink-soft);">Based on our pure passive holding use case, can you confirm RAK ICC (standard) is the right choice per your note "suitable for a pure holding structure"? Any concerns vs. DIFC, RAK ICC SPV, or DWTC for our case?</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0; border-bottom:1px dashed var(--line);">
+      <div style="font-weight:700; color:var(--accent-deep);">Q3.</div>
+      <div>
+        <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Banking — any concerns for RAK ICC holding entity?</div>
+        <div style="font-size:13px; color:var(--ink-soft);">Some UAE banks treat RAK ICC entities differently. Will RAK ICC affect our ability to open a UAE bank account easily? Any recommendations?</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0; border-bottom:1px dashed var(--line);">
+      <div style="font-weight:700; color:var(--accent-deep);">Q4.</div>
+      <div>
+        <div style="font-weight:700; font-size:14px; margin-bottom:4px;">Timeline — Holding Co setup duration?</div>
+        <div style="font-size:13px; color:var(--ink-soft);">From kick-off to trade license issuance, what's the realistic timeline for RAK ICC setup?</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:30px 1fr; gap:14px; align-items:start; padding:10px 0;">
+      <div style="font-weight:700; color:var(--accent-deep);">Q5.</div>
+      <div>
+        <div style="font-weight:700; font-size:14px; margin-bottom:4px;">What disbursements should we budget for separately?</div>
+        <div style="font-size:13px; color:var(--ink-soft);">Beyond your professional fees, please confirm what specific disbursements (government, registrar, courier, translation, etc.) we should budget for above the AED 35,000.</div>
+      </div>
+    </div>
+
+  </div>
 
   <h2>✅ My recommendation</h2>
 
