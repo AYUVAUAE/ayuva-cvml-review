@@ -2263,7 +2263,419 @@
   </div>
 
   <p style="text-align:center; color:var(--muted); font-size:13px; margin-top:40px; padding-top:20px; border-top:1px solid var(--line);">
-    End of Section 4 · Next: Section 5 — Project SPVs (Category E)
+    End of Section 4 · Continue to Section 5 below ↓
+  </p>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5 — SPVs (Category E)                -->
+  <!-- ============================================ -->
+
+  <h1 style="margin-top:80px;">Section 5: Project SPVs</h1>
+  <div class="sub">One SPV per project · Category E of the CVML proposal</div>
+
+  <h2>📍 Where SPVs sit in the structure</h2>
+
+  <div class="structure">
+    <div class="entity muted">
+      <div class="label">Section 1</div>
+      <div class="name">Holding Company</div>
+    </div>
+
+    <div class="ownership-label">↓ owns 100% ↓</div>
+
+    <div class="branch-row" style="margin-bottom:30px;">
+      <div class="entity muted">
+        <div class="label">Section 2</div>
+        <div class="name">Investment Co</div>
+      </div>
+      <div class="entity muted">
+        <div class="label">Section 3</div>
+        <div class="name">PMC</div>
+      </div>
+      <div class="entity muted">
+        <div class="label">Section 4</div>
+        <div class="name">AMC</div>
+      </div>
+    </div>
+
+    <div class="ownership-label">↓ Investment Co allocates capital ↓ / ↓ PMC builds & AMC operates ↓</div>
+
+    <div class="branch-row" style="margin-top:14px;">
+      <div class="entity holding" style="border-color:var(--accent); background:linear-gradient(180deg, #fff8e8, #ffffff); transform:scale(1.05);">
+        <div class="label" style="color:var(--accent-deep);">Section 5 — We are here</div>
+        <div class="name">SPV 1<br><small style="font-size:11px; color:var(--muted);">AYUVA Project 1</small></div>
+        <div class="desc">Holds the property 🏛️</div>
+      </div>
+      <div class="entity muted">
+        <div class="label">Future</div>
+        <div class="name">SPV 2<br><small style="font-size:11px; color:var(--muted);">AYUVA Project 2</small></div>
+      </div>
+      <div class="entity muted">
+        <div class="label">Future</div>
+        <div class="name">SPV 3<br><small style="font-size:11px; color:var(--muted);">AYUVA Project 3</small></div>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:13px; color:var(--muted); text-align:center; margin-top:8px;">
+    ↑ <b>One SPV per AYUVA project.</b> Each is a separate legal entity holding only that project's assets.
+  </p>
+
+  <h2>🎯 What an SPV does (and doesn't do)</h2>
+
+  <div class="does-does-not">
+    <div class="does">
+      <h3>✓ DOES</h3>
+      <ul>
+        <li><b>Holds the AYUVA Project 1 property</b> (lease or freehold)</li>
+        <li>Receives capital from Investment Co</li>
+        <li>Pays PMC for construction services</li>
+        <li>Pays AMC for operational management</li>
+        <li>Owns the revenue stream of Project 1</li>
+        <li>Distributes profit upward (to Investment Co → investor pool + Holding Co)</li>
+      </ul>
+    </div>
+    <div class="does-not">
+      <h3>✗ DOES NOT</h3>
+      <ul>
+        <li>Manage operations directly (AMC does)</li>
+        <li>Build the project directly (PMC does)</li>
+        <li>Take SAFE investments (Investment Co does)</li>
+        <li>Hold any other project's assets — each project = its own SPV</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="font-size:14px; color:var(--ink-soft); background:var(--paper); padding:12px 16px; border-radius:10px; border-left:3px solid var(--accent);">
+    <b>Mental model:</b> The SPV is like a <em>"project box"</em> — it owns everything about Project 1 and nothing else. If Project 1 fails, only that SPV is affected. Projects 2, 3, 4... live in their own boxes.
+  </p>
+
+  <h2>💡 Why one SPV per project (ring-fencing)</h2>
+
+  <p style="font-size:14px;">This is CVML's core rationale for the SPV layer:</p>
+
+  <div style="background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:20px 24px; margin:14px 0;">
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px;">
+      <div>
+        <div style="font-size:12px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:6px;">🔒 RISK ISOLATION</div>
+        <div style="font-size:13px; color:var(--ink-soft);">If Project 1 has a legal issue (e.g., contractor lawsuit), only Project 1's SPV is exposed — not Project 2 or 3.</div>
+      </div>
+      <div>
+        <div style="font-size:12px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:6px;">📊 SEPARATE ACCOUNTING</div>
+        <div style="font-size:13px; color:var(--ink-soft);">Each project has clean financials. Easy to track profit per project, calculate investor returns, audit individually.</div>
+      </div>
+      <div>
+        <div style="font-size:12px; font-weight:700; color:var(--accent-deep); letter-spacing:0.06em; margin-bottom:6px;">💼 EASIER EXIT</div>
+        <div style="font-size:13px; color:var(--ink-soft);">If we sell Project 1 alone (to a Marriott / Aman), it's a clean asset sale. Without SPVs, selling one project means restructuring the whole group.</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>🏛️ Jurisdiction — depends on Lease vs Buy</h2>
+
+  <p style="font-size:14px;">This is the BIG decision for SPV setup. The right jurisdiction depends on whether AYUVA Project 1 will <b>lease</b> the site or <b>own</b> the freehold:</p>
+
+  <div class="juris-grid">
+
+    <div class="juris-card">
+      <div class="juris-name">Mainland DET (DED)</div>
+      <div class="juris-tagline">If buying freehold property</div>
+      <div class="juris-fee">AED 16,476 – 24,476 <small>setup</small></div>
+      <div class="juris-meta">
+        • Mainland LLC structure<br>
+        • Required for direct UAE property ownership<br>
+        • Ejari'd office needed<br>
+        • Standard mainland process<br>
+        • Activity code: hospitality / hotel operations
+      </div>
+    </div>
+
+    <div class="juris-card">
+      <div class="juris-name">DIFC SPC (Special Purpose Company)</div>
+      <div class="juris-tagline">If leasing the property</div>
+      <div class="juris-fee">~AED 30k–50k <small>setup</small></div>
+      <div class="juris-meta">
+        • DIFC structure designed for ring-fencing<br>
+        • Cleaner foreign-ownership treatment<br>
+        • Better for international JV partners<br>
+        • <b>Cannot hold UAE freehold property directly</b><br>
+        • Often used for lease-only hospitality
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background:#fef9e8; border:1px dashed var(--accent); border-radius:10px; padding:12px 16px; margin:14px 0; font-size:13.5px;">
+    <b>📩 Question pending:</b> AYUVA Project 1 — lease or buy the site? This decision is the gating item for SPV jurisdiction. CEO discussion needed.
+  </div>
+
+  <h2>📋 Project-specific approvals (beyond CVML's scope)</h2>
+
+  <p style="font-size:14px;">Because SPVs for hospitality projects in mainland UAE involve a real operating asset, they need <b>additional approvals on top of entity setup</b>. CVML lists these as separate from their AED 20k lumpsum:</p>
+
+  <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:14px 0;">
+    <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
+      <thead>
+        <tr style="background:var(--bg);">
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Approval</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">When needed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">DET / DTCM tourism approval</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Hospitality classification + license</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Land + planning approval</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Zoning, master developer (e.g. Emaar, Nakheel) sign-off</td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Municipality approvals</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Building permits, technical clearance</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Civil Defence approval</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Health, fire, safety compliance</td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Hotel classification</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Tourism authority rating for hospitality</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Environmental + health approvals</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Depending on project scope (spa, wellness)</td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Construction approvals</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Contractor, engineer, consultant licenses</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; font-weight:600;">Operational permits</td><td style="padding:8px 12px;">Right before opening — F&B, alcohol (if any), spa, etc.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="background:var(--red-bg); border-left:3px solid var(--red); border-radius:0 8px 8px 0; padding:12px 16px; margin:14px 0; font-size:13.5px;">
+    <b style="color:var(--red);">⚠ These approvals can take MONTHS individually.</b> Build timeline buffer. Some approvals are sequential (need municipality → then Civil Defence → then tourism). Plan SPV setup early.
+  </div>
+
+  <h2>🧾 Regulatory & Tax obligations</h2>
+
+  <div style="background:var(--paper); border:2px solid var(--accent); border-radius:14px; padding:20px 24px; margin:14px 0;">
+    <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
+      <thead>
+        <tr style="background:var(--bg);">
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Obligation</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Status for SPV</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📊 Corporate Tax</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); color:var(--red);"><b>Applies.</b> Each SPV registers individually unless exempt. 9% over AED 375k profit. SPVs earn real operating revenue → likely taxable.</td>
+        </tr>
+        <tr style="background:#fafaf3;">
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🧮 VAT</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); color:var(--red);"><b>Required.</b> Hospitality services → over threshold easily.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🏛️ ESR + UBO</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line);">UBO required. ESR may apply depending on activities.</td>
+        </tr>
+        <tr style="background:#fafaf3;">
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📜 License renewal</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line);">Annual per SPV (~AED 16k–24k each)</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; font-weight:600;">📁 Annual filings</td>
+          <td style="padding:10px 12px;">Per SPV — audited financials, Corp Tax, VAT, ESR notification</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>🧮 F, G, H — Special Service Fees applied per SPV</h2>
+
+  <p style="font-size:14px;">For SPVs, F and G almost always apply. H depends on whether the SPV needs its own visas (often unnecessary if AMC handles operational staff).</p>
+
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:14px 0;">
+
+    <div style="background:var(--paper); border:2px solid var(--accent); border-radius:12px; padding:16px;">
+      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.08em; margin-bottom:4px;">CATEGORY F</div>
+      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Corporate Tax registration</div>
+      <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 3,000<small style="font-size:11px; color:var(--muted); font-weight:500;"> / SPV</small></div>
+      <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
+        <b style="color:var(--green);">✓ Applies</b><br>Each SPV registers separately.
+      </div>
+    </div>
+
+    <div style="background:var(--paper); border:2px solid var(--accent); border-radius:12px; padding:16px;">
+      <div style="font-size:11px; font-weight:700; color:var(--accent-deep); letter-spacing:0.08em; margin-bottom:4px;">CATEGORY G</div>
+      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">VAT registration</div>
+      <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 1,500<small style="font-size:11px; color:var(--muted); font-weight:500;"> / SPV</small></div>
+      <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
+        <b style="color:var(--green);">✓ Applies</b><br>Hospitality revenue → required.
+      </div>
+    </div>
+
+    <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:16px; opacity:0.7;">
+      <div style="font-size:11px; font-weight:700; color:var(--muted); letter-spacing:0.08em; margin-bottom:4px;">CATEGORY H</div>
+      <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Visa processing</div>
+      <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 8,000<small style="font-size:11px; color:var(--muted); font-weight:500;"> / visa</small></div>
+      <div style="background:var(--amber-bg); border-left:3px solid var(--amber); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
+        <b style="color:var(--amber);">⚠ Maybe</b><br>Usually AMC holds operational visas. SPV may need 1–2 for project director.
+      </div>
+    </div>
+
+  </div>
+
+  <h2>📑 Scope of Work — what CVML delivers for AED 20,000 per SPV (Category E)</h2>
+
+  <p style="font-size:14px;">Same 3-stream pattern. Stream (iii) is the SPV-specific value — drafting intercompany agreements that tie everything together.</p>
+
+  <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:12px 0;">
+
+    <div style="margin-bottom:18px;">
+      <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(i) Incorporation of SPVs</div>
+      <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
+        <li>Advising on most suitable jurisdiction for each SPV</li>
+        <li>Assisting with incorporation</li>
+        <li>Drafting / reviewing incorporation documents</li>
+        <li>Liaising with authorities on approvals and registration</li>
+        <li>Following up until trade license + incorporation docs issued</li>
+        <li>General guidance during the process</li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(ii) Structuring & Governance</div>
+      <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
+        <li>Advising on ownership structure and shareholding of each SPV</li>
+        <li>Advising on governance mechanisms + control structures</li>
+        <li>Advising on funding arrangements between Investment Co and SPVs</li>
+        <li>Ensuring proper ring-fencing of each project</li>
+        <li>Preparing corporate approvals required</li>
+      </ul>
+    </div>
+
+    <div>
+      <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">⭐ (iii) Intercompany & Operational Arrangements</div>
+      <p style="font-size:13px; color:var(--ink-soft); margin:0 0 8px;"><b>The SPV-specific value-add — wiring everything together.</b></p>
+      <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
+        <li>Drafting / reviewing <b>intercompany agreements</b></li>
+        <li>Advising on SPV ↔ PMC arrangements (construction contract)</li>
+        <li>Advising on SPV ↔ AMC arrangements (operations contract)</li>
+        <li>Structuring contractual relationships across the entities</li>
+        <li>General legal support for project implementation</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2>👤 What CVML does NOT cover for SPVs</h2>
+
+  <div class="does-does-not">
+    <div class="does">
+      <h3>✓ CVML COVERS</h3>
+      <ul>
+        <li>SPV legal entity setup</li>
+        <li>Intercompany agreement drafting</li>
+        <li>Corp Tax + VAT registration</li>
+        <li>Ring-fencing structure</li>
+      </ul>
+    </div>
+    <div class="does-not">
+      <h3>✗ CVML DOES NOT COVER</h3>
+      <ul>
+        <li>Project-specific approvals (DTCM, Civil Defence, Municipality)</li>
+        <li>Land purchase / lease negotiation</li>
+        <li>Construction contracts (with vendors)</li>
+        <li>Hotel classification application</li>
+        <li>F&B / alcohol / spa permits</li>
+        <li>Bookkeeping + ongoing VAT filings</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>💵 Real Year 1 total for SPV 1 (AYUVA Project 1)</h2>
+
+  <div style="background:white; border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin:14px 0;">
+    <div class="fee-line"><span class="fee-label">Category E — CVML setup fee</span><span class="fee-amt">AED 20,000</span></div>
+    <div class="fee-line"><span class="fee-label">Category F — Corp Tax registration</span><span class="fee-amt">AED 3,000</span></div>
+    <div class="fee-line"><span class="fee-label">Category G — VAT registration</span><span class="fee-amt">AED 1,500</span></div>
+    <div class="fee-line"><span class="fee-label">+ 5% VAT on CVML fees</span><span class="fee-amt">AED 1,225</span></div>
+    <div class="fee-line"><span class="fee-label">+ Mainland DET incorporation (if buying)</span><span class="fee-amt">~AED 20,000</span></div>
+    <div class="fee-line"><span class="fee-label">+ Office (Business Center for SPV)</span><span class="fee-amt">~AED 10,000</span></div>
+    <div class="fee-total" style="border-top:2px solid var(--accent); padding-top:12px; margin-top:8px;">
+      <span>Year 1 Total — SPV 1 (entity setup only)</span>
+      <span style="color:var(--accent-deep);">~AED 55,725</span>
+    </div>
+    <div style="font-size:12px; color:var(--muted); margin-top:12px; padding-top:10px; border-top:1px dashed var(--line);">
+      <b>Excludes ALL project-specific costs:</b> land purchase/lease, DTCM tourism approval, Civil Defence, Municipality, hotel classification, environmental permits, construction contracts. These can easily add <b>AED 200k–1M+</b> depending on project scope.
+    </div>
+  </div>
+
+  <h2>📈 Future projects — cost stacking</h2>
+
+  <p style="font-size:14px;">Important to understand: each new AYUVA project (6–8 planned) = its own SPV. Costs compound:</p>
+
+  <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:14px 0;">
+    <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
+      <thead>
+        <tr style="background:var(--bg);">
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Scenario</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">SPV setup cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Project 1 only</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 55,725</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Projects 1 + 2</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 111,450</td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Projects 1 + 2 + 3</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 167,175</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; font-weight:700;">All 8 planned projects</td><td style="padding:8px 12px; font-weight:700;">~AED 445,800</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>🚀 What CVML needs NOW vs LATER</h2>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0;">
+
+    <div style="background:var(--green-bg); border:2px solid var(--green); border-radius:14px; padding:18px 22px;">
+      <div style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;">🚀 NEEDED ONCE SITE IS LOCKED</div>
+      <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
+        <li><b>Site location confirmed</b> — Project 1 address</li>
+        <li><b>Lease or Buy decision</b> — determines jurisdiction</li>
+        <li><b>SPV name</b> — e.g., "AYUVA Project 1 LLC"</li>
+        <li><b>Shareholding</b> — Investment Co owns 100%</li>
+        <li><b>Manager</b> — could be Baru, Teru, or an appointed PM</li>
+      </ul>
+    </div>
+
+    <div style="background:#fef9e8; border:2px solid var(--accent); border-radius:14px; padding:18px 22px;">
+      <div style="font-size:12px; font-weight:700; color:var(--accent-deep); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;">⏳ STARTS AFTER SPV IS SET UP</div>
+      <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
+        <li>Project-specific approvals (DTCM, etc.) — sequential, can take months</li>
+        <li>Land lease / purchase contract</li>
+        <li>Construction contracts (signed by SPV with vendors)</li>
+        <li>SPV ↔ PMC + SPV ↔ AMC management agreements</li>
+        <li>Funding agreement Investment Co → SPV</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h2>✅ My recommendation</h2>
+
+  <div class="recommendation">
+    <h3>SPV setup is gated by site selection</h3>
+    <p><b>Why:</b> You can't set up SPV 1 until you know the site (lease vs buy decides jurisdiction). And there's no benefit to setting it up earlier — SPV's first real cost (project-specific approvals) only starts when the site is locked.</p>
+    <p><b>Recommended timing:</b></p>
+    <ul style="font-size:14px; padding-left:22px;">
+      <li>Lock the site for AYUVA Project 1</li>
+      <li>Decide lease vs buy</li>
+      <li>Then set up SPV 1 (CVML can do it in 2–4 weeks)</li>
+      <li>Project-specific approvals start immediately after</li>
+    </ul>
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:10px;">
+      <b>Don't overbuild:</b> Set up only SPV 1 for now. Future SPVs (2, 3, 4...) come when those projects are real, not before.
+    </p>
+  </div>
+
+  <h2>🎯 The complete recommended sequence</h2>
+
+  <div style="background:var(--paper); border:2px solid var(--accent); border-radius:14px; padding:20px 24px; margin:14px 0;">
+    <ol style="font-size:14px; line-height:1.8; padding-left:24px; margin:0;">
+      <li><b>Holding Co</b> (RAK ICC) — set up first, cheapest, fastest</li>
+      <li><b>Investment Co</b> (DIFC) — set up second, enables fundraising</li>
+      <li><b>Fundraise SAFE notes</b> into Investment Co (Japan + Dubai-side)</li>
+      <li><b>Site selection</b> for AYUVA Project 1 (lease vs buy)</li>
+      <li><b>SPV 1</b> (Mainland or DIFC SPC) — once site is locked</li>
+      <li><b>PMC</b> (Mainland) — 3 months before construction starts</li>
+      <li><b>AMC</b> (Mainland) — 3–6 months before AYUVA opens</li>
+    </ol>
+  </div>
+
+  <p style="text-align:center; color:var(--muted); font-size:13px; margin-top:40px; padding-top:20px; border-top:1px solid var(--line);">
+    End of Section 5 · All 5 entity sections complete ✓
   </p>
 
 </div>
