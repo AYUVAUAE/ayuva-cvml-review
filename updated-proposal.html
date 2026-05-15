@@ -31,23 +31,25 @@
     border-bottom: 1px solid var(--line);
     padding: 8px 0; margin: -30px -20px 24px;
     text-align: center;
+    display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
   }
-  .lang-toggle {
+  .lang-toggle, .curr-toggle {
     display: inline-flex; gap: 0; background: white;
     border: 1px solid var(--line); border-radius: 99px; overflow: hidden;
     box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
-  .lang-toggle button {
+  .lang-toggle button, .curr-toggle button {
     background: none; border: none; cursor: pointer;
     font-family: inherit; font-size: 12px; font-weight: 600;
-    padding: 8px 18px; color: var(--ink-soft);
+    padding: 8px 14px; color: var(--ink-soft);
     letter-spacing: 0.04em; transition: all 0.15s;
   }
-  .lang-toggle button.active {
+  .lang-toggle button.active, .curr-toggle button.active {
     background: linear-gradient(135deg, var(--accent), var(--accent-deep));
     color: white;
   }
-  .lang-toggle button:not(.active):hover { color: var(--accent-deep); }
+  .lang-toggle button:not(.active):hover,
+  .curr-toggle button:not(.active):hover { color: var(--accent-deep); }
   h1 {
     font-size:28px; margin: 0 0 6px; letter-spacing: -0.01em;
     border-bottom: 3px solid var(--accent); padding-bottom: 10px;
@@ -247,6 +249,11 @@
     <button type="button" data-lang="en" class="active">EN</button>
     <button type="button" data-lang="ja">日本語</button>
   </div>
+  <div class="curr-toggle" role="tablist" aria-label="Currency toggle">
+    <button type="button" data-curr="aed" class="active">AED</button>
+    <button type="button" data-curr="jpy">JPY ¥</button>
+    <button type="button" data-curr="usd">USD $</button>
+  </div>
 </div>
 
 <div class="container">
@@ -275,7 +282,8 @@
           </div>
           <div style="font-size:16px; font-weight:700; margin:2px 0;">EXCEED Capital</div>
           <div style="font-size:11px; color:var(--green); font-weight:600;">RAK ICC</div>
-          <div style="font-size:11px; color:var(--muted); margin-top:2px;">~AED 43,150</div>
+          <div style="font-size:11px; color:var(--muted); margin-top:2px;">~<span class="cost" data-aed="43150">AED 43,150</span></div>
+          <div style="font-size:10px; color:var(--muted); margin-top:1px;"><span class="lang en">+ ~</span><span class="lang ja">+ 約 </span><span class="cost" data-aed="5000">AED 5,000</span>/<span class="lang en">yr ongoing</span><span class="lang ja">年（継続）</span></div>
         </div>
 
         <div style="width:2px; height:24px; background:var(--line); margin:6px 0;"></div>
@@ -572,7 +580,7 @@
     </div>
     <div class="does-not" style="border-left-color:var(--amber); background:var(--amber-bg);">
       <h3 style="color:var(--amber);"><span class="lang en">⚠ DD complexity</span><span class="lang ja">⚠ デューデリジェンスの複雑化</span></h3>
-      <p style="margin:0; font-size:13.5px;"><span class="lang en">Future</span><span class="lang ja">将来</span> investors would have to investigate ALL of EXCEED's history (multi-year, multi-deal). With a fresh "EXCEED Capital" they only investigate AYUVA.</p>
+      <p style="margin:0; font-size:13.5px;"><span class="lang en">Future investors would have to investigate ALL of EXCEED's history (multi-year, multi-deal). With a fresh "EXCEED Capital" they only investigate AYUVA.</span><span class="lang ja">将来の投資家は EXCEED の全履歴（複数年・複数案件）を調査する必要があります。新規の「EXCEED Capital」を作れば、AYUVA のみを調査すればよい。</span></p>
     </div>
   </div>
 
@@ -586,7 +594,7 @@
       <div class="juris-tagline"><span class="lang en">Dubai International Financial Centre</span><span class="lang ja">ドバイ国際金融センター</span></div>
       <div class="juris-fee">~AED 76,000 <small><span class="lang en">govt fee</span><span class="lang ja">政府手数料</span></small></div>
       <div class="juris-meta">
-        • <span class="lang en">Office</span><span class="lang ja">オフィス</span> required (flexi-desk min)<br>
+        • <span class="lang en">Office required (flexi-desk min)</span><span class="lang ja">オフィス必須（最低フレキシデスク）</span><br>
         • <span class="lang en">Premium common-law jurisdiction</span><span class="lang ja">プレミアム英米法管轄区域</span><br>
         • Overkill for a pure holding entity
       </div>
@@ -945,7 +953,7 @@
     </div>
 
     <div style="font-size:12px; color:var(--muted); margin-top:12px; padding-top:10px; border-top:1px dashed var(--line);">
-      <b><span class="lang en">Note:</span><span class="lang ja">注：</span></b> Above is just the Holding Co cost. Office costs (if jurisdiction requires one), bank account opening fees, and other disbursements are <b><span class="lang en">extra</span><span class="lang ja">追加</span> and at actuals</b> per CVML's disclaimer.
+      <b><span class="lang en">Note:</span><span class="lang ja">注：</span></b> Above is just the Holding Co cost. Office costs (if jurisdiction requires one), bank account opening fees, and other disbursements are <b><span class="lang en">extra and at actuals</span><span class="lang ja">追加かつ実費</span></b> per CVML's disclaimer.
     </div>
   </div>
 
@@ -1003,7 +1011,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;"><span class="lang en">Corporate Tax registration</span><span class="lang ja">法人税登録</span></div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 3,000<small style="font-size:11px; color:var(--muted); font-weight:500;"> <span class="lang en">/ company</span><span class="lang ja">/ 会社</span></small></div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当する</span> to Holding Co</b><br>Every UAE company must register (legal requirement) — even if tax rate ends up at 0%.
+        <b style="color:var(--green);"><span class="lang en">✓ Applies to Holding Co</span><span class="lang ja">✓ ホールディングカンパニーに該当</span></b><br>Every UAE company must register (legal requirement) — even if tax rate ends up at 0%.
       </div>
     </div>
 
@@ -1070,7 +1078,7 @@
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(ii) Corporate Structuring & Governance — 6 deliverables</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
         <li><span class="lang en">Advising on the proposed group structure + ownership framework</span><span class="lang ja">提案されたグループ構造 + 所有フレームワークについて助言</span></li>
-        <li>Advising on the Holding ↔ Investment Co / PMC / AMC <span class="lang en">/ SPV</span><span class="lang ja">/ SPV</span> relationships</li>
+        <li>Advising on the Holding ↔ Investment Co / PMC / AMC / SPV relationships</li>
         <li><span class="lang en">Advising on governance mechanisms, shareholder arrangements, decision-making framework</span><span class="lang ja">ガバナンスメカニズム、株主取り決め、意思決定フレームワークについて助言</span></li>
         <li><span class="lang en">Drafting / reviewing required <b>shareholder resolutions</b> and corporate approvals</span><span class="lang ja">必要な<b>株主決議</b>とコーポレート承認のドラフト / レビュー</span></li>
         <li><span class="lang en">Advising on future restructuring, expansion, investor participation</span><span class="lang ja">将来の再編、拡張、投資家参加について助言</span></li>
@@ -1129,7 +1137,7 @@
 
   <div class="recommendation">
     <h3><span class="lang en">RAK ICC (standard) — for the Holding Company</span><span class="lang ja">RAK ICC（標準）— ホールディングカンパニー用</span></h3>
-    <p><b>Why:</b> The Holding Co does no business. It just owns shares. Paying DIFC <span class="lang en">premium</span><span class="lang ja">プレミアム</span> fees here is wasted money — the premium prestige matters at the <b>Investment Co layer</b> (Section 2), where investors actually look.</p>
+    <p><b>Why:</b> The Holding Co does no business. It just owns shares. Paying DIFC premium fees here is wasted money — the premium prestige matters at the <b>Investment Co layer</b> (Section 2), where investors actually look.</p>
     <p><span class="lang en"><b>Saves you ~AED 73,000 in Year 1</b> vs. DIFC, plus no office cost on top.</span><span class="lang ja"><b>初年度で約 AED 73,000 を節約</b> vs DIFC、オフィスコストも不要。</span></p>
     <p style="font-size:12.5px; color:var(--ink-soft); margin-top:10px;">
       <span class="lang en"><b>One caveat to verify with Walid:</b> Some banks treat RAK ICC entities differently when opening UAE bank accounts. Worth asking him directly.</span><span class="lang ja"><b>Walid に確認すべき注意点：</b>一部の銀行は UAE 銀行口座開設時に RAK ICC エンティティを異なる扱いとする。直接確認する価値あり。</span>
@@ -1551,7 +1559,7 @@
         <li><span class="lang en">Advising on whether UAE Corporate Tax applies</span><span class="lang ja">UAE 法人税が適用されるか助言</span></li>
         <li><span class="lang en">Preparing and submitting Corporate Tax registration with FTA</span><span class="lang ja">FTA への法人税登録の準備・提出</span></li>
         <li><span class="lang en">Liaising with FTA on queries</span><span class="lang ja">問い合わせについて FTA と連絡調整</span> / clarifications</li>
-        <li><span class="lang en">Assisting with VAT registration</span><span class="lang ja">VAT 登録の支援</span> if applicable</li>
+        <li><span class="lang en">Assisting with VAT registration if applicable</span><span class="lang ja">該当する場合の VAT 登録支援</span></li>
         <li><span class="lang en">High-level guidance on ongoing compliance</span><span class="lang ja">継続的なコンプライアンスに関する高レベル指導</span></li>
       </ul>
     </div>
