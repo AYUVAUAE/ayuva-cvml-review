@@ -19,6 +19,35 @@
     font-size:13.1px; line-height: 1.6;
   }
   .container { max-width: 920px; margin: 0 auto; }
+
+  /* Language toggle */
+  .lang.ja, .lang.en { display: none; }
+  body.lang-en .lang.en { display: revert; }
+  body.lang-ja .lang.ja { display: revert; }
+  .lang-toggle-bar {
+    position: sticky; top: 0; z-index: 100;
+    background: linear-gradient(180deg, rgba(247,244,236,0.97), rgba(247,244,236,0.92));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 0; margin: -30px -20px 24px;
+    text-align: center;
+  }
+  .lang-toggle {
+    display: inline-flex; gap: 0; background: white;
+    border: 1px solid var(--line); border-radius: 99px; overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .lang-toggle button {
+    background: none; border: none; cursor: pointer;
+    font-family: inherit; font-size: 12px; font-weight: 600;
+    padding: 8px 18px; color: var(--ink-soft);
+    letter-spacing: 0.04em; transition: all 0.15s;
+  }
+  .lang-toggle button.active {
+    background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+    color: white;
+  }
+  .lang-toggle button:not(.active):hover { color: var(--accent-deep); }
   h1 {
     font-size:28px; margin: 0 0 6px; letter-spacing: -0.01em;
     border-bottom: 3px solid var(--accent); padding-bottom: 10px;
@@ -211,14 +240,21 @@
   }
 </style>
 </head>
-<body>
+<body class="lang-en">
+
+<div class="lang-toggle-bar">
+  <div class="lang-toggle" role="tablist" aria-label="Language toggle">
+    <button type="button" data-lang="en" class="active">EN</button>
+    <button type="button" data-lang="ja">日本語</button>
+  </div>
+</div>
 
 <div class="container">
 
-  <h1>Section 1: Holding Company</h1>
+  <h1><span class="lang ja">セクション 1：ホールディングカンパニー</span><span class="lang en">Section 1: Holding Company</span></h1>
   <div class="sub">Working name: <b>EXCEED Capital</b> · Top of the AYUVA group structure</div>
 
-  <h2>📍 Where it sits in the structure</h2>
+  <h2><span class="lang ja">📍 構造内の位置</span><span class="lang en">📍 Where it sits in the structure</span></h2>
 
   <div class="structure">
     <div class="entity holding">
@@ -248,7 +284,7 @@
     </div>
   </div>
 
-  <h2>🎯 What it does (and doesn't do)</h2>
+  <h2><span class="lang ja">🎯 何をするか（何をしないか）</span><span class="lang en">🎯 What it does (and doesn't do)</span></h2>
 
   <div class="does-does-not">
     <div class="does">
@@ -276,7 +312,7 @@
     <b>Mental model:</b> The Holding Co is a clean "folder" that contains the other folders. It does nothing operational — it just <em>owns</em>.
   </p>
 
-  <h2>💡 Why not just use EXCEED REAL ESTATE LLC?</h2>
+  <h2><span class="lang ja">💡 なぜ EXCEED REAL ESTATE LLC をそのまま使わないのか？</span><span class="lang en">💡 Why not just use EXCEED REAL ESTATE LLC?</span></h2>
 
   <p style="font-size:14px;">EXCEED REAL ESTATE has its own existing business and partners. Two problems if we reuse it as Holding Co:</p>
 
@@ -341,7 +377,7 @@
     </div>
   </div>
 
-  <h2>📊 Year 1 government fees — visual comparison</h2>
+  <h2><span class="lang ja">📊 初年度 政府手数料 — 比較</span><span class="lang en">📊 Year 1 government fees — visual comparison</span></h2>
 
   <div class="bar-chart">
     <div class="bar-row">
@@ -368,7 +404,7 @@
 
   <p style="font-size:13px; color:var(--muted); text-align:center;">↑ DIFC costs <b>~23× more</b> than RAK ICC for the same legal function</p>
 
-  <h2>📋 Key Requirements (what we need to decide / provide)</h2>
+  <h2><span class="lang ja">📋 主要要件（決定 / 提供が必要なもの）</span><span class="lang en">📋 Key Requirements (what we need to decide / provide)</span></h2>
 
   <p style="font-size:14px;">CVML lists 4 baseline requirements. Each has a concrete decision or output we need to give them before they can incorporate the entity.</p>
 
@@ -476,7 +512,7 @@
     })();
   </script>
 
-  <h2>🧾 Regulatory & Tax obligations (ongoing)</h2>
+  <h2><span class="lang ja">🧾 規制・税務上の義務（継続的）</span><span class="lang en">🧾 Regulatory & Tax obligations (ongoing)</span></h2>
 
   <p style="font-size:14px;">Once the Holding Co is set up, there are <b>4 recurring obligations</b> that apply every year. These are NOT one-time — they recur for as long as the entity exists.</p>
 
@@ -618,7 +654,7 @@
     </div>
   </div>
 
-  <h2>💰 What CVML charges YOU (separately from government)</h2>
+  <h2><span class="lang ja">💰 CVML があなたに請求する費用（政府手数料とは別）</span><span class="lang en">💰 What CVML charges YOU (separately from government)</span></h2>
 
   <p style="font-size:14px;">There are <b>3 separate payments</b> that make up your total Year 1 cost. Pick a jurisdiction below to see the total update live.</p>
 
@@ -706,7 +742,7 @@
     })();
   </script>
 
-  <h2>🧮 F, G, H — Special Service Fees (charged per use)</h2>
+  <h2><span class="lang ja">🧮 F、G、H — 特別サービス手数料（利用ごとに請求）</span><span class="lang en">🧮 F, G, H — Special Service Fees (charged per use)</span></h2>
 
   <p style="font-size:14px;">Beyond the Category A AED 35,000 lumpsum, CVML has 3 special service fees that apply <b>per company / per use</b>:</p>
 
@@ -748,7 +784,7 @@
     <b>Note:</b> F, G, H will apply DIFFERENTLY to the other entities (Investment Co, PMC, AMC, SPV). PMC and AMC will need VAT (G) and many visas (H). We'll see this at each section.
   </div>
 
-  <h2>💵 Real Year 1 total for Holding Co</h2>
+  <h2><span class="lang ja">💵 ホールディングカンパニー 初年度 実質合計</span><span class="lang en">💵 Real Year 1 total for Holding Co</span></h2>
 
   <div style="background:white; border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin:14px 0;">
     <div class="fee-line"><span class="fee-label">Category A — Setup fee</span><span class="fee-amt">AED 35,000</span></div>
@@ -761,7 +797,7 @@
     </div>
   </div>
 
-  <h2>📑 Scope of Work — what CVML actually delivers for AED 35,000</h2>
+  <h2><span class="lang ja">📑 業務範囲 — CVML が AED 35,000 で実施する内容</span><span class="lang en">📑 Scope of Work — what CVML actually delivers for AED 35,000</span></h2>
 
   <p style="font-size:14px;">The AED 35,000 lumpsum covers 3 work streams. Here's the breakdown of every deliverable CVML commits to in the proposal:</p>
 
@@ -810,7 +846,7 @@
     <b>Total: 19 individual deliverables</b> bundled into the AED 35,000 lumpsum. This is a fixed-fee engagement — they don't bill hourly for these items.
   </p>
 
-  <h2>👤 What CVML does NOT cover — in-house finance needed</h2>
+  <h2><span class="lang ja">👤 CVML がカバーしないもの — 社内会計担当が必要</span><span class="lang en">👤 What CVML does NOT cover — in-house finance needed</span></h2>
 
   <p style="font-size:14px;">CVML handles the <b>legal side</b> (entity setup, tax registration, document drafting). They do NOT handle the <b>financial operations</b> side. For that we need a separate finance person.</p>
 
@@ -840,7 +876,7 @@
 
   <p style="font-size:14px; margin-top:10px;">→ We need to hire someone in-house (or outsource to an accounting firm) for these.</p>
 
-  <h2>✅ My recommendation</h2>
+  <h2><span class="lang ja">✅ 推奨事項</span><span class="lang en">✅ My recommendation</span></h2>
 
   <div class="recommendation">
     <h3>RAK ICC (standard) — for the Holding Company</h3>
@@ -859,8 +895,8 @@
   <!-- SECTION 2 — INVESTMENT COMPANY (Category B)  -->
   <!-- ============================================ -->
 
-  <h1 style="margin-top:80px;">Section 2: Investment Company</h1>
-  <div class="sub">Top investor-facing entity · Category B of the updated CVML proposal (13 May 2026)</div>
+  <h1 style="margin-top:80px;"><span class="lang ja">セクション 2：投資会社</span><span class="lang en">Section 2: Investment Company</span></h1>
+  <div class="sub"><span class="lang ja">投資家対応の中心エンティティ・CVML 改訂提案書（2026年5月13日）の カテゴリー B</span><span class="lang en">Top investor-facing entity · Category B of the updated CVML proposal (13 May 2026)</span></div>
 
   <h2>📍 Where it sits in the structure</h2>
 
@@ -925,7 +961,7 @@
     <b>Mental model:</b> Investment Co is the <em>"front door for investor money"</em>. All capital from Japanese SAFE investors + non-Japan investors flows through here, then gets pushed down to the SPV that actually owns the project.
   </p>
 
-  <h2>💡 Why this is the MOST important entity in the structure</h2>
+  <h2><span class="lang ja">💡 なぜこれが構造内で最も重要なエンティティか</span><span class="lang en">💡 Why this is the MOST important entity in the structure</span></h2>
 
   <p style="font-size:14px;">Three reasons this entity matters more than the others:</p>
 
@@ -948,7 +984,7 @@
     <b>📌 SAFE structure note:</b> The SAFE notes are how we'll <b>receive investor money during fundraising</b>, which later converts into Investment Co shares carrying revenue distribution rights. The <b>specific commercial terms</b> (valuation cap, distribution %, conversion trigger, lock-in, etc.) will be <b>discussed in a separate meeting with CVML</b> once the entity setup is underway. Not blocking incorporation.
   </div>
 
-  <h2>🏛️ The 3 jurisdiction options CVML is offering</h2>
+  <h2><span class="lang ja">🏛️ CVML が提示する 3 つの管轄区域オプション</span><span class="lang en">🏛️ The 3 jurisdiction options CVML is offering</span></h2>
 
   <p style="font-size:14px; margin-bottom:14px;">CVML lists only 3 jurisdictions for the Investment Company (no RAK ICC SPV option here, unlike Holding Co):</p>
 
@@ -1195,7 +1231,7 @@
     </table>
   </div>
 
-  <h2>🧮 F, G, H — Special Service Fees applied to Investment Co</h2>
+  <h2><span class="lang ja">🧮 F、G、H — 投資会社に適用される特別サービス手数料</span><span class="lang en">🧮 F, G, H — Special Service Fees applied to Investment Co</span></h2>
 
   <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:14px 0;">
 
@@ -1228,7 +1264,7 @@
 
   </div>
 
-  <h2>📑 Scope of Work — what CVML delivers for AED 35,000 (Category B)</h2>
+  <h2><span class="lang ja">📑 業務範囲 — CVML が AED 35,000 で実施する内容（カテゴリー B）</span><span class="lang en">📑 Scope of Work — what CVML delivers for AED 35,000 (Category B)</span></h2>
 
   <p style="font-size:14px;">Same 3 streams as Holding Co BUT with a major difference in Stream (ii) — SAFE notes are drafted here.</p>
 
@@ -1277,7 +1313,7 @@
     <b>Total: 18 individual deliverables</b> bundled into the AED 35,000 lumpsum.
   </p>
 
-  <h2>👤 What CVML does NOT cover for Investment Co</h2>
+  <h2><span class="lang ja">👤 投資会社で CVML がカバーしないもの</span><span class="lang en">👤 What CVML does NOT cover for Investment Co</span></h2>
 
   <div class="does-does-not">
     <div class="does">
@@ -1320,7 +1356,7 @@
     </p>
   </div>
 
-  <h2>🏢 DIFC Office Requirements</h2>
+  <h2><span class="lang ja">🏢 DIFC オフィス要件</span><span class="lang en">🏢 DIFC Office Requirements</span></h2>
 
   <p style="font-size:14px;">Every DIFC entity must have a registered office <b>inside the DIFC zone</b>. But "office" can mean different things. Three options ranging from cheap to expensive:</p>
 
@@ -1363,7 +1399,7 @@
     <b>⚠ Note on substance:</b> DIFC has economic substance rules. For a SAFE-issuing entity with no Year 1 employees, <b>flexi-desk should satisfy substance</b> — but confirm in writing with Walid before signing. Office cost is NOT in CVML's AED 35,000 fee — billed separately.
   </div>
 
-  <h2>💵 Real Year 1 total for Investment Co (with flexi-desk)</h2>
+  <h2><span class="lang ja">💵 投資会社 初年度 実質合計（フレキシデスク使用）</span><span class="lang en">💵 Real Year 1 total for Investment Co (with flexi-desk)</span></h2>
 
   <div style="background:white; border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin:14px 0;">
     <div class="fee-line"><span class="fee-label">Category B — CVML setup fee</span><span class="fee-amt">AED 35,000</span></div>
@@ -1380,7 +1416,7 @@
     </div>
   </div>
 
-  <h2>🚀 What CVML needs NOW vs LATER</h2>
+  <h2><span class="lang ja">🚀 CVML が今 vs 後で必要とするもの</span><span class="lang en">🚀 What CVML needs NOW vs LATER</span></h2>
 
   <p style="font-size:14px;">You can <b>start the DIFC incorporation today</b> with minimal inputs. SAFE structuring can happen in parallel or after.</p>
 
@@ -1444,8 +1480,8 @@
   <!-- SECTION 3 — PMC (Category C)                 -->
   <!-- ============================================ -->
 
-  <h1 style="margin-top:80px;">Section 3: Project Management Company (PMC)</h1>
-  <div class="sub">The construction / development arm · Category C of the CVML proposal</div>
+  <h1 style="margin-top:80px;"><span class="lang ja">セクション 3：プロジェクト管理会社（PMC）</span><span class="lang en">Section 3: Project Management Company (PMC)</span></h1>
+  <div class="sub"><span class="lang ja">建設・開発部門・CVML 提案書のカテゴリー C</span><span class="lang en">The construction / development arm · Category C of the CVML proposal</span></div>
 
   <h2>📍 Where it sits in the structure</h2>
 
@@ -1511,7 +1547,7 @@
     <b>Mental model:</b> PMC is the <em>construction company</em> for the AYUVA group. It earns a development fee from each SPV for executing the build. Active operating entity — needs real staff, real office, real activity.
   </p>
 
-  <h2>💡 Key difference from Holding Co / Investment Co</h2>
+  <h2><span class="lang ja">💡 ホールディング / 投資会社との主な違い</span><span class="lang en">💡 Key difference from Holding Co / Investment Co</span></h2>
 
   <p style="font-size:14px;">Unlike the upper-tier entities, PMC is an <b>active operating company</b>. That changes everything about its setup:</p>
 
@@ -1538,7 +1574,7 @@
     </div>
   </div>
 
-  <h2>🏛️ Jurisdiction — CVML recommends Mainland DET</h2>
+  <h2><span class="lang ja">🏛️ 管轄区域 — CVML はメインランド DET を推奨</span><span class="lang en">🏛️ Jurisdiction — CVML recommends Mainland DET</span></h2>
 
   <p style="font-size:14px;">For PMC, CVML's proposal lists only <b>Dubai Mainland (DED / DET)</b> as the recommended path, with the specific UAE activity code <b>8211015 (Project Management Services)</b>.</p>
 
@@ -1570,7 +1606,7 @@
 
   </div>
 
-  <h2>📋 Mainland DET requirements (per CVML)</h2>
+  <h2><span class="lang ja">📋 メインランド DET 要件（CVML より）</span><span class="lang en">📋 Mainland DET requirements (per CVML)</span></h2>
 
   <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:14px 0;">
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
@@ -1629,7 +1665,7 @@
     </table>
   </div>
 
-  <h2>🧮 F, G, H — Special Service Fees applied to PMC</h2>
+  <h2><span class="lang ja">🧮 F、G、H — PMC に適用される特別サービス手数料</span><span class="lang en">🧮 F, G, H — Special Service Fees applied to PMC</span></h2>
 
   <p style="font-size:14px;">For PMC, <b>all three</b> apply (unlike Holding Co where only F applied):</p>
 
@@ -1664,7 +1700,7 @@
 
   </div>
 
-  <h2>📑 Scope of Work — what CVML delivers for AED 30,000 (Category C)</h2>
+  <h2><span class="lang ja">📑 業務範囲 — CVML が AED 30,000 で実施する内容（カテゴリー C）</span><span class="lang en">📑 Scope of Work — what CVML delivers for AED 30,000 (Category C)</span></h2>
 
   <p style="font-size:14px;">CVML lists 3 streams (similar pattern to Holding/Investment Co):</p>
 
@@ -1706,7 +1742,7 @@
 
   </div>
 
-  <h2>👤 What CVML does NOT cover for PMC</h2>
+  <h2><span class="lang ja">👤 PMC で CVML がカバーしないもの</span><span class="lang en">👤 What CVML does NOT cover for PMC</span></h2>
 
   <div class="does-does-not">
     <div class="does">
@@ -1730,7 +1766,7 @@
     </div>
   </div>
 
-  <h2>🏢 Office Requirement — Physical Mandatory</h2>
+  <h2><span class="lang ja">🏢 オフィス要件 — 物理オフィス必須</span><span class="lang en">🏢 Office Requirement — Physical Mandatory</span></h2>
 
   <p style="font-size:14px;">Unlike the Holding Co (RAK ICC, no office) and Investment Co (DIFC flexi-desk), <b>PMC requires a real Ejari-registered office in mainland Dubai</b>. No flexi-desk option for mainland DET.</p>
 
@@ -1779,7 +1815,7 @@
     <b>📩 Question for Walid:</b> "For PMC, can we either share EXCEED REAL ESTATE LLC's existing Ejari'd office, or use a mainland business center address (~AED 10k/year)? Which is your typical recommendation for early-stage mainland entities like ours?"
   </div>
 
-  <h2>💵 Real Year 1 total for PMC</h2>
+  <h2><span class="lang ja">💵 PMC 初年度 実質合計</span><span class="lang en">💵 Real Year 1 total for PMC</span></h2>
 
   <div style="background:white; border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin:14px 0;">
     <div class="fee-line"><span class="fee-label">Category C — CVML setup fee</span><span class="fee-amt">AED 30,000</span></div>
@@ -1856,8 +1892,8 @@
   <!-- SECTION 4 — AMC (Category D)                 -->
   <!-- ============================================ -->
 
-  <h1 style="margin-top:80px;">Section 4: Asset / Hotel Management Company (AMC)</h1>
-  <div class="sub">The operations arm · Category D of the CVML proposal</div>
+  <h1 style="margin-top:80px;"><span class="lang ja">セクション 4：アセット / ホテル管理会社（AMC）</span><span class="lang en">Section 4: Asset / Hotel Management Company (AMC)</span></h1>
+  <div class="sub"><span class="lang ja">運営部門・CVML 提案書のカテゴリー D</span><span class="lang en">The operations arm · Category D of the CVML proposal</span></div>
 
   <h2>📍 Where it sits in the structure</h2>
 
@@ -1923,7 +1959,7 @@
     <b>Mental model:</b> AMC is the <em>"hotel operations company"</em> for AYUVA. Picture it like Marriott or Aman managing a hotel they don't own — same arrangement: AMC runs operations, SPV owns the property, AMC charges a management fee.
   </p>
 
-  <h2>💡 Key difference from PMC</h2>
+  <h2><span class="lang ja">💡 PMC との主な違い</span><span class="lang en">💡 Key difference from PMC</span></h2>
 
   <p style="font-size:14px;">PMC and AMC look similar on paper (both mainland, both operating entities). But they handle <b>completely different phases</b>:</p>
 
@@ -1982,7 +2018,7 @@
 
   </div>
 
-  <h2>📋 Mainland DET requirements (same as PMC)</h2>
+  <h2><span class="lang ja">📋 メインランド DET 要件（PMC と同じ）</span><span class="lang en">📋 Mainland DET requirements (same as PMC)</span></h2>
 
   <div style="background:var(--paper); border:1px solid var(--line); border-radius:12px; padding:18px 22px; margin:14px 0;">
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
@@ -2052,7 +2088,7 @@
     </table>
   </div>
 
-  <h2>🧮 F, G, H — Special Service Fees applied to AMC</h2>
+  <h2><span class="lang ja">🧮 F、G、H — AMC に適用される特別サービス手数料</span><span class="lang en">🧮 F, G, H — Special Service Fees applied to AMC</span></h2>
 
   <p style="font-size:14px;">All 3 apply, with <b>much higher H (visa) cost</b> than PMC due to hospitality staffing:</p>
 
@@ -2087,7 +2123,7 @@
 
   </div>
 
-  <h2>📑 Scope of Work — what CVML delivers for AED 30,000 (Category D)</h2>
+  <h2><span class="lang ja">📑 業務範囲 — CVML が AED 30,000 で実施する内容（カテゴリー D）</span><span class="lang en">📑 Scope of Work — what CVML delivers for AED 30,000 (Category D)</span></h2>
 
   <p style="font-size:14px;">Same 3-stream structure as PMC. Stream (ii) is AMC-specific — drafting the management agreement.</p>
 
@@ -2129,7 +2165,7 @@
 
   </div>
 
-  <h2>👤 What CVML does NOT cover for AMC</h2>
+  <h2><span class="lang ja">👤 AMC で CVML がカバーしないもの</span><span class="lang en">👤 What CVML does NOT cover for AMC</span></h2>
 
   <div class="does-does-not">
     <div class="does">
@@ -2154,7 +2190,7 @@
     </div>
   </div>
 
-  <h2>🏢 Office Requirement — Same 3 options as PMC</h2>
+  <h2><span class="lang ja">🏢 オフィス要件 — PMC と同じ 3 つの選択肢</span><span class="lang en">🏢 Office Requirement — Same 3 options as PMC</span></h2>
 
   <p style="font-size:14px;">Identical to PMC — mainland Ejari required. Same 3 options:</p>
 
@@ -2194,7 +2230,7 @@
     <b>Note:</b> AYUVA's main "office" for AMC will actually be the <b>AYUVA Project 1 facility itself</b> once it opens. The registered AMC address (Ejari) is just for licensing purposes — physical operations happen at the facility.
   </p>
 
-  <h2>💵 Real Year 1 total for AMC (assuming 10 visas)</h2>
+  <h2><span class="lang ja">💵 AMC 初年度 実質合計（ビザ 10 件想定）</span><span class="lang en">💵 Real Year 1 total for AMC (assuming 10 visas)</span></h2>
 
   <div style="background:white; border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin:14px 0;">
     <div class="fee-line"><span class="fee-label">Category D — CVML setup fee</span><span class="fee-amt">AED 30,000</span></div>
@@ -2270,10 +2306,10 @@
   <!-- SECTION 5 — SPVs (Category E)                -->
   <!-- ============================================ -->
 
-  <h1 style="margin-top:80px;">Section 5: Project SPVs</h1>
-  <div class="sub">One SPV per project · Category E of the CVML proposal</div>
+  <h1 style="margin-top:80px;"><span class="lang ja">セクション 5：プロジェクト SPV</span><span class="lang en">Section 5: Project SPVs</span></h1>
+  <div class="sub"><span class="lang ja">プロジェクトごとに 1 SPV・CVML 提案書のカテゴリー E</span><span class="lang en">One SPV per project · Category E of the CVML proposal</span></div>
 
-  <h2>📍 Where SPVs sit in the structure</h2>
+  <h2><span class="lang ja">📍 SPV の構造内の位置</span><span class="lang en">📍 Where SPVs sit in the structure</span></h2>
 
   <div class="structure">
     <div class="entity muted">
@@ -2321,7 +2357,7 @@
     ↑ <b>One SPV per AYUVA project.</b> Each is a separate legal entity holding only that project's assets.
   </p>
 
-  <h2>🎯 What an SPV does (and doesn't do)</h2>
+  <h2><span class="lang ja">🎯 SPV は何をするか（何をしないか）</span><span class="lang en">🎯 What an SPV does (and doesn't do)</span></h2>
 
   <div class="does-does-not">
     <div class="does">
@@ -2350,7 +2386,7 @@
     <b>Mental model:</b> The SPV is like a <em>"project box"</em> — it owns everything about Project 1 and nothing else. If Project 1 fails, only that SPV is affected. Projects 2, 3, 4... live in their own boxes.
   </p>
 
-  <h2>💡 Why one SPV per project (ring-fencing)</h2>
+  <h2><span class="lang ja">💡 なぜプロジェクトごとに 1 SPV か（リングフェンシング）</span><span class="lang en">💡 Why one SPV per project (ring-fencing)</span></h2>
 
   <p style="font-size:14px;">This is CVML's core rationale for the SPV layer:</p>
 
@@ -2371,7 +2407,7 @@
     </div>
   </div>
 
-  <h2>🏛️ Jurisdiction — depends on Lease vs Buy</h2>
+  <h2><span class="lang ja">🏛️ 管轄区域 — リース vs 購入で決まる</span><span class="lang en">🏛️ Jurisdiction — depends on Lease vs Buy</span></h2>
 
   <p style="font-size:14px;">This is the BIG decision for SPV setup. The right jurisdiction depends on whether AYUVA Project 1 will <b>lease</b> the site or <b>own</b> the freehold:</p>
 
@@ -2409,7 +2445,7 @@
     <b>📩 Question pending:</b> AYUVA Project 1 — lease or buy the site? This decision is the gating item for SPV jurisdiction. CEO discussion needed.
   </div>
 
-  <h2>📋 Project-specific approvals (beyond CVML's scope)</h2>
+  <h2><span class="lang ja">📋 プロジェクト固有の承認（CVML 範囲外）</span><span class="lang en">📋 Project-specific approvals (beyond CVML's scope)</span></h2>
 
   <p style="font-size:14px;">Because SPVs for hospitality projects in mainland UAE involve a real operating asset, they need <b>additional approvals on top of entity setup</b>. CVML lists these as separate from their AED 20k lumpsum:</p>
 
@@ -2473,7 +2509,7 @@
     </table>
   </div>
 
-  <h2>🧮 F, G, H — Special Service Fees applied per SPV</h2>
+  <h2><span class="lang ja">🧮 F、G、H — SPV ごとに適用される特別サービス手数料</span><span class="lang en">🧮 F, G, H — Special Service Fees applied per SPV</span></h2>
 
   <p style="font-size:14px;">For SPVs, F and G almost always apply. H depends on whether the SPV needs its own visas (often unnecessary if AMC handles operational staff).</p>
 
@@ -2508,7 +2544,7 @@
 
   </div>
 
-  <h2>📑 Scope of Work — what CVML delivers for AED 20,000 per SPV (Category E)</h2>
+  <h2><span class="lang ja">📑 業務範囲 — CVML が SPV あたり AED 20,000 で実施する内容（カテゴリー E）</span><span class="lang en">📑 Scope of Work — what CVML delivers for AED 20,000 per SPV (Category E)</span></h2>
 
   <p style="font-size:14px;">Same 3-stream pattern. Stream (iii) is the SPV-specific value — drafting intercompany agreements that tie everything together.</p>
 
@@ -2551,7 +2587,7 @@
 
   </div>
 
-  <h2>👤 What CVML does NOT cover for SPVs</h2>
+  <h2><span class="lang ja">👤 SPV で CVML がカバーしないもの</span><span class="lang en">👤 What CVML does NOT cover for SPVs</span></h2>
 
   <div class="does-does-not">
     <div class="does">
@@ -2576,7 +2612,7 @@
     </div>
   </div>
 
-  <h2>💵 Real Year 1 total for SPV 1 (AYUVA Project 1)</h2>
+  <h2><span class="lang ja">💵 SPV 1（AYUVA プロジェクト 1） 初年度 実質合計</span><span class="lang en">💵 Real Year 1 total for SPV 1 (AYUVA Project 1)</span></h2>
 
   <div style="background:white; border:2px solid var(--accent); border-radius:14px; padding:22px 26px; margin:14px 0;">
     <div class="fee-line"><span class="fee-label">Category E — CVML setup fee</span><span class="fee-amt">AED 20,000</span></div>
@@ -2594,7 +2630,7 @@
     </div>
   </div>
 
-  <h2>📈 Future projects — cost stacking</h2>
+  <h2><span class="lang ja">📈 将来のプロジェクト — コストの積み上げ</span><span class="lang en">📈 Future projects — cost stacking</span></h2>
 
   <p style="font-size:14px;">Important to understand: each new AYUVA project (6–8 planned) = its own SPV. Costs compound:</p>
 
@@ -2660,7 +2696,7 @@
     </p>
   </div>
 
-  <h2>🎯 The complete recommended sequence</h2>
+  <h2><span class="lang ja">🎯 推奨される完全なシーケンス</span><span class="lang en">🎯 The complete recommended sequence</span></h2>
 
   <div style="background:var(--paper); border:2px solid var(--accent); border-radius:14px; padding:20px 24px; margin:14px 0;">
     <ol style="font-size:14px; line-height:1.8; padding-left:24px; margin:0;">
@@ -2679,6 +2715,24 @@
   </p>
 
 </div>
+
+<script>
+  (function(){
+    const KEY = 'ayuva-proposal:lang';
+    const body = document.body;
+    const btns = document.querySelectorAll('.lang-toggle button');
+    function setLang(lang){
+      body.classList.toggle('lang-en', lang === 'en');
+      body.classList.toggle('lang-ja', lang === 'ja');
+      btns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+      try { localStorage.setItem(KEY, lang); } catch(e){}
+    }
+    let saved = 'en';
+    try { saved = localStorage.getItem(KEY) || 'en'; } catch(e){}
+    setLang(saved);
+    btns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+  })();
+</script>
 
 </body>
 </html>
