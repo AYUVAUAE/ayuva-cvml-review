@@ -252,7 +252,7 @@
 <div class="container">
 
   <h1><span class="lang ja">セクション 1：ホールディングカンパニー</span><span class="lang en">Section 1: Holding Company</span></h1>
-  <div class="sub">Working name: <b>EXCEED Capital</b> · Top of the AYUVA group structure</div>
+  <div class="sub"><span class="lang en">Working name: <b>EXCEED Capital</b> · Top of the AYUVA group structure</span><span class="lang ja">仮名称：<b>EXCEED Capital</b>・AYUVA グループストラクチャーの頂点</span></div>
 
   <h2><span class="lang ja">📍 構造内の位置</span><span class="lang en">📍 Where it sits in the structure</span></h2>
 
@@ -402,11 +402,11 @@
     </div>
   </div>
 
-  <p style="font-size:13px; color:var(--muted); text-align:center;">↑ DIFC costs <b>~23× more</b> than RAK ICC for the same legal function</p>
+  <p style="font-size:13px; color:var(--muted); text-align:center;"><span class="lang en">↑ DIFC costs <b>~23× more</b> than RAK ICC for the same legal function</span><span class="lang ja">↑ DIFC は同じ法的機能で RAK ICC より<b>約 23 倍高い</b></span></p>
 
   <h2><span class="lang ja">📋 主要要件（決定 / 提供が必要なもの）</span><span class="lang en">📋 Key Requirements (what we need to decide / provide)</span></h2>
 
-  <p style="font-size:14px;">CVML lists 4 baseline requirements. Each has a concrete decision or output we need to give them before they can incorporate the entity.</p>
+  <p style="font-size:14px;"><span class="lang en">CVML lists 4 baseline requirements. Each has a concrete decision or output we need to give them before they can incorporate the entity.</span><span class="lang ja">CVML は 4 つの基本要件を挙げる。各項目は CVML がエンティティを設立する前に提供すべき具体的な決定または成果物。</span></p>
 
   <!-- REQ 1: SHARE CAPITAL -->
   <div style="background:var(--paper); border:2px solid var(--green); border-radius:14px; padding:20px 24px; margin:14px 0; position:relative;">
@@ -504,7 +504,7 @@
         try { localStorage.set<span class="lang en">Item</span><span class="lang ja">項目</span>(STORAGE_KEY, input.value); } catch(e){}
       };
       try {
-        const saved = localStorage.getItem(STORAGE_KEY);
+        const saved = localStorage.get<span class="lang en">Item</span><span class="lang ja">項目</span>(STORAGE_KEY);
         if (saved) input.value = saved;
       } catch(e){}
       update();
@@ -514,7 +514,7 @@
 
   <h2><span class="lang ja">🧾 規制・税務上の義務（継続的）</span><span class="lang en">🧾 Regulatory & Tax obligations (ongoing)</span></h2>
 
-  <p style="font-size:14px;">Once the Holding Co is set up, there are <b>4 recurring obligations</b> that apply every year. These are NOT one-time — they recur for as long as the entity exists.</p>
+  <p style="font-size:14px;"><span class="lang en">Once the Holding Co is set up, there are <b>4 recurring obligations</b> that apply every year. These are NOT one-time — they recur for as long as the entity exists.</span><span class="lang ja">ホールディングカンパニー設立後、毎年適用される<b>4 つの継続的義務</b>がある。一度きりではなく — エンティティが存在する限り継続。</span></p>
 
   <!-- DETAILED EXPLANATION CARDS -->
 
@@ -610,7 +610,7 @@
   </div>
 
   <!-- SUMMARY TABLE -->
-  <h3 style="font-size:17px; margin:24px 0 10px; color:var(--accent-deep);">📋 TL;DR — Summary for the Holding Co</h3>
+  <h3 style="font-size:17px; margin:24px 0 10px; color:var(--accent-deep);"><span class="lang en">📋 TL;DR — Summary for the Holding Co</span><span class="lang ja">📋 まとめ — ホールディングカンパニーの概要</span></h3>
 
   <div style="background:var(--paper); border:2px solid var(--accent); border-radius:14px; padding:20px 24px; margin:12px 0;">
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
@@ -622,28 +622,28 @@
       </thead>
       <tbody>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📊 Corporate Tax</td>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line);">Register, but likely <b style="color:var(--green);">0% tax</b> (no profit)</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📊 Corporate Tax</span><span class="lang ja">📊 法人税</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Register, but likely <b style="color:var(--green);">0% tax</b> (no profit)</span><span class="lang ja">登録、ただしおそらく<b style="color:var(--green);">0% 税</b>（利益なし）</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🧮 VAT</td>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line);">Probably <b style="color:var(--green);">not needed</b></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🧮 VAT</span><span class="lang ja">🧮 VAT</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Probably <b style="color:var(--green);">not needed</b></span><span class="lang ja">おそらく<b style="color:var(--green);">不要</b></span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🏛️ ESR notification</td>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line);">Annual filing, <b style="color:var(--green);">exempt as passive</b></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🏛️ ESR notification</span><span class="lang ja">🏛️ ESR 通知</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Annual filing, <b style="color:var(--green);">exempt as passive</b></span><span class="lang ja">年次届出、<b style="color:var(--green);">パッシブとして免除</b></span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🆔 UBO</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🆔 UBO</span><span class="lang ja">🆔 UBO</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><b style="color:var(--green);">One-time filing</b> at setup</td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📜 License renewal</td>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line);">Annual <b>AED 1,500–2,500</b></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📜 License renewal</span><span class="lang ja">📜 ライセンス更新</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Annual <b>AED 1,500–2,500</b></span><span class="lang ja">年次 <b>AED 1,500～2,500</b></span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; font-weight:600;">📁 Annual filings</td>
-          <td style="padding:10px 12px;">Light, can be handled by CVML retainer</td>
+          <td style="padding:10px 12px; font-weight:600;"><span class="lang en">📁 Annual filings</span><span class="lang ja">📁 年次届出</span></td>
+          <td style="padding:10px 12px;"><span class="lang en">Light, can be handled by CVML retainer</span><span class="lang ja">軽微、CVML リテイナーで対応可能</span></td>
         </tr>
       </tbody>
     </table>
@@ -696,7 +696,7 @@
     </div>
 
     <div style="font-size:12px; color:var(--muted); margin-top:12px; padding-top:10px; border-top:1px dashed var(--line);">
-      <b>Note:</b> Above is just the Holding Co cost. Office costs (if jurisdiction requires one), bank account opening fees, and other disbursements are <b><span class="lang en">extra</span><span class="lang ja">追加</span> and at actuals</b> per CVML's disclaimer.
+      <b><span class="lang en">Note:</span><span class="lang ja">注：</span></b> Above is just the Holding Co cost. Office costs (if jurisdiction requires one), bank account opening fees, and other disbursements are <b><span class="lang en">extra</span><span class="lang ja">追加</span> and at actuals</b> per CVML's disclaimer.
     </div>
   </div>
 
@@ -744,7 +744,7 @@
 
   <h2><span class="lang ja">🧮 F、G、H — 特別サービス手数料（利用ごとに請求）</span><span class="lang en">🧮 F, G, H — Special Service Fees (charged per use)</span></h2>
 
-  <p style="font-size:14px;">Beyond the Category A AED 35,000 lumpsum, CVML has 3 special service fees that apply <b>per company / per use</b>:</p>
+  <p style="font-size:14px;"><span class="lang en">Beyond the Category A AED 35,000 lumpsum, CVML has 3 special service fees that apply <b>per company / per use</b>:</span><span class="lang ja">カテゴリー A の AED 35,000 一括費用に加え、CVML は<b>会社ごと / 利用ごと</b>に適用される 3 つの特別サービス手数料を設定：</span></p>
 
   <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:14px 0;">
 
@@ -806,37 +806,37 @@
     <div style="margin-bottom:18px;">
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">(i) Incorporation of the Company — 8 deliverables</span><span class="lang ja">(i) 会社の法人設立 — 8 つの成果物</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on most suitable UAE jurisdiction (mainland or free zone)</li>
-        <li>Preparing and submitting the incorporation application</li>
-        <li>Drafting / reviewing all corporate docs: <b>Memorandum of Association, Articles of Association</b>, ancillary docs</li>
-        <li>Advising on ownership and governance structure</li>
-        <li>Liaising with authorities on approvals, licensing, registration</li>
-        <li>Completing the incorporation process</li>
-        <li>Following up until trade license + incorporation docs issued</li>
-        <li>General legal and practical guidance during the process</li>
+        <li><span class="lang en">Advising on most suitable UAE jurisdiction (mainland or free zone)</span><span class="lang ja">最適な UAE 管轄区域（メインランドまたはフリーゾーン）について助言</span></li>
+        <li><span class="lang en">Preparing and submitting the incorporation application</span><span class="lang ja">法人設立申請の準備および提出</span></li>
+        <li><span class="lang en">Drafting / reviewing all corporate docs: <b>Memorandum of Association, Articles of Association</b>, ancillary docs</span><span class="lang ja">全コーポレート文書のドラフト / レビュー：<b>定款（MoA）、付随定款（AoA）</b>、付帯書類</span></li>
+        <li><span class="lang en">Advising on ownership and governance structure</span><span class="lang ja">所有・ガバナンス構造について助言</span></li>
+        <li><span class="lang en">Liaising with authorities on approvals, licensing, registration</span><span class="lang ja">承認・ライセンス・登録について当局と連絡調整</span></li>
+        <li><span class="lang en">Completing the incorporation process</span><span class="lang ja">法人設立プロセスの完了</span></li>
+        <li><span class="lang en">Following up until trade license + incorporation docs issued</span><span class="lang ja">トレードライセンス + 設立書類発行までフォローアップ</span></li>
+        <li><span class="lang en">General legal and practical guidance during the process</span><span class="lang ja">プロセス中の一般的な法律・実務指導</span></li>
       </ul>
     </div>
 
     <div style="margin-bottom:18px;">
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(ii) Corporate Structuring & Governance — 6 deliverables</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on the proposed group structure + ownership framework</li>
+        <li><span class="lang en">Advising on the proposed group structure + ownership framework</span><span class="lang ja">提案されたグループ構造 + 所有フレームワークについて助言</span></li>
         <li>Advising on the Holding ↔ Investment Co / PMC / AMC <span class="lang en">/ SPV</span><span class="lang ja">/ SPV</span> relationships</li>
-        <li>Advising on governance mechanisms, shareholder arrangements, decision-making framework</li>
-        <li>Drafting / reviewing required <b>shareholder resolutions</b> and corporate approvals</li>
-        <li>Advising on future restructuring, expansion, investor participation</li>
-        <li>Preparing ancillary legal docs for implementation</li>
+        <li><span class="lang en">Advising on governance mechanisms, shareholder arrangements, decision-making framework</span><span class="lang ja">ガバナンスメカニズム、株主取り決め、意思決定フレームワークについて助言</span></li>
+        <li><span class="lang en">Drafting / reviewing required <b>shareholder resolutions</b> and corporate approvals</span><span class="lang ja">必要な<b>株主決議</b>とコーポレート承認のドラフト / レビュー</span></li>
+        <li><span class="lang en">Advising on future restructuring, expansion, investor participation</span><span class="lang ja">将来の再編、拡張、投資家参加について助言</span></li>
+        <li><span class="lang en">Preparing ancillary legal docs for implementation</span><span class="lang ja">実施のための付帯法律文書の準備</span></li>
       </ul>
     </div>
 
     <div>
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">(iii) Corporate Tax + VAT Registration — 5 deliverables</span><span class="lang ja">(iii) 法人税 + VAT 登録 — 5 つの成果物</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on whether UAE Corporate Tax applies to the Holding Co</li>
-        <li>Preparing and submitting the Corporate Tax registration with the FTA</li>
-        <li>Liaising with the FTA on queries / clarifications</li>
-        <li>Assisting with VAT registration if applicable</li>
-        <li>High-level guidance on ongoing compliance requirements</li>
+        <li><span class="lang en">Advising on whether UAE Corporate Tax applies to the Holding Co</span><span class="lang ja">ホールディングカンパニーに UAE 法人税が適用されるか助言</span></li>
+        <li><span class="lang en">Preparing and submitting the Corporate Tax registration with the FTA</span><span class="lang ja">FTA への法人税登録の準備・提出</span></li>
+        <li><span class="lang en">Liaising with the FTA on queries / clarifications</span><span class="lang ja">問い合わせ / 明確化について FTA と連絡調整</span></li>
+        <li><span class="lang en">Assisting with VAT registration if applicable</span><span class="lang ja">該当する場合の VAT 登録支援</span></li>
+        <li><span class="lang en">High-level guidance on ongoing compliance requirements</span><span class="lang ja">継続的なコンプライアンス要件に関する高レベル指導</span></li>
       </ul>
     </div>
 
@@ -937,7 +937,7 @@
 
   <div class="does-does-not">
     <div class="does">
-      <h3>✓ DOES</h3>
+      <h3><span class="lang en">✓ DOES</span><span class="lang ja">✓ 行うこと</span></h3>
       <ul>
         <li><span class="lang en"><b>Receives investor money</b> (SAFE notes / convertibles)</span><span class="lang ja"><b>投資家資金を受領</b>（SAFE ノート / 転換型）</span></li>
         <li><span class="lang en">Holds investor relationships + agreements</span><span class="lang ja">投資家との関係 + 契約を保有</span></li>
@@ -947,12 +947,12 @@
       </ul>
     </div>
     <div class="does-not">
-      <h3>✗ DOES NOT</h3>
+      <h3><span class="lang en">✗ DOES NOT</span><span class="lang ja">✗ 行わないこと</span></h3>
       <ul>
-        <li>Build anything (PMC does)</li>
-        <li>Operate the facility (AMC does)</li>
+        <li><span class="lang en">Build anything (PMC does)</span><span class="lang ja">建設業務（PMC が行う）</span></li>
+        <li><span class="lang en">Operate the facility (AMC does)</span><span class="lang ja">施設運営（AMC が行う）</span></li>
         <li><span class="lang en">Own the project asset (SPV does)</span><span class="lang ja">プロジェクト資産の所有（SPV が行う）</span></li>
-        <li>Sign vendor / construction contracts</li>
+        <li><span class="lang en">Sign vendor / construction contracts</span><span class="lang ja">ベンダー / 建設契約の締結</span></li>
       </ul>
     </div>
   </div>
@@ -981,12 +981,12 @@
   </div>
 
   <div style="background:#fef9e8; border:1px solid var(--accent); border-radius:10px; padding:14px 18px; margin:14px 0; font-size:13.5px; line-height:1.6;">
-    <b>📌 SAFE structure note:</b> The SAFE notes are how we'll <b>receive investor money during fundraising</b>, which later converts into Investment Co shares carrying revenue distribution rights. The <b>specific commercial terms</b> (valuation cap, distribution %, conversion trigger, lock-in, etc.) will be <b>discussed in a separate meeting with CVML</b> once the entity setup is underway. Not blocking incorporation.
+    <span class="lang en"><b>📌 SAFE structure note:</b> The SAFE notes are how we'll <b>receive investor money during fundraising</b>, which later converts into Investment Co shares carrying revenue distribution rights. The <b>specific commercial terms</b> (valuation cap, distribution %, conversion trigger, lock-in, etc.) will be <b>discussed in a separate meeting with CVML</b> once the entity setup is underway. Not blocking incorporation.</span><span class="lang ja"><b>📌 SAFE 構造の注：</b>SAFE ノートは<b>資金調達中に投資家資金を受け取る</b>仕組みで、後に収益分配権を持つ投資会社株式に転換。<b>具体的な商業条件</b>（評価キャップ、分配 %、転換トリガー、ロックインなど）はエンティティ設立進行後に<b>CVML との別途ミーティングで議論</b>。設立をブロックしない。</span>
   </div>
 
   <h2><span class="lang ja">🏛️ CVML が提示する 3 つの管轄区域オプション</span><span class="lang en">🏛️ The 3 jurisdiction options CVML is offering</span></h2>
 
-  <p style="font-size:14px; margin-bottom:14px;">CVML lists only 3 jurisdictions for the Investment Company (no RAK ICC SPV option here, unlike Holding Co):</p>
+  <p style="font-size:14px; margin-bottom:14px;"><span class="lang en">CVML lists only 3 jurisdictions for the Investment Company (no RAK ICC SPV option here, unlike Holding Co):</span><span class="lang ja">CVML は投資会社向けに 3 つの管轄区域のみ提示（ホールディングカンパニーと異なり RAK ICC SPV オプションなし）：</span></p>
 
   <div class="juris-grid">
 
@@ -1031,7 +1031,7 @@
   <div style="background:#fef0ec; border:2px solid var(--red); border-radius:12px; padding:14px 18px; margin:14px 0;">
     <div style="font-size:11px; font-weight:700; letter-spacing:0.08em; color:var(--red); margin-bottom:4px;">⚠ ADGM IS MISSING</div>
     <p style="margin:0; font-size:14px; line-height:1.55;">
-      You specifically asked Walid for an <b>ADGM (Abu Dhabi)</b> quote — it's still NOT in this updated proposal. ADGM is the natural alternative to DIFC (also English common-law, ~30% cheaper). Worth pushing back to get ADGM added before locking in DIFC.
+      <span class="lang en">You specifically asked Walid for an <b>ADGM (Abu Dhabi)</b> quote — it's still NOT in this updated proposal. ADGM is the natural alternative to DIFC (also English common-law, ~30% cheaper). Worth pushing back to get ADGM added before locking in DIFC.</span><span class="lang ja">Walid に具体的に <b>ADGM（アブダビ）</b>の見積もりを依頼したが、この更新提案書にはまだ含まれていない。ADGM は DIFC の自然な代替案（英米法、約 30% 安）。DIFC 確定前に ADGM 追加を強く依頼する価値あり。</span>
     </p>
   </div>
 
@@ -1198,33 +1198,33 @@
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
       <thead>
         <tr style="background:var(--bg);">
-          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Obligation</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Obligation</span><span class="lang ja">義務</span></th>
           <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Status for Investment Co</span><span class="lang ja">投資会社への該当状況</span></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📊 Corporate Tax</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📊 Corporate Tax</span><span class="lang ja">📊 法人税</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Register. <b style="color:var(--amber);">Likely some profit</b> (investment returns), so 9% may apply over AED 375k.</span><span class="lang ja">登録。<b style="color:var(--amber);">利益が見込まれる</b>（投資収益）ため、AED 375k 超で 9% 適用の可能性。</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🧮 VAT</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🧮 VAT</span><span class="lang ja">🧮 VAT</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en"><b style="color:var(--green);">Probably not needed</b> (no commercial sales; just managing investor capital).</span><span class="lang ja"><b style="color:var(--green);">おそらく不要</b>（商業販売なし、投資家資本管理のみ）。</span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🏛️ ESR notification</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🏛️ ESR notification</span><span class="lang ja">🏛️ ESR 通知</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en"><b style="color:var(--amber);">May apply</b> — "Investment Fund Management" is a relevant activity if active management. CVML to confirm.</span><span class="lang ja"><b style="color:var(--amber);">適用される可能性あり</b> — アクティブ運用の場合「投資ファンド管理」が関連活動に該当。CVML が確認。</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🆔 UBO</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🆔 UBO</span><span class="lang ja">🆔 UBO</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">One-time filing at setup (same as Holding Co).</span><span class="lang ja">設立時に 1 回限りの届出（ホールディングカンパニーと同様）。</span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📜 License renewal</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📜 License renewal</span><span class="lang ja">📜 ライセンス更新</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">DIFC: <b>~AED 12k/year</b>. RAK ICC: <b>~AED 1.5k/year</b>.</span><span class="lang ja">DIFC：<b>約 AED 12k/年</b>。RAK ICC：<b>約 AED 1.5k/年</b>。</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; font-weight:600;">📁 Annual filings</td>
+          <td style="padding:10px 12px; font-weight:600;"><span class="lang en">📁 Annual filings</span><span class="lang ja">📁 年次届出</span></td>
           <td style="padding:10px 12px;"><span class="lang en">DIFC has stricter reporting than RAK ICC (audited accounts may be required).</span><span class="lang ja">DIFC は RAK ICC より厳格な報告（監査済財務諸表が要求される場合あり）。</span></td>
         </tr>
       </tbody>
@@ -1240,7 +1240,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Corporate Tax registration</div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 3,000<small style="font-size:11px; color:var(--muted); font-weight:500;"> / company</small></div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);">✓ Applies</b><br><span class="lang en">Required by UAE law.</span><span class="lang ja">UAE 法により必須。</span>
+        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当</span></b><br><span class="lang en">Required by UAE law.</span><span class="lang ja">UAE 法により必須。</span>
       </div>
     </div>
 
@@ -1273,13 +1273,13 @@
     <div style="margin-bottom:18px;">
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">(i) Incorporation of the Company</span><span class="lang ja">(i) 会社の法人設立</span> — 7 deliverables</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on most suitable UAE jurisdiction (mainland or free zone)</li>
-        <li>Preparing and submitting incorporation application</li>
-        <li>Drafting / reviewing all corporate docs: <b>MoA</b> + ancillary documents</li>
-        <li>Liaising with authorities on approvals, licensing, registration</li>
-        <li>Completing incorporation process</li>
-        <li>Following up until trade license + incorporation docs issued</li>
-        <li>General legal and practical guidance</li>
+        <li><span class="lang en">Advising on most suitable UAE jurisdiction (mainland or free zone)</span><span class="lang ja">最適な UAE 管轄区域（メインランドまたはフリーゾーン）について助言</span></li>
+        <li><span class="lang en">Preparing and submitting incorporation application</span><span class="lang ja">法人設立申請の準備・提出</span></li>
+        <li><span class="lang en">Drafting / reviewing all corporate docs: <b>MoA</b> + ancillary documents</span><span class="lang ja">全コーポレート文書のドラフト / レビュー：<b>MoA</b> + 付帯書類</span></li>
+        <li><span class="lang en">Liaising with authorities on approvals, licensing, registration</span><span class="lang ja">承認・ライセンス・登録について当局と連絡調整</span></li>
+        <li><span class="lang en">Completing incorporation process</span><span class="lang ja">法人設立プロセスの完了</span></li>
+        <li><span class="lang en">Following up until trade license + incorporation docs issued</span><span class="lang ja">トレードライセンス + 設立書類発行までフォローアップ</span></li>
+        <li><span class="lang en">General legal and practical guidance</span><span class="lang ja">一般的な法律・実務指導</span></li>
       </ul>
     </div>
 
@@ -1287,23 +1287,23 @@
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">⭐ (ii) Investment Structuring & Documentation — 6 deliverables</span><span class="lang ja">⭐ (ii) 投資ストラクチャリング & ドキュメンテーション — 6 つの成果物</span></div>
       <p style="font-size:13px; color:var(--ink-soft); margin:0 0 8px;"><span class="lang en"><b>This is the VALUE-ADD stream for Investment Co.</b> The real reason we hire CVML.</span><span class="lang ja"><b>これは投資会社の付加価値ストリーム。</b>CVML を雇う本来の理由。</span></p>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on the proposed investment structure (including SAFE notes or similar convertible instruments)</li>
-        <li><b>Drafting SAFE notes</b> or equivalent investment instruments</li>
-        <li><b>Drafting investment agreements</b> to be executed after receipt of funds</li>
-        <li>Advising on investor rights, conversion mechanisms, governance, exit arrangements</li>
-        <li>Advising on the flow of funds from Investment Co to the SPVs</li>
-        <li>Preparing required corporate approvals for the investment structure</li>
+        <li><span class="lang en">Advising on the proposed investment structure (including SAFE notes or similar convertible instruments)</span><span class="lang ja">提案された投資ストラクチャー（SAFE ノートまたは類似の転換証券を含む）について助言</span></li>
+        <li><span class="lang en"><b>Drafting SAFE notes</b> or equivalent investment instruments</span><span class="lang ja"><b>SAFE ノート</b>または同等の投資証券のドラフト</span></li>
+        <li><span class="lang en"><b>Drafting investment agreements</b> to be executed after receipt of funds</span><span class="lang ja">資金受領後に締結する<b>投資契約のドラフト</b></span></li>
+        <li><span class="lang en">Advising on investor rights, conversion mechanisms, governance, exit arrangements</span><span class="lang ja">投資家権利、転換メカニズム、ガバナンス、エグジット取り決めについて助言</span></li>
+        <li><span class="lang en">Advising on the flow of funds from Investment Co to the SPVs</span><span class="lang ja">投資会社から SPV への資金フローについて助言</span></li>
+        <li><span class="lang en">Preparing required corporate approvals for the investment structure</span><span class="lang ja">投資ストラクチャーに必要なコーポレート承認の準備</span></li>
       </ul>
     </div>
 
     <div>
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">(iii) Corporate Tax + VAT Registration</span><span class="lang ja">(iii) 法人税 + VAT 登録</span> — 5 deliverables</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on whether UAE Corporate Tax applies</li>
-        <li>Preparing and submitting Corporate Tax registration with FTA</li>
-        <li>Liaising with FTA on queries / clarifications</li>
-        <li>Assisting with VAT registration if applicable</li>
-        <li>High-level guidance on ongoing compliance</li>
+        <li><span class="lang en">Advising on whether UAE Corporate Tax applies</span><span class="lang ja">UAE 法人税が適用されるか助言</span></li>
+        <li><span class="lang en">Preparing and submitting Corporate Tax registration with FTA</span><span class="lang ja">FTA への法人税登録の準備・提出</span></li>
+        <li><span class="lang en">Liaising with FTA on queries</span><span class="lang ja">問い合わせについて FTA と連絡調整</span> / clarifications</li>
+        <li><span class="lang en">Assisting with VAT registration</span><span class="lang ja">VAT 登録の支援</span> if applicable</li>
+        <li><span class="lang en">High-level guidance on ongoing compliance</span><span class="lang ja">継続的なコンプライアンスに関する高レベル指導</span></li>
       </ul>
     </div>
 
@@ -1317,16 +1317,16 @@
 
   <div class="does-does-not">
     <div class="does">
-      <h3>✓ CVML COVERS</h3>
+      <h3><span class="lang en">✓ CVML COVERS</span><span class="lang ja">✓ CVML がカバー</span></h3>
       <ul>
         <li><span class="lang en">Drafting SAFE note + investment agreements</span><span class="lang ja">SAFE ノート + 投資契約のドラフト</span></li>
         <li><span class="lang en">Legal structure advice on investor rights</span><span class="lang ja">投資家権利に関する法的構造の助言</span></li>
-        <li>Entity setup + tax registration</li>
+        <li><span class="lang en">Entity setup + tax registration</span><span class="lang ja">エンティティ設立 + 税務登録</span></li>
         <li><span class="lang en">Conversion mechanism design (legally)</span><span class="lang ja">転換メカニズムの設計（法的）</span></li>
       </ul>
     </div>
     <div class="does-not">
-      <h3>✗ CVML DOES NOT COVER</h3>
+      <h3><span class="lang en">✗ CVML DOES NOT COVER</span><span class="lang ja">✗ CVML がカバーしない</span></h3>
       <ul>
         <li><span class="lang en">Finding / sourcing investors</span><span class="lang ja">投資家の発掘・調達</span></li>
         <li><span class="lang en">Pitching to investors</span><span class="lang ja">投資家へのピッチ</span></li>
@@ -1358,7 +1358,7 @@
 
   <h2><span class="lang ja">🏢 DIFC オフィス要件</span><span class="lang en">🏢 DIFC Office Requirements</span></h2>
 
-  <p style="font-size:14px;">Every DIFC entity must have a registered office <b>inside the DIFC zone</b>. But "office" can mean different things. Three options ranging from cheap to expensive:</p>
+  <p style="font-size:14px;"><span class="lang en">Every DIFC entity must have a registered office <b>inside the DIFC zone</b>. But "office" can mean different things. Three options ranging from cheap to expensive:</span><span class="lang ja">DIFC エンティティはすべて、<b>DIFC ゾーン内</b>の登録オフィスを持たなければならない。ただし「オフィス」の意味は多様。安価から高価まで 3 つの選択肢：</span></p>
 
   <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin:14px 0;">
 
@@ -1426,14 +1426,14 @@
     <div style="background:var(--green-bg); border:2px solid var(--green); border-radius:14px; padding:18px 22px;">
       <div style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;"><span class="lang en">🚀 NEEDED NOW — TO START SETUP</span><span class="lang ja">🚀 今必要 — 設立開始のため</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
-        <li><b>Company name (3 options)</b> — e.g., "AYUVA Investment Limited"</li>
-        <li><b>Jurisdiction</b> — DIFC ✓ (decided)</li>
-        <li><b>Shareholders</b> — Baru + Teru (per Section 1)</li>
-        <li><b>Declared share capital</b> — e.g., USD 100,000</li>
-        <li><b>Manager / director</b> — Baru or Teru</li>
-        <li><b>Office choice</b> — flexi-desk (recommended)</li>
+        <li><span class="lang en"><b>Company name (3 options)</b> — e.g., "AYUVA Investment Limited"</span><span class="lang ja"><b>会社名（3 つの選択肢）</b> — 例：「AYUVA Investment Limited」</span></li>
+        <li><span class="lang en"><b>Jurisdiction</b> — DIFC ✓ (decided)</span><span class="lang ja"><b>管轄区域</b> — DIFC ✓（決定済み）</span></li>
+        <li><span class="lang en"><b>Shareholders</b> — Baru + Teru (per Section 1)</span><span class="lang ja"><b>株主</b> — Baru + Teru（セクション 1 参照）</span></li>
+        <li><span class="lang en"><b>Declared share capital</b> — e.g., USD 100,000</span><span class="lang ja"><b>宣言資本金</b> — 例：USD 100,000</span></li>
+        <li><span class="lang en"><b>Manager / director</b> — Baru or Teru</span><span class="lang ja"><b>マネージャー / 取締役</b> — Baru または Teru</span></li>
+        <li><span class="lang en"><b>Office choice</b> — flexi-desk (recommended)</span><span class="lang ja"><b>オフィス選択</b> — フレキシデスク（推奨）</span></li>
         <li><b>Business activity</b> — "Holding investments / SAFE issuance"</li>
-        <li><b>KYC docs</b> — passport copies + proof of address</li>
+        <li><span class="lang en"><b>KYC docs</b> — passport copies + proof of address</span><span class="lang ja"><b>KYC 書類</b> — パスポートコピー + 住所証明</span></li>
       </ul>
     </div>
 
@@ -1441,14 +1441,14 @@
     <div style="background:#fef9e8; border:2px solid var(--accent); border-radius:14px; padding:18px 22px;">
       <div style="font-size:12px; font-weight:700; color:var(--accent-deep); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;"><span class="lang en">⏳ CAN WAIT — DISCUSS IN SEPARATE MEETING</span><span class="lang ja">⏳ 後でも可 — 別途ミーティングで議論</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
-        <li>Valuation cap / SAFE pool %</li>
-        <li>Conversion trigger (milestone / date)</li>
-        <li>Revenue distribution mechanism (22.5%)</li>
-        <li>Distribution frequency (monthly / quarterly)</li>
-        <li>Investor rights / board observer threshold</li>
-        <li>Lock-in period</li>
-        <li>Exit / liquidation terms</li>
-        <li>SAFE note template (CVML drafts after structuring meeting)</li>
+        <li><span class="lang en">Valuation cap / SAFE pool %</span><span class="lang ja">評価キャップ / SAFE プール %</span></li>
+        <li><span class="lang en">Conversion trigger (milestone / date)</span><span class="lang ja">転換トリガー（マイルストーン / 日付）</span></li>
+        <li><span class="lang en">Revenue distribution mechanism (22.5%)</span><span class="lang ja">収益分配メカニズム（22.5%）</span></li>
+        <li><span class="lang en">Distribution frequency (monthly / quarterly)</span><span class="lang ja">分配頻度（月次 / 四半期）</span></li>
+        <li><span class="lang en">Investor rights / board observer threshold</span><span class="lang ja">投資家権利 / 取締役オブザーバー基準</span></li>
+        <li><span class="lang en">Lock-in period</span><span class="lang ja">ロックイン期間</span></li>
+        <li><span class="lang en">Exit / liquidation terms</span><span class="lang ja">エグジット / 清算条件</span></li>
+        <li><span class="lang en">SAFE note template (CVML drafts after structuring meeting)</span><span class="lang ja">SAFE ノートテンプレート（構造化ミーティング後に CVML がドラフト）</span></li>
       </ul>
     </div>
 
@@ -1522,7 +1522,7 @@
 
   <div class="does-does-not">
     <div class="does">
-      <h3>✓ DOES</h3>
+      <h3><span class="lang en">✓ DOES</span><span class="lang ja">✓ 行うこと</span></h3>
       <ul>
         <li><span class="lang en"><b>Manages construction</b> of AYUVA Project 1</span><span class="lang ja">AYUVA プロジェクト 1 の<b>建設を管理</b></span></li>
         <li><span class="lang en">Coordinates contractors, designers, suppliers</span><span class="lang ja">請負業者、設計者、サプライヤーを調整</span></li>
@@ -1533,10 +1533,10 @@
       </ul>
     </div>
     <div class="does-not">
-      <h3>✗ DOES NOT</h3>
+      <h3><span class="lang en">✗ DOES NOT</span><span class="lang ja">✗ 行わないこと</span></h3>
       <ul>
         <li><span class="lang en">Hold investor money (Investment Co does)</span><span class="lang ja">投資家資金の保持（投資会社が行う）</span></li>
-        <li>Own the project asset (SPV does)</li>
+        <li><span class="lang en">Own the project asset (SPV does)</span><span class="lang ja">プロジェクト資産の所有（SPV が行う）</span></li>
         <li><span class="lang en">Operate the wellness facility after build (AMC does)</span><span class="lang ja">建設後のウェルネス施設運営（AMC が行う）</span></li>
         <li><span class="lang en">Sign contracts on behalf of investors</span><span class="lang ja">投資家を代表して契約締結</span></li>
       </ul>
@@ -1612,18 +1612,18 @@
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
       <thead>
         <tr style="background:var(--bg);">
-          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Item</th>
-          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Requirement</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Item</span><span class="lang ja">項目</span></th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Requirement</span><span class="lang ja">要件</span></th>
         </tr>
       </thead>
       <tbody>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Minimum capital</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">AED 10,000 (declared, no paid-up needed)</span><span class="lang ja">AED 10,000（宣言、払込不要）</span></td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Physical office</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en"><b>Mandatory</b> — valid Ejari-registered lease required</span><span class="lang ja"><b>必須</b> — 有効な Ejari 登録リースが必要</span></td></tr>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Manager</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Must appoint a manager — shareholder can serve</span><span class="lang ja">マネージャーの任命必須 — 株主が務めることが可能</span></td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Labour & Immigration card</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">~AED 1,550 to register</span><span class="lang ja">登録に約 AED 1,550</span></td></tr>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Incorporation cost</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">AED 16,476 – 24,476 (1-year license + registration + establishment card)</span><span class="lang ja">AED 16,476～24,476（1 年ライセンス + 登録 + 設立カード）</span></td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Visa cost (per visa)</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">~AED 5,850 (entry permit + change of status + medical + Emirates ID)</span><span class="lang ja">約 AED 5,850（入国許可 + 状態変更 + 健康診断 + Emirates ID）</span></td></tr>
-        <tr><td style="padding:8px 12px; font-weight:600;">Timeline</td><td style="padding:8px 12px;"><span class="lang en">2–4 weeks subject to authority approvals</span><span class="lang ja">当局の承認次第で 2～4 週間</span></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Minimum capital</span><span class="lang ja">最低資本</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">AED 10,000 (declared, no paid-up needed)</span><span class="lang ja">AED 10,000（宣言、払込不要）</span></td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Physical office</span><span class="lang ja">物理オフィス</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en"><b>Mandatory</b> — valid Ejari-registered lease required</span><span class="lang ja"><b>必須</b> — 有効な Ejari 登録リースが必要</span></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Manager</span><span class="lang ja">マネージャー</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Must appoint a manager — shareholder can serve</span><span class="lang ja">マネージャーの任命必須 — 株主が務めることが可能</span></td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Labour & Immigration card</span><span class="lang ja">労働 & 移民カード</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">~AED 1,550 to register</span><span class="lang ja">登録に約 AED 1,550</span></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Incorporation cost</span><span class="lang ja">法人設立費用</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">AED 16,476 – 24,476 (1-year license + registration + establishment card)</span><span class="lang ja">AED 16,476～24,476（1 年ライセンス + 登録 + 設立カード）</span></td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Visa cost (per visa)</span><span class="lang ja">ビザ費用（1 件あたり）</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">~AED 5,850 (entry permit + change of status + medical + Emirates ID)</span><span class="lang ja">約 AED 5,850（入国許可 + 状態変更 + 健康診断 + Emirates ID）</span></td></tr>
+        <tr><td style="padding:8px 12px; font-weight:600;"><span class="lang en">Timeline</span><span class="lang ja">期間</span></td><td style="padding:8px 12px;"><span class="lang en">2–4 weeks subject to authority approvals</span><span class="lang ja">当局の承認次第で 2～4 週間</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -1636,29 +1636,29 @@
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
       <thead>
         <tr style="background:var(--bg);">
-          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Obligation</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Obligation</span><span class="lang ja">義務</span></th>
           <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Status for PMC</span><span class="lang ja">PMC への該当状況</span></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📊 Corporate Tax</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📊 Corporate Tax</span><span class="lang ja">📊 法人税</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line); color:var(--red);"><span class="lang en"><b>Applies.</b> 9% over AED 375k profit. PMC earns development fees → likely taxable.</span><span class="lang ja"><b>該当。</b>AED 375k 超の利益に 9%。PMC は開発手数料を得る → 課税対象の可能性大。</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🧮 VAT</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🧮 VAT</span><span class="lang ja">🧮 VAT</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line); color:var(--red);"><span class="lang en"><b>Required.</b> PMC bills SPVs for services → revenue likely exceeds AED 375k threshold.</span><span class="lang ja"><b>必須。</b>PMC は SPV にサービスを請求 → 収益が AED 375k 閾値を超える可能性大。</span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🏛️ ESR + UBO</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🏛️ ESR + UBO</span><span class="lang ja">🏛️ ESR + UBO</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">UBO filing required. ESR notification annually.</span><span class="lang ja">UBO 届出必須。ESR 通知は年次。</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📜 License renewal</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📜 License renewal</span><span class="lang ja">📜 ライセンス更新</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Annual — same range as setup (~AED 16k–24k)</span><span class="lang ja">年次 — 設立と同範囲（約 AED 16k～24k）</span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; font-weight:600;">📁 Annual filings</td>
+          <td style="padding:10px 12px; font-weight:600;"><span class="lang en">📁 Annual filings</span><span class="lang ja">📁 年次届出</span></td>
           <td style="padding:10px 12px;"><span class="lang en">Audited financials, Corp Tax return, VAT quarterly returns</span><span class="lang ja">監査済財務諸表、法人税申告、VAT 四半期申告</span></td>
         </tr>
       </tbody>
@@ -1676,7 +1676,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Corporate Tax registration</div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 3,000</div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);">✓ Applies</b><br>Required by UAE law.
+        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当</span></b><br><span class="lang en">Required by UAE law.</span><span class="lang ja">UAE 法により必須。</span>
       </div>
     </div>
 
@@ -1685,7 +1685,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;">VAT registration</div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 1,500</div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);">✓ Applies</b><br><span class="lang en">PMC bills SPV → likely over threshold.</span><span class="lang ja">PMC は SPV に請求 → 閾値超えの可能性大。</span>
+        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当</span></b><br><span class="lang en">PMC bills SPV → likely over threshold.</span><span class="lang ja">PMC は SPV に請求 → 閾値超えの可能性大。</span>
       </div>
     </div>
 
@@ -1694,7 +1694,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Visa processing</div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 8,000<small style="font-size:11px; color:var(--muted); font-weight:500;"> / visa</small></div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);">✓ Applies</b><br><span class="lang en">Construction managers, project leads — multiple visas likely needed.</span><span class="lang ja">建設マネージャー、プロジェクトリーダー — 複数ビザが必要となる可能性大。</span>
+        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当</span></b><br><span class="lang en">Construction managers, project leads — multiple visas likely needed.</span><span class="lang ja">建設マネージャー、プロジェクトリーダー — 複数ビザが必要となる可能性大。</span>
       </div>
     </div>
 
@@ -1709,12 +1709,12 @@
     <div style="margin-bottom:18px;">
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(i) Incorporation of the Company</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on most suitable jurisdiction (mainland/free zone)</li>
-        <li>Preparing and submitting the incorporation application</li>
-        <li>Drafting / reviewing incorporation documents</li>
-        <li>Liaising with authorities on approvals, licensing, registration</li>
-        <li>Following up until trade license is issued</li>
-        <li>General legal and practical guidance</li>
+        <li><span class="lang en">Advising on most suitable jurisdiction (mainland/free zone)</span><span class="lang ja">最適な管轄区域（メインランド / フリーゾーン）について助言</span></li>
+        <li><span class="lang en">Preparing and submitting the incorporation application</span><span class="lang ja">法人設立申請の準備・提出</span></li>
+        <li><span class="lang en">Drafting / reviewing incorporation documents</span><span class="lang ja">法人設立書類のドラフト / レビュー</span></li>
+        <li><span class="lang en">Liaising with authorities on approvals, licensing, registration</span><span class="lang ja">承認・ライセンス・登録について当局と連絡調整</span></li>
+        <li><span class="lang en">Following up until trade license is issued</span><span class="lang ja">トレードライセンス発行までフォローアップ</span></li>
+        <li><span class="lang en">General legal and practical guidance</span><span class="lang ja">一般的な法律・実務指導</span></li>
       </ul>
     </div>
 
@@ -1722,21 +1722,21 @@
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">⭐ (ii) Operational Structuring & Agreements</span><span class="lang ja">⭐ (ii) 運営ストラクチャリング & 契約</span></div>
       <p style="font-size:13px; color:var(--ink-soft); margin:0 0 8px;"><span class="lang en"><b>The PMC-specific value-add stream.</b></span><span class="lang ja"><b>PMC 固有の付加価値ストリーム。</b></span></p>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on PMC's role within the overall structure</li>
-        <li><b>Drafting Project Management Agreements</b> between SPVs and PMC (the contract that pays PMC its 5–10% fee)</li>
-        <li>Advising on allocation of responsibilities, liabilities, commercial terms</li>
-        <li>Advising on the PMC ↔ Investment Co ↔ SPVs relationships</li>
+        <li><span class="lang en">Advising on PMC's role within the overall structure</span><span class="lang ja">PMC の全体構造内での役割について助言</span></li>
+        <li><span class="lang en"><b>Drafting Project Management Agreements</b> between SPVs and PMC (the contract that pays PMC its 5–10% fee)</span><span class="lang ja">SPV と PMC 間の<b>プロジェクト管理契約</b>のドラフト（PMC に 5～10% 手数料を支払う契約）</span></li>
+        <li><span class="lang en">Advising on allocation of responsibilities, liabilities, commercial terms</span><span class="lang ja">責任分担、債務、商業条件について助言</span></li>
+        <li><span class="lang en">Advising on the PMC ↔ Investment Co ↔ SPVs relationships</span><span class="lang ja">PMC ↔ 投資会社 ↔ SPV の関係について助言</span></li>
       </ul>
     </div>
 
     <div>
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(iii) Corporate Tax + VAT Registration</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on Corporate Tax applicability</li>
-        <li>Preparing & submitting Corp Tax registration with FTA</li>
-        <li>Liaising with FTA on queries</li>
-        <li>Assisting with VAT registration</li>
-        <li>High-level guidance on ongoing compliance</li>
+        <li><span class="lang en">Advising on Corporate Tax applicability</span><span class="lang ja">法人税の適用について助言</span></li>
+        <li><span class="lang en">Preparing & submitting Corp Tax registration with FTA</span><span class="lang ja">FTA への法人税登録の準備・提出</span></li>
+        <li><span class="lang en">Liaising with FTA on queries</span><span class="lang ja">問い合わせについて FTA と連絡調整</span></li>
+        <li><span class="lang en">Assisting with VAT registration</span><span class="lang ja">VAT 登録の支援</span></li>
+        <li><span class="lang en">High-level guidance on ongoing compliance</span><span class="lang ja">継続的なコンプライアンスに関する高レベル指導</span></li>
       </ul>
     </div>
 
@@ -1746,7 +1746,7 @@
 
   <div class="does-does-not">
     <div class="does">
-      <h3>✓ CVML COVERS</h3>
+      <h3><span class="lang en">✓ CVML COVERS</span><span class="lang ja">✓ CVML がカバー</span></h3>
       <ul>
         <li><span class="lang en">Entity setup + registration</span><span class="lang ja">エンティティ設立 + 登録</span></li>
         <li><span class="lang en">Drafting Project Management Agreement template</span><span class="lang ja">プロジェクト管理契約テンプレートのドラフト</span></li>
@@ -1755,7 +1755,7 @@
       </ul>
     </div>
     <div class="does-not">
-      <h3>✗ CVML DOES NOT COVER</h3>
+      <h3><span class="lang en">✗ CVML DOES NOT COVER</span><span class="lang ja">✗ CVML がカバーしない</span></h3>
       <ul>
         <li><span class="lang en">Hiring construction staff</span><span class="lang ja">建設スタッフの雇用</span></li>
         <li><span class="lang en">Finding / negotiating with contractors</span><span class="lang ja">請負業者の発掘・交渉</span></li>
@@ -1771,7 +1771,7 @@
   <p style="font-size:14px;"><span class="lang en">Unlike the Holding Co (RAK ICC, no office) and Investment Co (DIFC flexi-desk), <b>PMC requires a real Ejari-registered office in mainland Dubai</b>. No flexi-desk option for mainland DET.</span><span class="lang ja">ホールディングカンパニー（RAK ICC、オフィス不要）や投資会社（DIFC フレキシデスク）とは異なり、<b>PMC はメインランド・ドバイで実際の Ejari 登録オフィスが必要</b>。メインランド DET にフレキシデスクオプションはなし。</span></p>
 
   <div style="background:var(--red-bg); border-left:3px solid var(--red); border-radius:0 8px 8px 0; padding:12px 16px; margin:14px 0; font-size:13.5px;">
-    <b style="color:var(--red);">⚠ Important:</b> The DIFC office (used by Investment Co) <b>CANNOT</b> be the PMC's registered address. DIFC and Mainland are separate jurisdictions with separate office requirements. PMC needs its own mainland address.
+    <b style="color:var(--red);">⚠ Important:</b> <span class="lang en">The DIFC office (used by Investment Co) <b>CANNOT</b> be the PMC's registered address. DIFC and Mainland are separate jurisdictions with separate office requirements. PMC needs its own mainland address.</span><span class="lang ja">DIFC オフィス（投資会社が使用）は PMC の登録住所に<b>使用不可</b>。DIFC とメインランドは別管轄区域、別のオフィス要件。PMC は独自のメインランド住所が必要。</span>
   </div>
 
   <h3 style="font-size:17px; margin:18px 0 10px;"><span class="lang en">3 office options for PMC (cheapest first):</span><span class="lang ja">PMC のオフィス選択肢 3 つ（安い順）：</span></h3>
@@ -1812,7 +1812,7 @@
   </div>
 
   <div style="background:#fef9e8; border:1px dashed var(--accent); border-radius:10px; padding:12px 16px; margin:14px 0; font-size:13px;">
-    <b>📩 Question for Walid:</b> "For PMC, can we either share EXCEED REAL ESTATE LLC's existing Ejari'd office, or use a mainland business center address (~AED 10k/year)? Which is your typical recommendation for early-stage mainland entities like ours?"
+    <b><span class="lang en">📩 Question for Walid:</span><span class="lang ja">📩 Walid への質問：</span></b> <span class="lang en">"For PMC, can we either share EXCEED REAL ESTATE LLC's existing Ejari'd office, or use a mainland business center address (~AED 10k/year)? Which is your typical recommendation for early-stage mainland entities like ours?"</span><span class="lang ja">「PMC について、既存の EXCEED REAL ESTATE LLC の Ejari 登録オフィスを共有するか、メインランドビジネスセンター住所（年間約 AED 10k）を利用するかのいずれかが可能ですか？当社のような初期段階のメインランドエンティティに対する典型的な推奨はどちらですか？」</span>
   </div>
 
   <h2><span class="lang ja">💵 PMC 初年度 実質合計</span><span class="lang en">💵 Real Year 1 total for PMC</span></h2>
@@ -1842,12 +1842,12 @@
     <div style="background:var(--green-bg); border:2px solid var(--green); border-radius:14px; padding:18px 22px;">
       <div style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;"><span class="lang en">🚀 NEEDED TO START</span><span class="lang ja">🚀 開始に必要</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
-        <li><b>Company name (3 options)</b> — e.g., "AYUVA Project Management LLC"</li>
-        <li><b>Jurisdiction</b> — Mainland DET ✓</li>
-        <li><b>Shareholders</b> — Holding Co owns 100%</li>
-        <li><b>Manager / director</b> — pick one of Baru / Teru</li>
+        <li><span class="lang en"><b>Company name (3 options)</b> — e.g., "AYUVA Project Management LLC"</span><span class="lang ja"><b>会社名（3 つの選択肢）</b> — 例：「AYUVA Project Management LLC」</span></li>
+        <li><span class="lang en"><b>Jurisdiction</b> — Mainland DET ✓</span><span class="lang ja"><b>管轄区域</b> — メインランド DET ✓</span></li>
+        <li><span class="lang en"><b>Shareholders</b> — Holding Co owns 100%</span><span class="lang ja"><b>株主</b> — ホールディングカンパニーが 100% 所有</span></li>
+        <li><span class="lang en"><b>Manager / director</b> — pick one of Baru / Teru</span><span class="lang ja"><b>マネージャー / 取締役</b> — Baru / Teru のいずれかを選択</span></li>
         <li><b>Office choice</b> — small Ejari'd office (<span class="lang en">200–400 sqft</span><span class="lang ja">200～400 sqft</span>)</li>
-        <li><b>Number of visas needed Year 1</b> — estimate 3–5</li>
+        <li><span class="lang en"><b>Number of visas needed Year 1</b> — estimate 3–5</span><span class="lang ja"><b>初年度必要ビザ数</b> — 3～5 と見積もり</span></li>
         <li><b>KYC docs</b> — passport copies + proof of address</li>
       </ul>
     </div>
@@ -1855,11 +1855,11 @@
     <div style="background:#fef9e8; border:2px solid var(--accent); border-radius:14px; padding:18px 22px;">
       <div style="font-size:12px; font-weight:700; color:var(--accent-deep); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;"><span class="lang en">⏳ CAN WAIT</span><span class="lang ja">⏳ 後でも可</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
-        <li>PMC fee % for AYUVA Project 1 (5%? 7%? 10%?)</li>
-        <li>Project Management Agreement final terms</li>
-        <li>PMC ↔ SPV billing schedule</li>
-        <li>Office lease specifics</li>
-        <li>Construction-staff hiring plan</li>
+        <li><span class="lang en">PMC fee % for AYUVA Project 1 (5%? 7%? 10%?)</span><span class="lang ja">AYUVA プロジェクト 1 の PMC 手数料 %（5%？ 7%？ 10%？）</span></li>
+        <li><span class="lang en">Project Management Agreement final terms</span><span class="lang ja">プロジェクト管理契約の最終条件</span></li>
+        <li><span class="lang en">PMC ↔ SPV billing schedule</span><span class="lang ja">PMC ↔ SPV 請求スケジュール</span></li>
+        <li><span class="lang en">Office lease specifics</span><span class="lang ja">オフィスリースの詳細</span></li>
+        <li><span class="lang en">Construction-staff hiring plan</span><span class="lang ja">建設スタッフ採用計画</span></li>
       </ul>
     </div>
 
@@ -1934,7 +1934,7 @@
 
   <div class="does-does-not">
     <div class="does">
-      <h3>✓ DOES</h3>
+      <h3><span class="lang en">✓ DOES</span><span class="lang ja">✓ 行うこと</span></h3>
       <ul>
         <li><span class="lang en"><b>Operates AYUVA</b> after it opens — gym, spa, F&B, sauna, etc.</span><span class="lang ja">オープン後の <b>AYUVA を運営</b> — ジム、スパ、F&B、サウナなど</span></li>
         <li><span class="lang en">Manages all hospitality staff (trainers, therapists, F&B, front desk)</span><span class="lang ja">全ホスピタリティスタッフを管理（トレーナー、セラピスト、F&B、フロント）</span></li>
@@ -1945,10 +1945,10 @@
       </ul>
     </div>
     <div class="does-not">
-      <h3>✗ DOES NOT</h3>
+      <h3><span class="lang en">✗ DOES NOT</span><span class="lang ja">✗ 行わないこと</span></h3>
       <ul>
-        <li>Hold investor money (Investment Co does)</li>
-        <li>Own the project asset (SPV does)</li>
+        <li><span class="lang en">Hold investor money (Investment Co does)</span><span class="lang ja">投資家資金の保持（投資会社が行う）</span></li>
+        <li><span class="lang en">Own the project asset (SPV does)</span><span class="lang ja">プロジェクト資産の所有（SPV が行う）</span></li>
         <li><span class="lang en">Build the project (PMC does)</span><span class="lang ja">プロジェクトを建設（PMC が行う）</span></li>
         <li><span class="lang en">Receive direct investments</span><span class="lang ja">投資の直接受領</span></li>
       </ul>
@@ -1969,7 +1969,7 @@
       <ul style="margin:0; padding-left:20px; font-size:13px; line-height:1.6;">
         <li><span class="lang en">Active during build (months 0–18)</span><span class="lang ja">建設中にアクティブ（0～18 ヶ月目）</span></li>
         <li><span class="lang en">Project managers, architects</span><span class="lang ja">プロジェクトマネージャー、建築家</span></li>
-        <li>Activity code: 8211015</li>
+        <li><span class="lang en">Activity code: 8211015</span><span class="lang ja">活動コード：8211015</span></li>
         <li><span class="lang en">~5 staff</span><span class="lang ja">約 5 名のスタッフ</span></li>
         <li><span class="lang en">Fee tied to construction value</span><span class="lang ja">建設価値に連動した手数料</span></li>
       </ul>
@@ -1998,9 +1998,9 @@
       <div class="juris-fee">AED 16,476 – 24,476 <small>setup</small></div>
       <div class="juris-meta">
         • <span class="lang en">Physical office mandatory (Ejari)</span><span class="lang ja">物理オフィス必須（Ejari）</span><br>
-        • Min capital: AED 10,000<br>
+        • Min capital: <span class="lang en">AED 10,000</span><span class="lang ja">AED 10,000</span><br>
         • <span class="lang en">Activity code: <b>8211001 (Hotel Management)</b></span><span class="lang ja">活動コード：<b>8211001（ホテル管理）</b></span><br>
-        • Timeline: <span class="lang en">2–4 weeks</span><span class="lang ja">2～4 週間</span><br>
+        • <span class="lang en">Timeline</span><span class="lang ja">期間</span>: <span class="lang en">2–4 weeks</span><span class="lang ja">2～4 週間</span><br>
         • <span class="lang en"><b>Note:</b> Not allowed to practice real estate activities (Division 70)</span><span class="lang ja"><b>注：</b>不動産活動（第 70 部）の実施は不可</span>
       </div>
     </div>
@@ -2024,19 +2024,19 @@
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
       <thead>
         <tr style="background:var(--bg);">
-          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Item</th>
-          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Requirement</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Item</span><span class="lang ja">項目</span></th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Requirement</span><span class="lang ja">要件</span></th>
         </tr>
       </thead>
       <tbody>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Minimum capital</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">AED 10,000</td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Physical office</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en"><b>Mandatory</b> — Ejari-registered lease</span><span class="lang ja"><b>必須</b> — Ejari 登録リース</span></td></tr>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Manager</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Must appoint — shareholder can serve</span><span class="lang ja">任命必須 — 株主が務めることが可能</span></td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Activity code</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en"><b>8211001 (Hotel Management)</b> — NOT real estate activities</span><span class="lang ja"><b>8211001（ホテル管理）</b> — 不動産活動ではない</span></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Minimum capital</span><span class="lang ja">最低資本</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">AED 10,000</span><span class="lang ja">AED 10,000</span></td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Physical office</span><span class="lang ja">物理オフィス</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en"><b>Mandatory</b> — Ejari-registered lease</span><span class="lang ja"><b>必須</b> — Ejari 登録リース</span></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Manager</span><span class="lang ja">マネージャー</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Must appoint — shareholder can serve</span><span class="lang ja">任命必須 — 株主が務めることが可能</span></td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Activity code</span><span class="lang ja">活動コード</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en"><b>8211001 (Hotel Management)</b> — NOT real estate activities</span><span class="lang ja"><b>8211001（ホテル管理）</b> — 不動産活動ではない</span></td></tr>
         <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Labour card</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 1,550 to register</td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Incorporation cost</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">AED 16,476 – 24,476</td></tr>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Visa cost (per visa)</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">~AED 5,850</span><span class="lang ja">約 AED 5,850</span></td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; font-weight:600;">Timeline</td><td style="padding:8px 12px;">2–4 weeks</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Incorporation cost</span><span class="lang ja">法人設立費用</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">AED 16,476 – 24,476</td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Visa cost (per visa)</span><span class="lang ja">ビザ費用（1 件あたり）</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">~AED 5,850</span><span class="lang ja">約 AED 5,850</span></td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; font-weight:600;"><span class="lang en">Timeline</span><span class="lang ja">期間</span></td><td style="padding:8px 12px;">2–4 weeks</td></tr>
       </tbody>
     </table>
   </div>
@@ -2059,29 +2059,29 @@
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
       <thead>
         <tr style="background:var(--bg);">
-          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Obligation</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Obligation</span><span class="lang ja">義務</span></th>
           <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Status for AMC</span><span class="lang ja">AMC への該当状況</span></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📊 Corporate Tax</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📊 Corporate Tax</span><span class="lang ja">📊 法人税</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line); color:var(--red);"><span class="lang en"><b>Applies.</b> 9% over AED 375k profit. AMC earns management fees → likely taxable.</span><span class="lang ja"><b>該当。</b>AED 375k 超の利益に 9%。AMC は管理手数料を得る → 課税対象の可能性大。</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🧮 VAT</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🧮 VAT</span><span class="lang ja">🧮 VAT</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line); color:var(--red);"><span class="lang en"><b>Required.</b> Hospitality services + management fees → revenue over threshold.</span><span class="lang ja"><b>必須。</b>ホスピタリティサービス + 管理手数料 → 収益が閾値超え。</span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🏛️ ESR + UBO</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🏛️ ESR + UBO</span><span class="lang ja">🏛️ ESR + UBO</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);">UBO filing required. ESR notification annually.</td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📜 License renewal</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📜 License renewal</span><span class="lang ja">📜 ライセンス更新</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Annual (~AED 16k–24k)</span><span class="lang ja">年次（約 AED 16k～24k）</span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; font-weight:600;">📁 Annual filings</td>
+          <td style="padding:10px 12px; font-weight:600;"><span class="lang en">📁 Annual filings</span><span class="lang ja">📁 年次届出</span></td>
           <td style="padding:10px 12px;"><span class="lang en">Audited financials, Corp Tax return, VAT quarterly returns, employee filings</span><span class="lang ja">監査済財務諸表、法人税申告、VAT 四半期申告、従業員届出</span></td>
         </tr>
       </tbody>
@@ -2099,7 +2099,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Corporate Tax registration</div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 3,000</div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);">✓ Applies</b><br>Required by UAE law.
+        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当</span></b><br><span class="lang en">Required by UAE law.</span><span class="lang ja">UAE 法により必須。</span>
       </div>
     </div>
 
@@ -2108,7 +2108,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;">VAT registration</div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 1,500</div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);">✓ Applies</b><br><span class="lang en">Hospitality services + mgmt fees.</span><span class="lang ja">ホスピタリティサービス + 管理手数料。</span>
+        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当</span></b><br><span class="lang en">Hospitality services + mgmt fees.</span><span class="lang ja">ホスピタリティサービス + 管理手数料。</span>
       </div>
     </div>
 
@@ -2132,12 +2132,12 @@
     <div style="margin-bottom:18px;">
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(i) Incorporation of the Company</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on most suitable jurisdiction (mainland/free zone)</li>
-        <li>Preparing and submitting the incorporation application</li>
-        <li>Drafting / reviewing incorporation documents</li>
-        <li>Liaising with authorities on approvals, licensing, registration</li>
-        <li>Following up until trade license is issued</li>
-        <li>General legal and practical guidance</li>
+        <li><span class="lang en">Advising on most suitable jurisdiction (mainland/free zone)</span><span class="lang ja">最適な管轄区域（メインランド / フリーゾーン）について助言</span></li>
+        <li><span class="lang en">Preparing and submitting the incorporation application</span><span class="lang ja">法人設立申請の準備・提出</span></li>
+        <li><span class="lang en">Drafting / reviewing incorporation documents</span><span class="lang ja">法人設立書類のドラフト / レビュー</span></li>
+        <li><span class="lang en">Liaising with authorities on approvals, licensing, registration</span><span class="lang ja">承認・ライセンス・登録について当局と連絡調整</span></li>
+        <li><span class="lang en">Following up until trade license is issued</span><span class="lang ja">トレードライセンス発行までフォローアップ</span></li>
+        <li><span class="lang en">General legal and practical guidance</span><span class="lang ja">一般的な法律・実務指導</span></li>
       </ul>
     </div>
 
@@ -2145,21 +2145,21 @@
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">⭐ (ii) Operational & Management Agreements</span><span class="lang ja">⭐ (ii) 運営 & 管理契約</span></div>
       <p style="font-size:13px; color:var(--ink-soft); margin:0 0 8px;"><span class="lang en"><b>The AMC-specific value-add stream.</b></span><span class="lang ja"><b>AMC 固有の付加価値ストリーム。</b></span></p>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on AMC's role within the structure</li>
-        <li><b>Drafting Asset Management Agreement and/or Hotel Management Agreement</b> (the contract that pays AMC its 5–10% fee)</li>
-        <li>Advising on operational scope, management responsibilities, fee structures</li>
-        <li>Advising on the AMC ↔ SPV relationship</li>
+        <li><span class="lang en">Advising on AMC's role within the structure</span><span class="lang ja">AMC の構造内での役割について助言</span></li>
+        <li><span class="lang en"><b>Drafting Asset Management Agreement and/or Hotel Management Agreement</b> (the contract that pays AMC its 5–10% fee)</span><span class="lang ja"><b>アセット管理契約および / またはホテル管理契約</b>のドラフト（AMC に 5～10% 手数料を支払う契約）</span></li>
+        <li><span class="lang en">Advising on operational scope, management responsibilities, fee structures</span><span class="lang ja">運営範囲、管理責任、手数料構造について助言</span></li>
+        <li><span class="lang en">Advising on the AMC ↔ SPV relationship</span><span class="lang ja">AMC ↔ SPV の関係について助言</span></li>
       </ul>
     </div>
 
     <div>
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);">(iii) Corporate Tax + VAT Registration</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on Corporate Tax applicability</li>
-        <li>Preparing & submitting Corp Tax registration with FTA</li>
-        <li>Liaising with FTA on queries</li>
-        <li>Assisting with VAT registration</li>
-        <li>High-level guidance on ongoing compliance</li>
+        <li><span class="lang en">Advising on Corporate Tax applicability</span><span class="lang ja">法人税の適用について助言</span></li>
+        <li><span class="lang en">Preparing & submitting Corp Tax registration with FTA</span><span class="lang ja">FTA への法人税登録の準備・提出</span></li>
+        <li><span class="lang en">Liaising with FTA on queries</span><span class="lang ja">問い合わせについて FTA と連絡調整</span></li>
+        <li><span class="lang en">Assisting with VAT registration</span><span class="lang ja">VAT 登録の支援</span></li>
+        <li><span class="lang en">High-level guidance on ongoing compliance</span><span class="lang ja">継続的なコンプライアンスに関する高レベル指導</span></li>
       </ul>
     </div>
 
@@ -2169,16 +2169,16 @@
 
   <div class="does-does-not">
     <div class="does">
-      <h3>✓ CVML COVERS</h3>
+      <h3><span class="lang en">✓ CVML COVERS</span><span class="lang ja">✓ CVML がカバー</span></h3>
       <ul>
-        <li>Entity setup + registration</li>
+        <li><span class="lang en">Entity setup + registration</span><span class="lang ja">エンティティ設立 + 登録</span></li>
         <li><span class="lang en">Drafting AMC management agreement template</span><span class="lang ja">AMC 管理契約テンプレートのドラフト</span></li>
-        <li>Corp Tax + VAT registration</li>
-        <li>Visa processing assistance</li>
+        <li><span class="lang en">Corp Tax + VAT registration</span><span class="lang ja">法人税 + VAT 登録</span></li>
+        <li><span class="lang en">Visa processing assistance</span><span class="lang ja">ビザ申請支援</span></li>
       </ul>
     </div>
     <div class="does-not">
-      <h3>✗ CVML DOES NOT COVER</h3>
+      <h3><span class="lang en">✗ CVML DOES NOT COVER</span><span class="lang ja">✗ CVML がカバーしない</span></h3>
       <ul>
         <li><span class="lang en">Hospitality staffing / recruiting (trainers, therapists, F&B)</span><span class="lang ja">ホスピタリティスタッフィング / 採用（トレーナー、セラピスト、F&B）</span></li>
         <li><span class="lang en">Tourism authority (DTCM) approval</span><span class="lang ja">観光当局（DTCM）の承認</span></li>
@@ -2257,24 +2257,24 @@
     <div style="background:var(--green-bg); border:2px solid var(--green); border-radius:14px; padding:18px 22px;">
       <div style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;">🚀 NEEDED TO START</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
-        <li><b>Company name (3 options)</b> — e.g., "AYUVA Hotel Management LLC"</li>
+        <li><span class="lang en"><b>Company name (3 options)</b> — e.g., "AYUVA Hotel Management LLC"</span><span class="lang ja"><b>会社名（3 つの選択肢）</b> — 例：「AYUVA Hotel Management LLC」</span></li>
         <li><b>Jurisdiction</b> — Mainland DET ✓</li>
         <li><b>Shareholders</b> — Holding Co owns 100%</li>
-        <li><b>Manager / director</b> — pick one of Baru / Teru</li>
-        <li><b>Office choice</b> — share EXCEED office OR business center</li>
-        <li><b>Visa count Year 1</b> — estimate 10–30 hospitality staff</li>
+        <li><b><span class="lang en">Manager</span><span class="lang ja">マネージャー</span> / director</b> — pick one of Baru / Teru</li>
+        <li><span class="lang en"><b>Office choice</b> — share EXCEED office OR business center</span><span class="lang ja"><b>オフィス選択</b> — EXCEED オフィス共有 OR ビジネスセンター</span></li>
+        <li><span class="lang en"><b>Visa count Year 1</b> — estimate 10–30 hospitality staff</span><span class="lang ja"><b>初年度ビザ数</b> — ホスピタリティスタッフ 10～30 名と見積もり</span></li>
       </ul>
     </div>
 
     <div style="background:#fef9e8; border:2px solid var(--accent); border-radius:14px; padding:18px 22px;">
       <div style="font-size:12px; font-weight:700; color:var(--accent-deep); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;">⏳ CAN WAIT</div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
-        <li>AMC fee % (5%? 7%? 10% of revenue?)</li>
-        <li>Hotel Management Agreement final terms</li>
-        <li>AMC ↔ SPV billing schedule</li>
-        <li>Tourism authority (DTCM) approval — once facility is closer to opening</li>
-        <li>F&B / Spa permits — per-service basis</li>
-        <li>Hospitality team hiring plan</li>
+        <li><span class="lang en">AMC fee % (5%? 7%? 10% of revenue?)</span><span class="lang ja">AMC 手数料 %（5%？ 7%？ 収益の 10%？）</span></li>
+        <li><span class="lang en">Hotel Management Agreement final terms</span><span class="lang ja">ホテル管理契約の最終条件</span></li>
+        <li><span class="lang en">AMC ↔ SPV billing schedule</span><span class="lang ja">AMC ↔ SPV 請求スケジュール</span></li>
+        <li><span class="lang en">Tourism authority (DTCM) approval — once facility is closer to opening</span><span class="lang ja">観光当局（DTCM）承認 — 施設オープンが近づいてから</span></li>
+        <li><span class="lang en">F&B / Spa permits — per-service basis</span><span class="lang ja">F&B / スパ許可 — サービス単位</span></li>
+        <li><span class="lang en">Hospitality team hiring plan</span><span class="lang ja">ホスピタリティチーム採用計画</span></li>
       </ul>
     </div>
 
@@ -2361,7 +2361,7 @@
 
   <div class="does-does-not">
     <div class="does">
-      <h3>✓ DOES</h3>
+      <h3><span class="lang en">✓ DOES</span><span class="lang ja">✓ 行うこと</span></h3>
       <ul>
         <li><span class="lang en"><b>Holds the AYUVA Project 1 property</b> (lease or freehold)</span><span class="lang ja"><b>AYUVA プロジェクト 1 の物件を保有</b>（リースまたはフリーホールド）</span></li>
         <li><span class="lang en">Receives capital from Investment Co</span><span class="lang ja">投資会社から資本を受領</span></li>
@@ -2372,7 +2372,7 @@
       </ul>
     </div>
     <div class="does-not">
-      <h3>✗ DOES NOT</h3>
+      <h3><span class="lang en">✗ DOES NOT</span><span class="lang ja">✗ 行わないこと</span></h3>
       <ul>
         <li><span class="lang en">Manage operations directly (AMC does)</span><span class="lang ja">直接運営の管理（AMC が行う）</span></li>
         <li><span class="lang en">Build the project directly (PMC does)</span><span class="lang ja">プロジェクトの直接建設（PMC が行う）</span></li>
@@ -2462,7 +2462,7 @@
         <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Land + planning approval</span><span class="lang ja">土地 + 計画承認</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Zoning, master developer (e.g. Emaar, Nakheel) sign-off</span><span class="lang ja">ゾーニング、マスターデベロッパー（例：Emaar、Nakheel）の承認</span></td></tr>
         <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Municipality approvals</span><span class="lang ja">自治体承認</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Building permits, technical clearance</span><span class="lang ja">建築許可、技術クリアランス</span></td></tr>
         <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Civil Defence approval</span><span class="lang ja">民間防衛承認</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Health, fire, safety compliance</span><span class="lang ja">健康、消防、安全コンプライアンス</span></td></tr>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;">Hotel classification</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Tourism authority rating for hospitality</span><span class="lang ja">ホスピタリティ向け観光当局格付け</span></td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Hotel classification</span><span class="lang ja">ホテル分類</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Tourism authority rating for hospitality</span><span class="lang ja">ホスピタリティ向け観光当局格付け</span></td></tr>
         <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Environmental + health approvals</span><span class="lang ja">環境 + 衛生承認</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Depending on project scope (spa, wellness)</span><span class="lang ja">プロジェクト範囲による（スパ、ウェルネス）</span></td></tr>
         <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">Construction approvals</span><span class="lang ja">建設承認</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Contractor, engineer, consultant licenses</span><span class="lang ja">請負業者、エンジニア、コンサルタントライセンス</span></td></tr>
         <tr style="background:#fafaf3;"><td style="padding:8px 12px; font-weight:600;"><span class="lang en">Operational permits</span><span class="lang ja">運営許可</span></td><td style="padding:8px 12px;"><span class="lang en">Right before opening — F&B, alcohol (if any), spa, etc.</span><span class="lang ja">オープン直前 — F&B、アルコール（あれば）、スパ等</span></td></tr>
@@ -2480,29 +2480,29 @@
     <table style="width:100%; border-collapse:collapse; font-size:13.5px;">
       <thead>
         <tr style="background:var(--bg);">
-          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);">Obligation</th>
+          <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Obligation</span><span class="lang ja">義務</span></th>
           <th style="text-align:left; padding:10px 12px; border-bottom:2px solid var(--accent); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent-deep);"><span class="lang en">Status for SPV</span><span class="lang ja">SPV への該当状況</span></th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📊 Corporate Tax</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📊 Corporate Tax</span><span class="lang ja">📊 法人税</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line); color:var(--red);"><span class="lang en"><b>Applies.</b> Each SPV registers individually unless exempt. 9% over AED 375k profit. SPVs earn real operating revenue → likely taxable.</span><span class="lang ja"><b>該当。</b>免税でない限り、各 SPV は個別登録。AED 375k 超の利益に 9%。SPV は実際の運営収益を得る → 課税対象の可能性大。</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🧮 VAT</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🧮 VAT</span><span class="lang ja">🧮 VAT</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line); color:var(--red);"><span class="lang en"><b>Required.</b> Hospitality services → over threshold easily.</span><span class="lang ja"><b>必須。</b>ホスピタリティサービス → 容易に閾値超え。</span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">🏛️ ESR + UBO</td>
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line);">UBO required. ESR may apply depending on activities.</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">🏛️ ESR + UBO</span><span class="lang ja">🏛️ ESR + UBO</span></td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">UBO required. ESR may apply depending on activities.</span><span class="lang ja">UBO 必須。ESR は活動による適用可能性。</span></td>
         </tr>
         <tr style="background:#fafaf3;">
-          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;">📜 License renewal</td>
+          <td style="padding:10px 12px; border-bottom:1px solid var(--line); font-weight:600;"><span class="lang en">📜 License renewal</span><span class="lang ja">📜 ライセンス更新</span></td>
           <td style="padding:10px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Annual per SPV (~AED 16k–24k each)</span><span class="lang ja">SPV ごとに年次（各約 AED 16k～24k）</span></td>
         </tr>
         <tr>
-          <td style="padding:10px 12px; font-weight:600;">📁 Annual filings</td>
+          <td style="padding:10px 12px; font-weight:600;"><span class="lang en">📁 Annual filings</span><span class="lang ja">📁 年次届出</span></td>
           <td style="padding:10px 12px;"><span class="lang en">Per SPV — audited financials, Corp Tax, VAT, ESR notification</span><span class="lang ja">SPV ごと — 監査済財務諸表、法人税、VAT、ESR 通知</span></td>
         </tr>
       </tbody>
@@ -2520,7 +2520,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;">Corporate Tax registration</div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 3,000<small style="font-size:11px; color:var(--muted); font-weight:500;"> / SPV</small></div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);">✓ Applies</b><br><span class="lang en">Each SPV registers separately.</span><span class="lang ja">各 SPV は個別に登録。</span>
+        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当</span></b><br><span class="lang en">Each SPV registers separately.</span><span class="lang ja">各 SPV は個別に登録。</span>
       </div>
     </div>
 
@@ -2529,7 +2529,7 @@
       <div style="font-size:15px; font-weight:700; margin-bottom:8px;">VAT registration</div>
       <div style="font-size:22px; font-weight:700; color:var(--ink); margin-bottom:8px;">AED 1,500<small style="font-size:11px; color:var(--muted); font-weight:500;"> / SPV</small></div>
       <div style="background:var(--green-bg); border-left:3px solid var(--green); border-radius:0 6px 6px 0; padding:8px 10px; font-size:12.5px;">
-        <b style="color:var(--green);">✓ Applies</b><br><span class="lang en">Hospitality revenue → required.</span><span class="lang ja">ホスピタリティ収益 → 必須。</span>
+        <b style="color:var(--green);"><span class="lang en">✓ Applies</span><span class="lang ja">✓ 該当</span></b><br><span class="lang en">Hospitality revenue → required.</span><span class="lang ja">ホスピタリティ収益 → 必須。</span>
       </div>
     </div>
 
@@ -2553,23 +2553,23 @@
     <div style="margin-bottom:18px;">
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">(i) Incorporation of SPVs</span><span class="lang ja">(i) SPV の法人設立</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on most suitable jurisdiction for each SPV</li>
-        <li>Assisting with incorporation</li>
-        <li>Drafting / reviewing incorporation documents</li>
-        <li>Liaising with authorities on approvals and registration</li>
-        <li>Following up until trade license + incorporation docs issued</li>
-        <li>General guidance during the process</li>
+        <li><span class="lang en">Advising on most suitable jurisdiction for each SPV</span><span class="lang ja">各 SPV に最適な管轄区域について助言</span></li>
+        <li><span class="lang en">Assisting with incorporation</span><span class="lang ja">法人設立の支援</span></li>
+        <li><span class="lang en">Drafting / reviewing incorporation documents</span><span class="lang ja">法人設立書類のドラフト / レビュー</span></li>
+        <li><span class="lang en">Liaising with authorities on approvals and registration</span><span class="lang ja">承認・登録について当局と連絡調整</span></li>
+        <li><span class="lang en">Following up until trade license + incorporation docs issued</span><span class="lang ja">トレードライセンス + 設立書類発行までフォローアップ</span></li>
+        <li><span class="lang en">General guidance during the process</span><span class="lang ja">プロセス中の一般的な指導</span></li>
       </ul>
     </div>
 
     <div style="margin-bottom:18px;">
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">(ii) Structuring & Governance</span><span class="lang ja">(ii) ストラクチャリング & ガバナンス</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Advising on ownership structure and shareholding of each SPV</li>
-        <li>Advising on governance mechanisms + control structures</li>
-        <li>Advising on funding arrangements between Investment Co and SPVs</li>
-        <li>Ensuring proper ring-fencing of each project</li>
-        <li>Preparing corporate approvals required</li>
+        <li><span class="lang en">Advising on ownership structure and shareholding of each SPV</span><span class="lang ja">各 SPV の所有構造・株式保有について助言</span></li>
+        <li><span class="lang en">Advising on governance mechanisms + control structures</span><span class="lang ja">ガバナンスメカニズム + 統制構造について助言</span></li>
+        <li><span class="lang en">Advising on funding arrangements between Investment Co and SPVs</span><span class="lang ja">投資会社と SPV 間の資金提供取り決めについて助言</span></li>
+        <li><span class="lang en">Ensuring proper ring-fencing of each project</span><span class="lang ja">各プロジェクトの適切なリングフェンシングを確保</span></li>
+        <li><span class="lang en">Preparing corporate approvals required</span><span class="lang ja">必要なコーポレート承認の準備</span></li>
       </ul>
     </div>
 
@@ -2577,11 +2577,11 @@
       <div style="font-size:14px; font-weight:700; color:var(--accent-deep); margin-bottom:8px; padding-bottom:6px; border-bottom:2px solid var(--accent);"><span class="lang en">⭐ (iii) Intercompany & Operational Arrangements</span><span class="lang ja">⭐ (iii) 会社間 & 運営契約</span></div>
       <p style="font-size:13px; color:var(--ink-soft); margin:0 0 8px;"><span class="lang en"><b>The SPV-specific value-add — wiring everything together.</b></span><span class="lang ja"><b>SPV 固有の付加価値 — 全てを繋ぐ。</b></span></p>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.65;">
-        <li>Drafting / reviewing <b>intercompany agreements</b></li>
-        <li>Advising on SPV ↔ PMC arrangements (construction contract)</li>
-        <li>Advising on SPV ↔ AMC arrangements (operations contract)</li>
-        <li>Structuring contractual relationships across the entities</li>
-        <li>General legal support for project implementation</li>
+        <li><span class="lang en">Drafting / reviewing <b>intercompany agreements</b></span><span class="lang ja"><b>会社間契約</b>のドラフト / レビュー</span></li>
+        <li><span class="lang en">Advising on SPV ↔ PMC arrangements (construction contract)</span><span class="lang ja">SPV ↔ PMC の取り決めについて助言（建設契約）</span></li>
+        <li><span class="lang en">Advising on SPV ↔ AMC arrangements (operations contract)</span><span class="lang ja">SPV ↔ AMC の取り決めについて助言（運営契約）</span></li>
+        <li><span class="lang en">Structuring contractual relationships across the entities</span><span class="lang ja">エンティティ間の契約関係を構築</span></li>
+        <li><span class="lang en">General legal support for project implementation</span><span class="lang ja">プロジェクト実施のための一般的な法的支援</span></li>
       </ul>
     </div>
 
@@ -2591,16 +2591,16 @@
 
   <div class="does-does-not">
     <div class="does">
-      <h3>✓ CVML COVERS</h3>
+      <h3><span class="lang en">✓ CVML COVERS</span><span class="lang ja">✓ CVML がカバー</span></h3>
       <ul>
         <li><span class="lang en">SPV legal entity setup</span><span class="lang ja">SPV 法人設立</span></li>
         <li><span class="lang en">Intercompany agreement drafting</span><span class="lang ja">会社間契約のドラフト</span></li>
-        <li>Corp Tax + VAT registration</li>
+        <li><span class="lang en">Corp Tax + VAT registration</span><span class="lang ja">法人税 + VAT 登録</span></li>
         <li><span class="lang en">Ring-fencing structure</span><span class="lang ja">リングフェンシング構造</span></li>
       </ul>
     </div>
     <div class="does-not">
-      <h3>✗ CVML DOES NOT COVER</h3>
+      <h3><span class="lang en">✗ CVML DOES NOT COVER</span><span class="lang ja">✗ CVML がカバーしない</span></h3>
       <ul>
         <li><span class="lang en">Project-specific approvals (DTCM, Civil Defence, Municipality)</span><span class="lang ja">プロジェクト固有の承認（DTCM、民間防衛、自治体）</span></li>
         <li><span class="lang en">Land purchase / lease negotiation</span><span class="lang ja">土地購入 / リース交渉</span></li>
@@ -2620,7 +2620,7 @@
     <div class="fee-line"><span class="fee-label">Category G — VAT registration</span><span class="fee-amt">AED 1,500</span></div>
     <div class="fee-line"><span class="fee-label">+ 5% VAT on CVML fees</span><span class="fee-amt">AED 1,225</span></div>
     <div class="fee-line"><span class="fee-label"><span class="lang en">+ Mainland DET incorporation (if buying)</span><span class="lang ja">+ メインランド DET 法人設立（購入の場合）</span></span><span class="fee-amt">~AED 20,000</span></div>
-    <div class="fee-line"><span class="fee-label"><span class="lang en">+ Office (Business Center for SPV)</span><span class="lang ja">+ オフィス（SPV 用ビジネスセンター）</span></span><span class="fee-amt">~AED 10,000</span></div>
+    <div class="fee-line"><span class="fee-label"><span class="lang en">+ Office (Business Center for SPV)</span><span class="lang ja">+ オフィス（SPV 用ビジネスセンター）</span></span><span class="fee-amt">~<span class="lang en">AED 10,000</span><span class="lang ja">AED 10,000</span></span></div>
     <div class="fee-total" style="border-top:2px solid var(--accent); padding-top:12px; margin-top:8px;">
       <span><span class="lang en">Year 1 Total — SPV 1 (entity setup only)</span><span class="lang ja">初年度合計 — SPV 1（エンティティ設立のみ）</span></span>
       <span style="color:var(--accent-deep);">~AED 55,725</span>
@@ -2643,10 +2643,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Project 1 only</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 55,725</td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Projects 1 + 2</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 111,450</td></tr>
-        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line);">Projects 1 + 2 + 3</td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 167,175</td></tr>
-        <tr style="background:#fafaf3;"><td style="padding:8px 12px; font-weight:700;">All 8 planned projects</td><td style="padding:8px 12px; font-weight:700;">~AED 445,800</td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Project 1 only</span><span class="lang ja">プロジェクト 1 のみ</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 55,725</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Projects 1 + 2</span><span class="lang ja">プロジェクト 1 + 2</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 111,450</td></tr>
+        <tr><td style="padding:8px 12px; border-bottom:1px solid var(--line);"><span class="lang en">Projects 1 + 2 + 3</span><span class="lang ja">プロジェクト 1 + 2 + 3</span></td><td style="padding:8px 12px; border-bottom:1px solid var(--line);">~AED 167,175</td></tr>
+        <tr style="background:#fafaf3;"><td style="padding:8px 12px; font-weight:700;"><span class="lang en">All 8 planned projects</span><span class="lang ja">計画中の全 8 プロジェクト</span></td><td style="padding:8px 12px; font-weight:700;">~AED 445,800</td></tr>
       </tbody>
     </table>
   </div>
@@ -2658,22 +2658,22 @@
     <div style="background:var(--green-bg); border:2px solid var(--green); border-radius:14px; padding:18px 22px;">
       <div style="font-size:12px; font-weight:700; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;"><span class="lang en">🚀 NEEDED ONCE SITE IS LOCKED</span><span class="lang ja">🚀 用地確定後に必要</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
-        <li><b>Site location confirmed</b> — Project 1 address</li>
-        <li><b>Lease or Buy decision</b> — determines jurisdiction</li>
-        <li><b>SPV name</b> — e.g., "AYUVA Project 1 LLC"</li>
-        <li><b>Shareholding</b> — Investment Co owns 100%</li>
-        <li><b>Manager</b> — could be Baru, Teru, or an appointed PM</li>
+        <li><span class="lang en"><b>Site location confirmed</b> — Project 1 address</span><span class="lang ja"><b>サイト位置確定</b> — プロジェクト 1 の住所</span></li>
+        <li><span class="lang en"><b>Lease or Buy decision</b> — determines jurisdiction</span><span class="lang ja"><b>リース or 購入の決定</b> — 管轄区域を決定</span></li>
+        <li><span class="lang en"><b>SPV name</b> — e.g., "AYUVA Project 1 LLC"</span><span class="lang ja"><b>SPV 名</b> — 例：「AYUVA Project 1 LLC」</span></li>
+        <li><span class="lang en"><b>Shareholding</b> — Investment Co owns 100%</span><span class="lang ja"><b>株式保有</b> — 投資会社が 100% 所有</span></li>
+        <li><span class="lang en"><b>Manager</b> — could be Baru, Teru, or an appointed PM</span><span class="lang ja"><b>マネージャー</b> — Baru、Teru、または指名された PM が可能</span></li>
       </ul>
     </div>
 
     <div style="background:#fef9e8; border:2px solid var(--accent); border-radius:14px; padding:18px 22px;">
       <div style="font-size:12px; font-weight:700; color:var(--accent-deep); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:10px;"><span class="lang en">⏳ STARTS AFTER SPV IS SET UP</span><span class="lang ja">⏳ SPV 設立後に開始</span></div>
       <ul style="margin:0; padding-left:22px; font-size:13.5px; line-height:1.8;">
-        <li>Project-specific approvals (DTCM, etc.) — sequential, can take months</li>
-        <li>Land lease / purchase contract</li>
-        <li>Construction contracts (signed by SPV with vendors)</li>
-        <li>SPV ↔ PMC + SPV ↔ AMC management agreements</li>
-        <li>Funding agreement Investment Co → SPV</li>
+        <li><span class="lang en">Project-specific approvals (DTCM, etc.) — sequential, can take months</span><span class="lang ja">プロジェクト固有承認（DTCM など）— 順次、数ヶ月かかる場合あり</span></li>
+        <li><span class="lang en">Land lease / purchase contract</span><span class="lang ja">土地リース / 購入契約</span></li>
+        <li><span class="lang en">Construction contracts (signed by SPV with vendors)</span><span class="lang ja">建設契約（SPV がベンダーと締結）</span></li>
+        <li><span class="lang en">SPV ↔ PMC + SPV ↔ AMC management agreements</span><span class="lang ja">SPV ↔ PMC + SPV ↔ AMC 管理契約</span></li>
+        <li><span class="lang en">Funding agreement Investment Co → SPV</span><span class="lang ja">資金提供契約 投資会社 → SPV</span></li>
       </ul>
     </div>
 
@@ -2725,10 +2725,10 @@
       body.classList.toggle('lang-en', lang === 'en');
       body.classList.toggle('lang-ja', lang === 'ja');
       btns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-      try { localStorage.setItem(KEY, lang); } catch(e){}
+      try { localStorage.set<span class="lang en">Item</span><span class="lang ja">項目</span>(KEY, lang); } catch(e){}
     }
     let saved = 'en';
-    try { saved = localStorage.getItem(KEY) || 'en'; } catch(e){}
+    try { saved = localStorage.get<span class="lang en">Item</span><span class="lang ja">項目</span>(KEY) || 'en'; } catch(e){}
     setLang(saved);
     btns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
   })();
